@@ -11,10 +11,10 @@
 
         d: function (e) {
             this._window = $(window),
-            this._document = $(document),
-            this._body = $('body'),
-            this._html = $('html'),
-            this.sideNav = $('.rbt-search-dropdown')
+                this._document = $(document),
+                this._body = $('body'),
+                this._html = $('html'),
+                this.sideNav = $('.rbt-search-dropdown')
         },
         methods: function (e) {
             eduJs.salActive();
@@ -66,7 +66,7 @@
                 var active = tabs.find('a.active');
                 var next = active.parent('li').next('li').find('a');
                 if (next.length === 0) {
-                  next = tabs.first().find('a').on('click');
+                    next = tabs.first().find('a').on('click');
                 }
                 next.tab('show');
             }
@@ -76,58 +76,58 @@
         offCanvas: function (params) {
             if ($('#rbt-offcanvas-activation').length) {
                 $('#rbt-offcanvas-activation').on('click', function () {
-                    $('.side-menu').addClass('side-menu-active'), 
-                    $('body').addClass('offcanvas-menu-active')
+                    $('.side-menu').addClass('side-menu-active'),
+                        $('body').addClass('offcanvas-menu-active')
                 }),
 
-                $('.close_side_menu').on('click', function () {
-                    $('.side-menu').removeClass('side-menu-active'), 
-                    $('body').removeClass('offcanvas-menu-active')
-                }),
+                    $('.close_side_menu').on('click', function () {
+                        $('.side-menu').removeClass('side-menu-active'),
+                            $('body').removeClass('offcanvas-menu-active')
+                    }),
 
-                $('.side-menu .side-nav .navbar-nav li a').on('click', function () {
-                    $('.side-menu').removeClass('side-menu-active'), 
-                    $('body').removeClass('offcanvas-menu-active')
-                }), 
-                
-                $('#btn_sideNavClose').on('click', function () {
-                    $('.side-menu').removeClass('side-menu-active'), 
-                    $('body').removeClass('offcanvas-menu-active')
-                });
-            } 
+                    $('.side-menu .side-nav .navbar-nav li a').on('click', function () {
+                        $('.side-menu').removeClass('side-menu-active'),
+                            $('body').removeClass('offcanvas-menu-active')
+                    }),
+
+                    $('#btn_sideNavClose').on('click', function () {
+                        $('.side-menu').removeClass('side-menu-active'),
+                            $('body').removeClass('offcanvas-menu-active')
+                    });
+            }
         },
 
         cartSidenav: function (params) {
             if ($('.rbt-cart-sidenav-activation').length) {
                 $('.rbt-cart-sidenav-activation').on('click', function () {
-                    $('.rbt-cart-side-menu').addClass('side-menu-active'), 
-                    $('body').addClass('cart-sidenav-menu-active')
+                    $('.rbt-cart-side-menu').addClass('side-menu-active'),
+                        $('body').addClass('cart-sidenav-menu-active')
                 }),
 
-                $('.minicart-close-button').on('click', function () {
-                    $('.rbt-cart-side-menu').removeClass('side-menu-active'), 
-                    $('body').removeClass('cart-sidenav-menu-active')
-                }),
+                    $('.minicart-close-button').on('click', function () {
+                        $('.rbt-cart-side-menu').removeClass('side-menu-active'),
+                            $('body').removeClass('cart-sidenav-menu-active')
+                    }),
 
-                $('.side-menu .side-nav .navbar-nav li a').on('click', function () {
-                    $('.rbt-cart-side-menu').removeClass('side-menu-active'), 
-                    $('body').removeClass('cart-sidenav-menu-active')
-                }), 
-                
-                $('#btn_sideNavClose, .close_side_menu').on('click', function () {
-                    $('.rbt-cart-side-menu').removeClass('side-menu-active'), 
-                    $('body').removeClass('cart-sidenav-menu-active')
-                });
-            } 
+                    $('.side-menu .side-nav .navbar-nav li a').on('click', function () {
+                        $('.rbt-cart-side-menu').removeClass('side-menu-active'),
+                            $('body').removeClass('cart-sidenav-menu-active')
+                    }),
+
+                    $('#btn_sideNavClose, .close_side_menu').on('click', function () {
+                        $('.rbt-cart-side-menu').removeClass('side-menu-active'),
+                            $('body').removeClass('cart-sidenav-menu-active')
+                    });
+            }
         },
 
 
         menuCurrentLink: function () {
             var currentPage = location.pathname.split("/"),
-            current = currentPage[currentPage.length-1];
-            $('.mainmenu li a, .dashboard-mainmenu li a, .for-right-content .rbt-course-main-content li a').each(function(){
+                current = currentPage[currentPage.length - 1];
+            $('.mainmenu li a, .dashboard-mainmenu li a, .for-right-content .rbt-course-main-content li a').each(function () {
                 var $this = $(this);
-                if($this.attr('href') === current){
+                if ($this.attr('href') === current) {
                     $this.addClass('active');
                     $this.parents('.has-menu-child-item').addClass('menu-item-open')
                 }
@@ -172,13 +172,13 @@
                 },
                 breakpoints: {
                     575: {
-                      slidesPerView: 1,
+                        slidesPerView: 1,
                     },
                     768: {
-                      slidesPerView: 2,
+                        slidesPerView: 2,
                     },
                     992: {
-                      slidesPerView: 3,
+                        slidesPerView: 3,
                     },
                 },
             });
@@ -198,17 +198,17 @@
                 },
                 breakpoints: {
                     575: {
-                      slidesPerView: 1,
+                        slidesPerView: 1,
                     },
                     768: {
-                      slidesPerView: 2,
+                        slidesPerView: 2,
                     },
                     992: {
-                      slidesPerView: 3,
+                        slidesPerView: 3,
                     },
-                    
+
                     1200: {
-                      slidesPerView: 4,
+                        slidesPerView: 4,
                     },
                 },
             });
@@ -259,16 +259,16 @@
                 },
                 breakpoints: {
                     480: {
-                      slidesPerView: 1,
+                        slidesPerView: 1,
                     },
                     481: {
-                      slidesPerView: 2,
+                        slidesPerView: 2,
                     },
                     768: {
-                      slidesPerView: 3,
+                        slidesPerView: 3,
                     },
                     992: {
-                      slidesPerView: 3,
+                        slidesPerView: 3,
                     },
                 },
             });
@@ -328,15 +328,15 @@
                 },
                 breakpoints: {
                     575: {
-                      slidesPerView: 1,
+                        slidesPerView: 1,
                     },
 
                     768: {
-                      slidesPerView: 2,
+                        slidesPerView: 2,
                     },
 
                     992: {
-                      slidesPerView: 3,
+                        slidesPerView: 3,
                     },
                 },
             });
@@ -398,26 +398,26 @@
                 },
                 scrollbar: {
                     el: '.swiper-scrollbar',
-                        draggable: true,
-                        hide: true,
-                        snapOnRelease: true
+                    draggable: true,
+                    hide: true,
+                    snapOnRelease: true
                 },
                 breakpoints: {
                     480: {
-                      slidesPerView: 1,
+                        slidesPerView: 1,
                     },
                     481: {
-                      slidesPerView: 2,
+                        slidesPerView: 2,
                     },
                     768: {
-                      slidesPerView: 2,
+                        slidesPerView: 2,
                     },
                     992: {
-                      slidesPerView: 3,
+                        slidesPerView: 3,
                     },
 
                     1200: {
-                      slidesPerView: 6,
+                        slidesPerView: 6,
                     },
                 },
             });
@@ -433,25 +433,25 @@
                 },
                 scrollbar: {
                     el: '.swiper-scrollbar',
-                        draggable: true,
-                        hide: true,
-                        snapOnRelease: true
+                    draggable: true,
+                    hide: true,
+                    snapOnRelease: true
                 },
                 breakpoints: {
                     480: {
-                      slidesPerView: 1,
+                        slidesPerView: 1,
                     },
                     481: {
-                      slidesPerView: 2,
+                        slidesPerView: 2,
                     },
                     768: {
-                      slidesPerView: 2,
+                        slidesPerView: 2,
                     },
                     992: {
-                      slidesPerView: 3,
+                        slidesPerView: 3,
                     },
                     1200: {
-                      slidesPerView: 4,
+                        slidesPerView: 4,
                     },
                 },
             });
@@ -468,9 +468,9 @@
                 },
                 scrollbar: {
                     el: '.swiper-scrollbar',
-                        draggable: true,
-                        hide: true,
-                        snapOnRelease: true
+                    draggable: true,
+                    hide: true,
+                    snapOnRelease: true
                 },
                 pagination: {
                     el: '.rbt-swiper-pagination',
@@ -478,19 +478,19 @@
                 },
                 breakpoints: {
                     575: {
-                      slidesPerView: 1,
+                        slidesPerView: 1,
                     },
 
                     768: {
-                      slidesPerView: 2,
+                        slidesPerView: 2,
                     },
 
                     992: {
-                      slidesPerView: 3,
+                        slidesPerView: 3,
                     },
                     1200: {
-                      slidesPerView: 3,
-                      slidesPerGroup: 3,
+                        slidesPerView: 3,
+                        slidesPerGroup: 3,
                     },
                 },
             });
@@ -513,10 +513,10 @@
             });
         },
 
-        eduBgCardHover : function () {
-            $('.rbt-hover-active').mouseenter(function() {
+        eduBgCardHover: function () {
+            $('.rbt-hover-active').mouseenter(function () {
                 var self = this;
-                setTimeout(function() {
+                setTimeout(function () {
                     $('.rbt-hover-active.active').removeClass('active');
                     $(self).addClass('active');
                 }, 0);
@@ -534,8 +534,8 @@
 
         counterUp: function () {
             var odo = $('.odometer');
-            odo.each(function() {
-                $('.odometer').appear(function(e) {
+            odo.each(function () {
+                $('.odometer').appear(function (e) {
                     var countNumber = $(this).attr('data-count');
                     $(this).html(countNumber);
                 });
@@ -545,34 +545,34 @@
 
         pricingPlan: function () {
             var mainPlan = $('.rbt-pricing-area');
-            mainPlan.each(function() {
+            mainPlan.each(function () {
                 var yearlySelectBtn = $('.yearly-plan-btn'),
                     monthlySelectBtn = $('.monthly-plan-btn'),
                     monthlyPrice = $('.monthly-pricing'),
                     yearlyPrice = $('.yearly-pricing'),
                     buttonSlide = $('.pricing-checkbox');
 
-                $(monthlySelectBtn).on('click', function() {
+                $(monthlySelectBtn).on('click', function () {
                     buttonSlide.prop('checked', true);
                     $(this).addClass('active').parent('.nav-item').siblings().children().removeClass('active');
                     monthlyPrice.css('display', 'block');
                     yearlyPrice.css('display', 'none');
                 });
-                
-                $(yearlySelectBtn).on('click', function() {
+
+                $(yearlySelectBtn).on('click', function () {
                     buttonSlide.prop('checked', false);
                     $(this).addClass('active').parent('.nav-item').siblings().children().removeClass('active');
                     monthlyPrice.css('display', 'none');
                     yearlyPrice.css('display', 'block');
                 });
-    
-                $(buttonSlide).change(function() {
+
+                $(buttonSlide).change(function () {
                     if ($('input[class="pricing-checkbox"]:checked').length > 0) {
                         monthlySelectBtn.addClass('active');
                         yearlySelectBtn.removeClass('active');
                         monthlyPrice.css('display', 'block');
                         yearlyPrice.css('display', 'none');
-                    }else {
+                    } else {
                         yearlySelectBtn.addClass('active');
                         monthlySelectBtn.removeClass('active');
                         monthlyPrice.css('display', 'none');
@@ -586,23 +586,23 @@
             var gridViewBtn = $('.rbt-grid-view'),
                 listViewBTn = $('.rbt-list-view');
 
-                $(gridViewBtn).on('click', function () {
-                    $(this).addClass('active').parent('.course-switch-item').siblings().children().removeClass('active');
-                    $('.rbt-course-grid-column').addClass('active-grid-view');
-                    $('.rbt-course-grid-column').removeClass('active-list-view');
-                    $('.rbt-card').removeClass('card-list-2');
-                })
+            $(gridViewBtn).on('click', function () {
+                $(this).addClass('active').parent('.course-switch-item').siblings().children().removeClass('active');
+                $('.rbt-course-grid-column').addClass('active-grid-view');
+                $('.rbt-course-grid-column').removeClass('active-list-view');
+                $('.rbt-card').removeClass('card-list-2');
+            })
 
-                $(listViewBTn).on('click', function () {
-                    $(this).addClass('active').parent('.course-switch-item').siblings().children().removeClass('active');
-                    $('.rbt-course-grid-column').removeClass('active-grid-view');
-                    $('.rbt-course-grid-column').addClass('active-list-view');
-                    $('.rbt-card').addClass('card-list-2');
-                })
+            $(listViewBTn).on('click', function () {
+                $(this).addClass('active').parent('.course-switch-item').siblings().children().removeClass('active');
+                $('.rbt-course-grid-column').removeClass('active-grid-view');
+                $('.rbt-course-grid-column').addClass('active-list-view');
+                $('.rbt-card').addClass('card-list-2');
+            })
         },
 
 
-        stickyHeader:  function () {
+        stickyHeader: function () {
             // Header Transparent
             if ($('header').hasClass('header-transparent')) {
                 $('body').addClass('active-header-transparent')
@@ -663,12 +663,12 @@
         _clickDoc: function () {
             var inputblur, inputFocus, openSideNav, closeSideNav;
             inputblur = function (e) {
-				if (!$(this).val()) {
-					$(this).parent('.form-group').removeClass('focused');
-				}
+                if (!$(this).val()) {
+                    $(this).parent('.form-group').removeClass('focused');
+                }
             };
             inputFocus = function (e) {
-				$(this).parents('.form-group').addClass('focused');
+                $(this).parents('.form-group').addClass('focused');
             };
             openSideNav = function (e) {
                 e.preventDefault();
@@ -678,17 +678,17 @@
             };
 
             closeSideNav = function (e) {
-				if (!$('.rbt-search-dropdown, .rbt-search-dropdown *:not(".search-trigger-active, .search-trigger-active *")').is(e.target)) {
+                if (!$('.rbt-search-dropdown, .rbt-search-dropdown *:not(".search-trigger-active, .search-trigger-active *")').is(e.target)) {
                     eduJs.sideNav.removeClass('active');
                     $('.search-trigger-active').removeClass('open');
                     eduJs._html.removeClass('side-nav-opened');
                 }
             };
             eduJs._document
-            .on('blur', 'input,textarea,select', inputblur)
-            .on('focus', 'input:not([type="radio"]),input:not([type="checkbox"]),textarea,select', inputFocus)
-            .on('click', '.search-trigger-active', openSideNav)
-            .on('click', '.side-nav-opened', closeSideNav)
+                .on('blur', 'input,textarea,select', inputblur)
+                .on('focus', 'input:not([type="radio"]),input:not([type="checkbox"]),textarea,select', inputFocus)
+                .on('click', '.search-trigger-active', openSideNav)
+                .on('click', '.side-nav-opened', closeSideNav)
         },
 
         wowActivation: function () {
@@ -696,13 +696,13 @@
         },
 
         radialProgress: function () {
-            $(window).scroll( function(){
+            $(window).scroll(function () {
                 /* Check the location of each desired element */
-                $('.radial-progress').each( function(i){
+                $('.radial-progress').each(function (i) {
                     var bottom_of_object = $(this).offset().top + $(this).outerHeight();
                     var bottom_of_window = $(window).scrollTop() + $(window).height();
                     /* If the object is completely visible in the window, fade it in */
-                    if( bottom_of_window > bottom_of_object ){
+                    if (bottom_of_window > bottom_of_object) {
                         $('.radial-progress').easyPieChart({
                             lineWidth: 10,
                             scaleLength: 0,
@@ -710,12 +710,12 @@
                             trackColor: false,
                             lineCap: 'round',
                             size: 180,
-                            onStep: function(from, to, percent) {
-                            $(this.el).find('.percent').text(Math.round(percent));
-                        }
-                    });
+                            onStep: function (from, to, percent) {
+                                $(this.el).find('.percent').text(Math.round(percent));
+                            }
+                        });
                     }
-                }); 
+                });
             });
         },
 
@@ -756,7 +756,7 @@
         },
 
         headerSticky: function () {
-            $(window).on('scroll', function() {
+            $(window).on('scroll', function () {
                 if ($('body').hasClass('rbt-header-sticky')) {
                     var stickyPlaceHolder = $('.rbt-sticky-placeholder'),
                         headerConainer = $('.rbt-header-wrapper'),
@@ -826,7 +826,7 @@
                 $('.header-transperent-spacer').css('padding-top', mainHeader + 'px');
             }
         },
-        
+
         categoryMenuHover: function () {
             $('.vertical-nav-menu li.vertical-nav-item').mouseover(function () {
                 $('.rbt-vertical-inner').hide();
@@ -873,8 +873,8 @@
                 type: 'image',
                 mainClass: 'mfp-with-zoom',
                 // other options
-                gallery:{
-                    enabled:true
+                gallery: {
+                    enabled: true
                 },
                 zoom: {
                     enabled: true, // By default it's false, so don't forget to enable it
@@ -883,10 +883,10 @@
                     // The "opener" function should return the element from which popup will be zoomed in
                     // and to which popup will be scaled down
                     // By defailt it looks for an image tag:
-                    opener: function(openerElement) {
-                      // openerElement is the element on which popup was initialized, in this case its <a> tag
-                      // you don't need to add "opener" option if this code matches your needs, it's defailt one.
-                      return openerElement.is('img') ? openerElement : openerElement.find('img');
+                    opener: function (openerElement) {
+                        // openerElement is the element on which popup was initialized, in this case its <a> tag
+                        // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+                        return openerElement.is('img') ? openerElement : openerElement.find('img');
                     }
                 }
             });
@@ -928,7 +928,7 @@
             var scrollBottom = $('.rbt-course-action-bottom');
             $(window).scroll(function () {
                 var topPos = $(this).scrollTop();
-                var targetPossition = $(document).height() * 0.66; 
+                var targetPossition = $(document).height() * 0.66;
                 var filled = (($(document).scrollTop() + window.innerHeight) / $(document).height());
                 if (topPos > targetPossition && filled != 1) {
                     $(scrollBottom).addClass('rbt-course-action-active');
@@ -942,9 +942,9 @@
             var windowWidth = $(window).width(); {
                 if (windowWidth < 1199) {
                     $('.top-bar-expended').on('click', function () {
-                        $('.top-expended-activation').hasClass('active') ? ( $('.top-expended-activation').removeClass('active'), $('.top-expended-activation').find('.top-expended-wrapper').css({ height: '32px' }) ) : ($('.top-expended-activation').addClass('active'), $('.top-expended-activation').find('.top-expended-wrapper').css({ height: ($('.top-expended-inner')).outerHeight() + 'px' }))
+                        $('.top-expended-activation').hasClass('active') ? ($('.top-expended-activation').removeClass('active'), $('.top-expended-activation').find('.top-expended-wrapper').css({ height: '32px' })) : ($('.top-expended-activation').addClass('active'), $('.top-expended-activation').find('.top-expended-wrapper').css({ height: ($('.top-expended-inner')).outerHeight() + 'px' }))
                     })
-                    $(window).on('hresize', function() {
+                    $(window).on('hresize', function () {
                         $('.top-expended-activation').hasClass('active') && $('.top-expended-activation').find('.top-expended-inner').css({
                             height: ($('.top-expended-inner')).outerHeight() + 'px'
                         })
@@ -981,36 +981,36 @@
 
         contactForm: function () {
             $('.rainbow-dynamic-form').on('submit', function (e) {
-				e.preventDefault();
-				var _self = $(this);
-				var __selector = _self.closest('input,textarea');
-				_self.closest('div').find('input,textarea').removeAttr('style');
-				_self.find('.error-msg').remove();
-				_self.closest('div').find('button[type="submit"]').attr('disabled', 'disabled');
-				var data = $(this).serialize();
-				$.ajax({
-					url: 'mail.php',
-					type: "post",
-					dataType: 'json',
-					data: data,
-					success: function (data) {
-						_self.closest('div').find('button[type="submit"]').removeAttr('disabled');
-						if (data.code == false) {
-							_self.closest('div').find('[name="' + data.field + '"]');
-							_self.find('.rainbow-btn').after('<div class="error-msg"><p>*' + data.err + '</p></div>');
-						} else {
-							$('.error-msg').hide();
-							$('.form-group').removeClass('focused');
-							_self.find('.rainbow-btn').after('<div class="success-msg"><p>' + data.success + '</p></div>');
-							_self.closest('div').find('input,textarea').val('');
+                e.preventDefault();
+                var _self = $(this);
+                var __selector = _self.closest('input,textarea');
+                _self.closest('div').find('input,textarea').removeAttr('style');
+                _self.find('.error-msg').remove();
+                _self.closest('div').find('button[type="submit"]').attr('disabled', 'disabled');
+                var data = $(this).serialize();
+                $.ajax({
+                    url: 'mail.php',
+                    type: "post",
+                    dataType: 'json',
+                    data: data,
+                    success: function (data) {
+                        _self.closest('div').find('button[type="submit"]').removeAttr('disabled');
+                        if (data.code == false) {
+                            _self.closest('div').find('[name="' + data.field + '"]');
+                            _self.find('.rainbow-btn').after('<div class="error-msg"><p>*' + data.err + '</p></div>');
+                        } else {
+                            $('.error-msg').hide();
+                            $('.form-group').removeClass('focused');
+                            _self.find('.rainbow-btn').after('<div class="success-msg"><p>' + data.success + '</p></div>');
+                            _self.closest('div').find('input,textarea').val('');
 
-							setTimeout(function () {
-								$('.success-msg').fadeOut('slow');
-							}, 5000);
-						}
-					}
-				});
-			});
+                            setTimeout(function () {
+                                $('.success-msg').fadeOut('slow');
+                            }, 5000);
+                        }
+                    }
+                });
+            });
         },
 
         player: function () {
@@ -1025,44 +1025,44 @@
         quizAns: function () {
             var currentQuestion = 1;
             showQuestion(currentQuestion);
-            
+
             $('#next-btn').click(function () {
-              if (currentQuestion < $('.question').length) {
-                currentQuestion++;
-                showQuestion(currentQuestion);
-              }
+                if (currentQuestion < $('.question').length) {
+                    currentQuestion++;
+                    showQuestion(currentQuestion);
+                }
             });
-      
+
             $('#prev-btn').click(function () {
-              if (currentQuestion > 1) {
-                currentQuestion--;
-                showQuestion(currentQuestion);
-              }
+                if (currentQuestion > 1) {
+                    currentQuestion--;
+                    showQuestion(currentQuestion);
+                }
             });
-      
+
             function showQuestion(questionNumber) {
-              $('.question').hide();
-              $('#question-' + questionNumber).show();
-      
-              if (questionNumber == 1) {
-                $('#prev-btn').prop('disabled', true);
-              } else {
-                $('#prev-btn').prop('disabled', false);
-              }
-      
-              if (questionNumber == $('.question').length) {
-                $('#next-btn').hide();
-                $("#submit-btn").show();
-              } else {
-                $('#next-btn').show();
-                $('#submit-btn').hide();
-              }
+                $('.question').hide();
+                $('#question-' + questionNumber).show();
+
+                if (questionNumber == 1) {
+                    $('#prev-btn').prop('disabled', true);
+                } else {
+                    $('#prev-btn').prop('disabled', false);
+                }
+
+                if (questionNumber == $('.question').length) {
+                    $('#next-btn').hide();
+                    $("#submit-btn").show();
+                } else {
+                    $('#next-btn').show();
+                    $('#submit-btn').hide();
+                }
             }
             $('#quiz-form').submit(function (event) {
-              event.preventDefault();
-      
-              // Here, you can add your logic to grade the quiz and show the results to the user
-            //   alert("Quiz submitted!");
+                event.preventDefault();
+
+                // Here, you can add your logic to grade the quiz and show the results to the user
+                //   alert("Quiz submitted!");
             });
         },
 
@@ -1070,16 +1070,16 @@
             // Get saved data from sessionStorage
             let selectedCollapse = sessionStorage.getItem('selectedCollapse');
             if (selectedCollapse != null) {
-            $('.accordion .collapse').removeClass('show');
-            $('.accordion-button').addClass('collapsed').attr('aria-expanded', false);
-            $(selectedCollapse).addClass('show');
-            $(selectedCollapse).siblings().find('button').removeClass('collapsed').attr('aria-expanded', true);
+                $('.accordion .collapse').removeClass('show');
+                $('.accordion-button').addClass('collapsed').attr('aria-expanded', false);
+                $(selectedCollapse).addClass('show');
+                $(selectedCollapse).siblings().find('button').removeClass('collapsed').attr('aria-expanded', true);
             }
             // To set, which one will be opened
             $('.accordion .accordion-button').on("click", function () {
-            let target = $(this).data('bs-target');
-            // Save data to sessionStorage
-            sessionStorage.setItem('selectedCollapse', target);
+                let target = $(this).data('bs-target');
+                // Save data to sessionStorage
+                sessionStorage.setItem('selectedCollapse', target);
             });
         },
 
@@ -1131,5 +1131,21 @@
 
 
 
+// 9.08 off canvas
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the close button
+    var closeButton = document.querySelector('.rbt-close-offcanvas');
 
+    // Add click event listener to the close button
+    closeButton.addEventListener('click', function (event) {
+        event.preventDefault();  // Prevent default action of the button (in case it's inside a form or has some other default action)
+
+        // Get the off-canvas menu
+        var offCanvasMenu = document.querySelector('.rbt-offcanvas-side-menu');
+
+        // Remove the 'active-offcanvas' class to hide the menu
+        offCanvasMenu.classList.remove('active-offcanvas');
+    });
+});
+// last one the when reload the page auto show the pop up

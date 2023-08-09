@@ -12077,10 +12077,12 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   left: 0;
   background-color: var(--color-white);
   width: 100%;
-  animation: stickySlideDown 0.65s cubic-bezier(0.23, 1, 0.32, 1) both;
   z-index: 99;
   box-shadow: var(--shadow-1);
 }
+
+
+
 .rbt-header .rbt-header-wrapper.color-white-variation .mainmenu-nav .mainmenu > li > a {
   color: var(--color-white);
 }
@@ -12335,7 +12337,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   margin: 0 auto;
 }
 .rbt-header .mainmenu-nav .mainmenu li.with-megamenu .rbt-megamenu.grid-item-4 {
-  width: 100%;
+  width: 25%;
   margin: 0 auto;
 }
 .rbt-header .mainmenu-nav .mainmenu li.with-megamenu .rbt-megamenu .wrapper {
@@ -12893,20 +12895,20 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 .popup-mobile-menu .mainmenu .has-dropdown > a {
   position: relative;
 }
-.popup-mobile-menu .mainmenu .has-menu-child-item > a::after,
+/* .popup-mobile-menu .mainmenu .has-menu-child-item > a::after,
 .popup-mobile-menu .mainmenu .has-dropdown > a::after {
-  position: absolute;
-  content: "\e9b1";
-  font-family: "feather" !important;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: 0.4s;
-}
-.popup-mobile-menu .mainmenu .has-menu-child-item > a.open::after,
+position: absolute;
+content: "\e9b1";
+font-family: "feather" !important;
+right: 0;
+top: 50%;
+transform: translateY(-50%);
+transition: 0.4s;
+} */
+/* .popup-mobile-menu .mainmenu .has-menu-child-item > a.open::after,
 .popup-mobile-menu .mainmenu .has-dropdown > a.open::after {
   content: "\e996";
-}
+} */
 .popup-mobile-menu .mainmenu .rbt-megamenu {
   padding: 0;
   max-width: 100%;
@@ -29219,3 +29221,4 @@ Course Sidebar
   }
 }
 /*# sourceMappingURL=../maps/style.css.map */
+/* 9.08 */
