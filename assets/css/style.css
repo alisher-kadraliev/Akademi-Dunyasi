@@ -119,10 +119,12 @@
 /*-- Variables --*/
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&amp;display=swap");
 :root {
-  --color-primary: #2f57ef;
-  --color-secondary: #b966e7;
+  --color-primary: #EF0107;
+  /* #2f57ef */
+  --color-secondary: #16BFFD;
+  /* #b966e7 */
   --color-coral: #E9967A;
-  --color-violet: #800080;
+  --color-violet: #16BFFD;
   --color-pink: #DB7093;
   --color-heading: #192335;
   --color-body: #6b7385;
@@ -12035,7 +12037,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   z-index: 99;
 }
 .rbt-header .logo a img {
-  max-height: 50px;
+  max-height: 74px;
   object-fit: cover;
 }
 @media only screen and (max-width: 575px) {
