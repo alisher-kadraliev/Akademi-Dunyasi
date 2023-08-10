@@ -13541,7 +13541,7 @@ fieldset:disabled {
   outline: none;
 }
 .rbt-btn-second{
-  padding: 0 11px!important;
+  padding: 0 12px!important;
   background: var(--color-primary);
   height: 49px!important;
   line-height: 46px!important;
