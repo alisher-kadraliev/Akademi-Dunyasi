@@ -454,6 +454,8 @@ input[type=submit] {
   -moz-appearance: button;
   appearance: button;
   cursor: pointer;
+  scroll-behavior: smooth!important;
+
 }
 
 button[disabled],
@@ -614,7 +616,6 @@ body {
   font-family: var(--font-primary);
   color: var(--color-body);
   font-weight: 400;
-  scroll-behavior: auto;
   position: relative;
   overflow-y: scroll;
   scrollbar-width: thin;
@@ -11271,7 +11272,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 .rbt-category-menu-wrapper .category-dropdown-menu .category-menu-item {
   display: flex;
-  padding: 20px;
+  padding: 25px;
 }
 .rbt-category-menu-wrapper .category-dropdown-menu .category-menu-item .rbt-vertical-nav {
   min-width: 230px;
@@ -11292,7 +11293,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 .rbt-category-menu-wrapper .category-dropdown-menu .category-menu-item .rbt-vertical-nav-list-wrapper li a {
   font-weight: 500;
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 13.5px;
   display: block;
   color: var(--color-body);
   margin: 0;
@@ -11306,7 +11307,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   padding-left: 20px;
   height: 100%;
   width: auto;
-  min-width: 320px;
+  min-width: 524px;
 }
 .rbt-category-menu-wrapper .category-dropdown-menu .category-menu-item .rbt-vertical-nav-content .vartical-nav-content-menu li a {
   padding: 5px 0px;
@@ -11935,6 +11936,9 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 }
 .rbt-header-middle .rbt-header-sec .rbt-header-sec-col.rbt-header-center .rbt-header-content .header-info {
   width: 100%;
+}
+.header_space{
+  margin-left: 35px!important;
 }
 
 .rbt-header-mid-1 .quick-access > li.account-access {
@@ -12895,7 +12899,8 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
 .popup-mobile-menu .mainmenu .has-dropdown > a {
   position: relative;
 }
-/* .popup-mobile-menu .mainmenu .has-menu-child-item > a::after,
+
+.popup-mobile-menu .mainmenu .has-menu-child-item > a::after,
 .popup-mobile-menu .mainmenu .has-dropdown > a::after {
 position: absolute;
 content: "\e9b1";
@@ -12904,11 +12909,11 @@ right: 0;
 top: 50%;
 transform: translateY(-50%);
 transition: 0.4s;
-} */
-/* .popup-mobile-menu .mainmenu .has-menu-child-item > a.open::after,
+}
+.popup-mobile-menu .mainmenu .has-menu-child-item > a.open::after,
 .popup-mobile-menu .mainmenu .has-dropdown > a.open::after {
   content: "\e996";
-} */
+}
 .popup-mobile-menu .mainmenu .rbt-megamenu {
   padding: 0;
   max-width: 100%;
@@ -13534,6 +13539,22 @@ fieldset:disabled {
   border-radius: 6px;
   border: 0 none;
   outline: none;
+}
+.rbt-btn-second{
+  padding: 0 11px!important;
+  background: var(--color-primary);
+  height: 49px!important;
+  line-height: 46px!important;
+  color: var(--color-white);
+  font-size: 14px!important;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+  border-radius: 6px;
+  border: 0 none;
 }
 .rbt-btn.btn-secondary {
   background: var(--color-secondary);
@@ -29222,3 +29243,6 @@ Course Sidebar
 }
 /*# sourceMappingURL=../maps/style.css.map */
 /* 9.08 */
+.rbt-vertical-nav-list-wrapper.vertical-nav-menu li:nth-child(n+7) {
+  display: none;
+}

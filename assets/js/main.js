@@ -1148,4 +1148,36 @@ document.addEventListener("DOMContentLoaded", function () {
         offCanvasMenu.classList.remove('active-offcanvas');
     });
 });
-// last one the when reload the page auto show the pop up
+
+//scroll to link
+document.addEventListener("DOMContentLoaded", function () {
+    // Check if there's a hash in the URL
+    if (window.location.hash) {
+        // Remove the hash from the ID because querySelector uses CSS syntax
+        var id = window.location.hash.substr(1);
+
+        // Find the element
+        var element = document.getElementById(id);
+
+        // If the element exists, scroll to it smoothly
+        if (element) {
+            element.scrollIntoView({behavior: "smooth"});
+        }
+    }
+});
+
+document.getElementById("readMoreBtn").addEventListener("click", function() {
+    var listItems = document.querySelectorAll(".rbt-vertical-nav-list-wrapper.vertical-nav-menu li");
+
+    // Toggle between showing/hiding list items beyond the first 6
+    for (var i = 7; i < listItems.length; i++) {
+        if (listItems[i].style.display === "none" || listItems[i].style.display === "") {
+            listItems[i].style.display = "list-item";
+        } else {
+            listItems[i].style.display = "none";
+        }
+    }
+
+    // Toggle button text between "Read More" and "Read Less"
+    this.textContent = this.textContent === "Daha az göster" ? "Daha çok göster" : "Daha az göster";
+});
