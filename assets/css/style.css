@@ -1630,8 +1630,8 @@ ul.rbt-dropdown-menu li .sub-menu li a, ul.rbt-dropdown-menu li a .right-icon, u
 
 @media only screen and (max-width: 767px) {
   .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 }
 .color-box-inner .title {
@@ -10706,13 +10706,13 @@ Primary style
 @media only screen and (min-width: 1600px) and (max-width: 1919px) {
   .header-space-betwween {
     padding-left: 50px;
-    padding-right: 50px;
+    /* padding-right: 50px; */
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .header-space-betwween {
     padding-left: 30px;
-    padding-right: 30px;
+    /* padding-right: 30px; */
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -20222,25 +20222,26 @@ ul.testimonial-thumb-wrapper li a.active .thumb img {
   display: none;
 }
 
+
 .scroll-animation {
   display: flex;
-  width: -webkit-calc((420px * 16) + (30px * 16));
-  width: -moz-calc((420px * 16) + (30px * 16));
+  width: -webkit-calc((420px * 6) + (30px * 6));
+  width: -moz-calc((420px * 6) + (30px * 6));
   width: 7200px;
   position: relative;
 }
 .scroll-animation.scroll-right-left {
-  -webkit-animation: scroll 80s linear infinite;
-  -moz-animation: scroll 80s linear infinite;
-  animation: scroll 80s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  -moz-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .scroll-animation.scroll-left-right {
-  -webkit-animation: scrollLeft 80s linear infinite;
-  -moz-animation: scrollLeft 80s linear infinite;
-  animation: scrollLeft 80s linear infinite;
+  -webkit-animation: scrollLeft 40s linear infinite;
+  -moz-animation: scrollLeft 40s linear infinite;
+  animation: scrollLeft 40s linear infinite;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -27651,7 +27652,7 @@ Course Sidebar
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .rbt-splash-slider {
-    padding: 100px 50px;
+    padding: 100px 176px;
     padding-bottom: 100px;
   }
 }
@@ -27683,7 +27684,7 @@ Course Sidebar
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 145px;
+  height: 97px;
   z-index: 9;
 }
 .rbt-splash-slider .banner-top {
@@ -27820,14 +27821,14 @@ Course Sidebar
 .rbt-splash-slider .splash-service-main .bg-shape img {
   width: 100%;
 }
-.rbt-splash-slider .service-wrapper {
-  position: relative;
+/* .rbt-splash-slider .service-wrapper { */
+  /* position: relative;
   z-index: 10;
-  background: rgba(39, 0, 255, 0.5);
+  background: rgb(238,174,202);
   border-radius: 10px;
   backdrop-filter: blur(15px);
   background-image: linear-gradient(218.15deg, #b966e763 0%, #2f57ef4a 100%);
-}
+} */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rbt-splash-slider .service-wrapper.service-white {
     margin-top: 64px;
@@ -29247,4 +29248,13 @@ Course Sidebar
 /* 9.08 */
 .rbt-vertical-nav-list-wrapper.vertical-nav-menu li:nth-child(n+7) {
   display: none;
+}
+.hero_content{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 767px) {
+  .hero_content{
+    margin-top: 40px;
+  }
 }
