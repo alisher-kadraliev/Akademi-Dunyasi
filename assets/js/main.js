@@ -1161,12 +1161,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // If the element exists, scroll to it smoothly
         if (element) {
-            element.scrollIntoView({behavior: "smooth"});
+            element.scrollIntoView({ behavior: "smooth" });
         }
     }
 });
 
-document.getElementById("readMoreBtn").addEventListener("click", function() {
+document.getElementById("readMoreBtn").addEventListener("click", function () {
     var listItems = document.querySelectorAll(".rbt-vertical-nav-list-wrapper.vertical-nav-menu li");
 
     // Toggle between showing/hiding list items beyond the first 6
@@ -1180,4 +1180,10 @@ document.getElementById("readMoreBtn").addEventListener("click", function() {
 
     // Toggle button text between "Read More" and "Read Less"
     this.textContent = this.textContent === "Daha az göster" ? "Daha çok göster" : "Daha az göster";
+});
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+let smoother = ScrollSmoother.create({
+    wrapper:'#smooth-wrapper',
+    content:'#smooth-content',
 });
