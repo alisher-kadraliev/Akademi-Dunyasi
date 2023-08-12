@@ -1181,9 +1181,116 @@ document.getElementById("readMoreBtn").addEventListener("click", function () {
     // Toggle button text between "Read More" and "Read Less"
     this.textContent = this.textContent === "Daha az göster" ? "Daha çok göster" : "Daha az göster";
 });
+//smooth
+const lenis = new Lenis()
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-let smoother = ScrollSmoother.create({
-    wrapper:'#smooth-wrapper',
-    content:'#smooth-content',
+lenis.on('scroll', (e) => {
+    console.log(e)
+})
+
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
+gsap.registerPlugin(ScrollTrigger);
+
+// learn what all this code means at
+// https://www.creativecodingclub.com/bundles/creative-coding-club
+// unlock over 200 GSAP lessons today
+
+
+const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)")
+const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)")
+
+
+gsap.set(photos, {yPercent:101})
+
+const allPhotos = gsap.utils.toArray(".desktopPhoto")
+
+
+// create
+let mm = gsap.matchMedia();
+
+// add a media query. When it matches, the associated function will run
+mm.add("(min-width: 600px)", () => {
+
+  // this setup code only runs when viewport is at least 600px wide
+  console.log("desktop")
+	
+  ScrollTrigger.create({
+	trigger:".gallery",
+	start:"top top",
+	end:"bottom bottom",
+	pin:".right"
+})
+
+//create scrolltrigger for each details section
+//trigger photo animation when headline of each details section 
+//reaches 80% of window height
+details.forEach((detail, index)=> {
+
+	let headline = detail.querySelector("h1")
+	let animation = gsap.timeline()
+	   .to(photos[index], {yPercent:0})
+	   .set(allPhotos[index], {autoAlpha:0})
+	ScrollTrigger.create({
+		trigger:headline,
+		start:"top 80%",
+		end:"top 50%",
+		animation:animation,
+		scrub:true,
+		markers:false
+	})
+})
+	
+	
+  
+  return () => { // optional
+    // custom cleanup code here (runs when it STOPS matching)
+	  console.log("mobile")
+  };
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+/* ScrollTrigger Docs
+
+https://greensock.com/docs/v3/Plugins/ScrollTrigger
+
+*/
+
+
+
+
+
+/* 
+
+learn more GreenSock and ScrollTrigger
+
+https://www.creativeCodingClub.com
+
+new lessons weekly
+less than $1 per week
+
+*/
