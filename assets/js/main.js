@@ -1197,100 +1197,126 @@ requestAnimationFrame(raf)
 
 gsap.registerPlugin(ScrollTrigger);
 
-// learn what all this code means at
-// https://www.creativecodingclub.com/bundles/creative-coding-club
-// unlock over 200 GSAP lessons today
 
+const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)");
+const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
+gsap.set(photos, { yPercent: 101 });
+const allPhotos = gsap.utils.toArray(".desktopPhoto");
+const gallery = document.querySelector(".gallery");
 
-const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)")
-const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)")
-
-
-gsap.set(photos, {yPercent:101})
-
-const allPhotos = gsap.utils.toArray(".desktopPhoto")
-
-
-// create
 let mm = gsap.matchMedia();
 
-// add a media query. When it matches, the associated function will run
 mm.add("(min-width: 600px)", () => {
+    console.log("desktop");
 
-  // this setup code only runs when viewport is at least 600px wide
-  console.log("desktop")
-	
-  ScrollTrigger.create({
-	trigger:".gallery",
-	start:"top top",
-	end:"bottom bottom",
-	pin:".right"
-})
+    ScrollTrigger.create({
+        trigger: ".gallery",
+        start: "top top",
+        end: "bottom bottom",
+        pin: ".right"
+    });
 
-//create scrolltrigger for each details section
-//trigger photo animation when headline of each details section 
-//reaches 80% of window height
-details.forEach((detail, index)=> {
+    details.forEach((detail, index) => {
+        let headline = detail.querySelector("h1");
+        let animation = gsap.timeline()
+            .to(photos[index], { yPercent: 0, onStart: setColor, onStartParams: [photos[index]] })
+            .set(allPhotos[index], { autoAlpha: 0 })
+            .add(() => {
+                // This will also be executed in reverse, so you can optionally add logic here if needed
+            });
 
-	let headline = detail.querySelector("h1")
-	let animation = gsap.timeline()
-	   .to(photos[index], {yPercent:0})
-	   .set(allPhotos[index], {autoAlpha:0})
-	ScrollTrigger.create({
-		trigger:headline,
-		start:"top 80%",
-		end:"top 50%",
-		animation:animation,
-		scrub:true,
-		markers:false
-	})
-})
-	
-	
-  
-  return () => { // optional
-    // custom cleanup code here (runs when it STOPS matching)
-	  console.log("mobile")
-  };
+        ScrollTrigger.create({
+            trigger: headline,
+            start: "top 90%",
+            end: "top 10%",
+            animation: animation,
+            scrub: true,
+            markers: false
+        });
+    });
+
+    return () => { 
+        console.log("mobile");
+    };
 });
 
+function setColor(photo) {
+    let colorClass = Array.from(photo.classList).find(cls => ["red", "green", "pink", "blue"].includes(cls));
+    if (colorClass) {
+        gallery.style.backgroundColor = getComputedStyle(photo).backgroundColor;
+    }
+}
+
+// Utility function to get the color class
+function getColorClass(element) {
+    const colors = ["red", "green", "pink", "blue"];
+    for (let color of colors) {
+        if (element.classList.contains(color)) {
+            return color;
+        }
+    }
+    return null; // or a default color if desired
+}
 
 
 
 
+//nasil
+
+// const races = document.querySelector(".nasil_races");
+// console.log(races.offsetWidth)
+
+// function getScrollAmount() {
+// 	let racesWidth = races.scrollWidth;
+// 	return -(racesWidth - window.innerWidth);
+// }
+
+// const tween = gsap.to(races, {
+// 	x: getScrollAmount,
+// 	duration: 3,
+// 	ease: "none",
+// });
 
 
+// ScrollTrigger.create({
+// 	trigger:".nasil_wrapper",
+// 	start:"top 30%",
+// 	end: () => `+=${getScrollAmount() * -1}`,
+// 	pin:true,
+// 	animation:tween,
+// 	scrub:1,
+// 	invalidateOnRefresh:true,
+// })
 
-
-
-
-
-
-
-
-
-
- 
-
-
-
-/* ScrollTrigger Docs
-
-https://greensock.com/docs/v3/Plugins/ScrollTrigger
-
-*/
-
-
-
-
-
-/* 
-
-learn more GreenSock and ScrollTrigger
-
-https://www.creativeCodingClub.com
-
-new lessons weekly
-less than $1 per week
-
-*/
+let scroll_tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.nasil_wrapper',
+        start: "top top",
+        // pin: true,
+        scrub: true,
+        end: "+=300",
+        // markers: true,
+    }
+}),
+    facts = [...document.querySelectorAll('.columns_n')]
+scroll_tl.to('.nasil_races', {
+    scale: 1,
+    duration: 1,
+    ease: "slow"
+})
+scroll_tl.to(facts, {
+    xPercent: -85 * (facts.length - 1),
+    scrollTrigger: {
+        trigger: ".nasil_races",
+        start: "center center",
+        pin: true,
+        // horizontal: true,
+        // pinSpacing:false,
+        // markers: true,
+        scrub: 1,
+        snap: 1 / (facts.length - 1),
+        // base vertical scrolling on how wide the container is so it feels more natural.
+        // end: () => `+=${smallFactsContainer.offsetWidth}`
+        end: () => `+=4320`
+    }
+});

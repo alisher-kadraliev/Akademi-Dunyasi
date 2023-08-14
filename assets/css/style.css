@@ -2536,7 +2536,7 @@ textarea:-ms-input-placeholder {
 }
 
 .rbt-section-gapBottom {
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rbt-section-gapBottom {
@@ -2633,7 +2633,7 @@ textarea:-ms-input-placeholder {
 }
 
 .default-callto-action-overlap {
-  padding-top: 276px;
+  padding-top: 10px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .default-callto-action-overlap {
@@ -14389,6 +14389,7 @@ a.rbt-moderbt-btn::before {
   transition: all 0.3s ease;
   z-index: -1;
 }
+
 a.rbt-moderbt-btn i {
   position: relative;
   top: 2px;
@@ -14404,7 +14405,7 @@ a.rbt-moderbt-btn:hover i {
   transform: translateX(0);
 }
 a.rbt-moderbt-btn:hover::before {
-  width: 100%;
+  width: 48%;
   background: var(--color-primary);
   opacity: 1;
 }
@@ -29642,121 +29643,490 @@ Course Sidebar
   }
 }
 
-
-
-
-
 .gallery {
-  display:flex;	
+  display: flex;
   /* outline:1px solid red; */
+  margin-top: -140px;
+  padding-top: 51px;
 }
 
 .left {
-	width:50%;
+  width: 50%;
 }
 
 .right {
-	height:100vh;
-	/* outline:1px solid purple; */
-	width:50%;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
+  height: 100vh;
+  /* outline:1px solid purple; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .desktopContent {
-	margin:auto;
-	width:80%;
+  margin: auto;
+  width: 90%;
 }
 
 .desktopContentSection {
-	min-height:100vh;
-	/* outline:1px solid green; */
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
+  min-height: 100vh;
+  /* outline:1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 
 .desktopPhotos {
   width: 31vw;
   height: 31vw;
-	border-radius:20px;
-	position:relative;
-	overflow:hidden;
-	box-shadow:4px 4px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
 }
-
 .desktopPhoto {
-	position:absolute;
-	width:100%;
-	height:100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
-
-
-
 
 .red {
-	background: crimson;
+  background-color: rgb(211, 214, 240);
 }
 
 .green {
-	background:MediumSeaGreen;
+  background-color: rgb(255, 237, 224);
+}
+
+.pink {
+  background-color: rgb(250, 225, 238);
 }
 
 .blue {
-	background:dodgerblue;
+  background-color: rgb(224, 240, 255);
 }
-
-.pink{
-	background:deepPink;
-}
-
 
 /* small screen / mobile layout */
 .mobileContent {
-	display:none;
-	width:80vw;
+  display: none;
+  width: 80vw;
 }
 
 .mobilePhoto {
-	width:80vw;
-	height:80vw;
-	margin-top:5em;
-	border-radius:6vw;
+  width: 80vw;
+  height: 80vw;
+  margin-top: 5em;
+  border-radius: 6vw;
 }
-
-
-
-
-
+.desc {
+  color: #000;
+  font-size: 15px;
+  padding-bottom: 10px;
+  letter-spacing: 0.38px;
+  font-weight: 400;
+  padding-top: 0.3rem;
+}
 
 /* defines styles for screens up to 599px wide */
 @media screen and (max-width: 599px) {
-	.left {
-		display:none;
-	}
-	
-	.right {
-		height:auto;
-		width:100%;
-		align-items:center;	
-	}	
-	
-	.desktopPhotos {
-		display:none;
-	}
-	
-	.mobileContent {
-		display:block;
-	}
-	
+  .left {
+    display: none;
+  }
 
+  .right {
+    height: auto;
+    width: 100%;
+    align-items: center;
+  }
+
+  .desktopPhotos {
+    display: none;
+  }
+
+  .mobileContent {
+    display: block;
+  }
 }
 
-.about_section{
-  width: 52.5%;
+.about_section {
+  width: 58.5%;
   text-align: left;
   margin-left: auto;
   margin-right: 25.2px;
+}
+
+.nasil_title_one {
+  text-align: center;
+  margin-bottom: 50px !important;
+}
+
+.nasil_races {
+  width: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.nasil_cont {
+  margin-left: 10%;
+}
+.nasil_text,
+.nasil_subtext {
+  width: 84%;
+  letter-spacing: 0.15px;
+  line-height: 1.64;
+  color: #6e6e73;
+}
+.space-100vh {
+  height: 100px;
+  background: var(--color-extra2);
+}
+.nasil_wrapper {
+  overflow-x: hidden;
+  background: var(--color-extra2);
+}
+.columns_n {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 40px;
+  width: 600px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.nasil_btn {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.nasil_text {
+  color: black;
+}
+a.bg-secondary-opacity:hover,
+button.bg-secondary-opacity:hover {
+  background: var(--color-primary) !important;
+}
+@media (max-width: 480px) {
+  .nasil_races {
+    gap: 25px;
+  }
+  .nasil_cont {
+    margin-left: 0%;
+  }
+  .columns_n {
+    width: 220px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .nasil_title {
+    font-size: 17px;
+  }
+  .nasil_subtext {
+    font-size: 15px;
+  }
+}
+.nasil_title {
+  margin-bottom: 0px;
+}
+/* slide company  */
+#slideshow {
+  margin: 0 auto;
+  height: 388px;
+  width: 100%;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.slideshow-title {
+  font-family: "Allerta Stencil";
+  font-size: 62px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 25%;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.sub-heading {
+  padding-top: 50px;
+  font-size: 18px;
+}
+.sub-heading-two {
+  font-size: 15px;
+}
+.sub-heading-three {
+  font-size: 13px;
+}
+.sub-heading-four {
+  font-size: 11px;
+}
+.sub-heading-five {
+  font-size: 9px;
+}
+.sub-heading-six {
+  font-size: 7px;
+}
+.sub-heading-seven {
+  font-size: 5px;
+}
+.sub-heading-eight {
+  font-size: 3px;
+}
+.sub-heading-nine {
+  font-size: 1px;
+}
+
+.entire-content {
+  margin: auto;
+  width: 190px;
+  perspective: 1000px;
+  position: relative;
+  padding-top: 80px;
+}
+
+.content-carrousel {
+  width: 100%;
+  position: absolute;
+  float: right;
+  animation: rotar 15s infinite linear;
+  transform-style: preserve-3d;
+}
+
+.content-carrousel:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.content-carrousel figure {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.content-carrousel figure:nth-child(1) {
+  transform: rotateY(0deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(2) {
+  transform: rotateY(40deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(3) {
+  transform: rotateY(80deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(4) {
+  transform: rotateY(120deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(5) {
+  transform: rotateY(160deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(6) {
+  transform: rotateY(200deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(7) {
+  transform: rotateY(240deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(8) {
+  transform: rotateY(280deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(9) {
+  transform: rotateY(320deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(10) {
+  transform: rotateY(360deg) translateZ(300px);
+}
+
+.shadow {
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px #000;
+  border-radius: 1px;
+}
+
+.content-carrousel img {
+  image-rendering: auto;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%;
+}
+
+.content-carrousel img:hover {
+  transform: scale(1.2);
+  transition: all 300ms;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* form */
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #000;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #000;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: var(--color-primary);
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--color-primary);
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.login-box a:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow:
+    0 0 5px var(--color-primary),
+    0 0 25px var(--color-primary),
+    0 0 50px var(--color-primary),
+    0 0 100px var(--color-primary);
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary));
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--color-primary));
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--color-primary));
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--color-primary));
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
 }
