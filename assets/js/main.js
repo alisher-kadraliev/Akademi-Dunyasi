@@ -1228,7 +1228,7 @@ mm.add("(min-width: 600px)", () => {
         ScrollTrigger.create({
             trigger: headline,
             start: "top 90%",
-            end: "top 10%",
+            end: "top 20%",
             animation: animation,
             scrub: true,
             markers: false
