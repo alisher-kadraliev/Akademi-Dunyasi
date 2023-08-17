@@ -117,14 +117,13 @@
     Default Styles
 ***************************************/
 /*-- Variables --*/
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400&amp;display=swap");
 :root {
   --color-primary: #ef0107;
   /* #2f57ef */
   --color-secondary: #192335;
   /* #b966e7 */
   --color-coral: #e9967a;
-  --color-violet: #16bffd;
+  --color-violet: #800080;
   --color-pink: #db7093;
   --color-heading: #192335;
   --color-body: #6b7385;
@@ -211,8 +210,8 @@
   --transition-3: transform 0.85s cubic-bezier(0.23, 1, 0.32, 1), background 0.3s, border 0.3s, border-radius 0.3s,
     box-shadow 0.3s;
   --transition-4: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  --font-primary: "Euclid Circular";
-  --font-secondary: "Euclid Circular";
+  --font-primary: "Lexend";
+  --font-secondary: "ARIAL";
   --font-alt: "Source Serif Pro", serif;
   --font-size-b1: 24px;
   --font-size-b2: 18px;
@@ -338,7 +337,7 @@ ins {
 }
 
 pre {
-  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-family: "Lexend", Courier, monospace;
   font-size: var(--font-size-b3);
   margin: 10px 0;
   overflow: auto;
@@ -970,7 +969,7 @@ cite,
 }
 
 var {
-  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-family: "Lexend", Courier, monospace;
 }
 
 /*---------------------------
@@ -1543,8 +1542,8 @@ ul.rbt-dropdown-menu li a {
     Background Opacity With Text Colors  
 ---------------------------------------*/
 .bg-primary-opacity {
-  background: var(--primary-opacity) !important;
-  color: var(--color-primary) !important;
+  background: #000000 !important;
+  color: #dfd9d9f5 !important;
 }
 
 .bg-secondary-opacity {
@@ -2512,12 +2511,12 @@ textarea:-ms-input-placeholder {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rbt-section-gap {
-    padding: 80px 0;
+    padding: 40px 0;
   }
 }
 @media only screen and (max-width: 767px) {
   .rbt-section-gap {
-    padding: 80px 0;
+    padding: 40px 0;
   }
 }
 
@@ -13839,6 +13838,9 @@ fieldset:disabled {
     var(--color-secondary)
   );
 }
+.nasil_gradient{
+  width: 183px;
+}
 .rbt-btn.btn-gradient:hover {
   background-color: inherit;
   background-position: 102% 0;
@@ -18211,10 +18213,10 @@ span.transparent-button:hover i {
 .rbt-badge-2 {
   display: flex;
   align-items: center;
-  background: rgba(226, 213, 252, 0.8);
+  background: transparent;
   box-shadow: 0 12px 22px 0 rgba(214, 191, 242, 0.28);
   padding: 0 20px;
-  border: 1px solid #fff;
+  border: 1px solid #fff!important;
   border-radius: 500px;
   height: 50px;
   line-height: 50px;
@@ -29581,7 +29583,7 @@ Course Sidebar
 }
 /*# sourceMappingURL=../maps/style.css.map */
 /* 9.08 */
-.rbt-vertical-nav-list-wrapper.vertical-nav-menu li:nth-child(n + 7) {
+.rbt-vertical-nav-list-wrapper.vertical-nav-menu li:nth-child(n + 12) {
   display: none;
 }
 .bg-gray{
@@ -29670,6 +29672,9 @@ display: none;
   .gallery{
     padding-top: 0;
   }
+  .size50vh{
+    margin-bottom: 106px;
+  }
 }
 
 .left {
@@ -29711,7 +29716,7 @@ display: none;
   height: 100%;
 }
 
-.red {
+.red  {
   background-color: rgb(211, 214, 240);
 }
 
@@ -29727,6 +29732,12 @@ display: none;
   background-color: rgb(224, 240, 255);
 }
 
+/* 
+@media (max-width:480px) {
+  .blue{
+    display: none;
+  }
+} */
 /* small screen / mobile layout */
 .mobileContent {
   display: none;
@@ -29738,10 +29749,11 @@ display: none;
   height: 80vw;
   margin-top: 5em;
   border-radius: 6vw;
+  position: relative;
 }
 .desc {
   color: #000;
-  font-size: 15px;
+  font-size: 14px;
   padding-bottom: 10px;
   letter-spacing: 0.38px;
   font-weight: 400;
@@ -29780,7 +29792,11 @@ display: none;
   text-align: center;
   margin-bottom: 50px !important;
 }
-
+@media (max-width:480px) {
+  .nasil_title_one{
+    margin-top: 40px;
+  }
+}
 .nasil_races {
   width: fit-content;
   display: flex;
@@ -29856,12 +29872,14 @@ button.bg-secondary-opacity:hover {
 /* slide company  */
 #slideshow {
   margin: 0 auto;
-  height: 490px;
+  height: 535px;
   width: 100%;
   background-color: white;
   box-sizing: border-box;
 }
-
+.ilet{
+  margin-bottom: 163px;
+}
 .slideshow-title {
   font-family: "Allerta Stencil";
   font-size: 62px;
@@ -29904,10 +29922,10 @@ button.bg-secondary-opacity:hover {
 
 .entire-content {
   margin: auto;
-  width: 190px;
-  perspective: 500px;
+  width: 196px;
+  perspective: 1134px;
   position: relative;
-  padding-top: 80px;
+  padding-top: 64px;
 }
 @media (max-width:480px) {
   .entire-content {
@@ -30011,7 +30029,31 @@ button.bg-secondary-opacity:hover {
   box-sizing: border-box;
   border-radius: 10px;
 }
-
+@media (max-width:1478px) {
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -45%);
+    background: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+}
+/* form */
+.login-box-mobil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
@@ -30196,4 +30238,46 @@ display: none!important;
   .sinavm{
     display: none!important;
   }
+}
+
+.bg_primary{
+  background: var(--color-extra2);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+	grid-area: 1 / 1 / 2 / 2;
+	z-index: 999;	
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+  overflow: hidden;
+  fill: #f5f5f7;
+  color:#f5f5f7;
+}
+
+.overlay.hidden {
+  display: none;
+}
+ .after_medium{
+  display: none!important;
+}
+.hero_animate{
+  height: 1000px;
+}
+@media (max-width:992px) {
+  .hero_animate{
+    display: none;
+  }
+  .after_medium{
+    display: block!important;
+  }
+}
+header {
+  display: none;
+  transition: .3s ease;
+}
+.top_space{
+  padding-top: 72px;
 }

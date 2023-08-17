@@ -1170,7 +1170,7 @@ document.getElementById("readMoreBtn").addEventListener("click", function () {
     var listItems = document.querySelectorAll(".rbt-vertical-nav-list-wrapper.vertical-nav-menu li");
 
     // Toggle between showing/hiding list items beyond the first 6
-    for (var i = 7; i < listItems.length; i++) {
+    for (var i = 13; i < listItems.length; i++) {
         if (listItems[i].style.display === "none" || listItems[i].style.display === "") {
             listItems[i].style.display = "list-item";
         } else {
@@ -1216,24 +1216,30 @@ mm.add("(min-width: 600px)", () => {
         pin: ".right"
     });
 
-    details.forEach((detail, index) => {
-        let headline = detail.querySelector("h1");
-        let animation = gsap.timeline()
-            .to(photos[index], { yPercent: 0, onStart: setColor, onStartParams: [photos[index]] })
-            .set(allPhotos[index], { autoAlpha: 0 })
-            .add(() => {
-                // This will also be executed in reverse, so you can optionally add logic here if needed
-            });
-
-        ScrollTrigger.create({
-            trigger: headline,
-            start: "top 90%",
-            end: "top 20%",
-            animation: animation,
-            scrub: true,
-            markers: false
+details.forEach((detail, index) => {
+    let headline = detail.querySelector("h3");
+    let animation = gsap.timeline()
+        .to(photos[index], { yPercent: 0, onStart: setColor, onStartParams: [photos[index]] })
+        .set(allPhotos[index], { autoAlpha: 0 })
+        .add(() => {
+            // This will be executed when the animation plays forward
         });
+
+    animation.eventCallback("onReverseComplete", () => {
+        // This will be executed when the animation reverses
+        resetColor(photos[index]);
     });
+
+    ScrollTrigger.create({
+        trigger: headline,
+        start: "top 90%",
+        end: "top 28%",
+        animation: animation,
+        scrub: true,
+        markers: false,
+    });
+});
+
 
     return () => { 
         console.log("mobile");
@@ -1241,15 +1247,23 @@ mm.add("(min-width: 600px)", () => {
 });
 
 function setColor(photo) {
-    let colorClass = Array.from(photo.classList).find(cls => ["red", "green", "pink", "blue"].includes(cls));
+    let colorClass = Array.from(photo.classList).find(cls => ["green", "red", "pink", "blue"].includes(cls));
     if (colorClass) {
         gallery.style.backgroundColor = getComputedStyle(photo).backgroundColor;
     }
 }
-
+function resetColor(photo) {
+    // Store the original background color in a data attribute (do this before changing the color)
+    if (!gallery.hasAttribute("data-original-color")) {
+        gallery.setAttribute("data-original-color", gallery.style.backgroundColor);
+    }
+    
+    // Reset the background color to the original color
+    gallery.style.backgroundColor = gallery.getAttribute("data-original-color");
+}
 // Utility function to get the color class
 function getColorClass(element) {
-    const colors = ["red", "green", "pink", "blue"];
+    const colors = ["green", " red", "pink","blue"];
     for (let color of colors) {
         if (element.classList.contains(color)) {
             return color;
@@ -1320,3 +1334,23 @@ scroll_tl.to(facts, {
         end: () => `+=4320`
     }
 });
+
+
+// Get the window height
+const windowHeight = window.innerHeight;
+
+// Get the element to animate
+const heroAnimate = document.querySelector('.hero_animate');
+
+// Animate to full window height
+gsap.to(heroAnimate, { duration: 1, height: `${windowHeight}px` });
+
+// Wait 4 seconds and then animate back to 700px
+// setTimeout(() => {
+//     gsap.to(heroAnimate, { duration: 1, height: '750px' });
+// }, 4000);
+setTimeout(function() {
+    const header = document.querySelector('header');
+    header.style.display = 'block';
+    gsap.from(header, { duration: 1, opacity: 0 });
+}, 8000);
