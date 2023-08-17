@@ -1216,32 +1216,32 @@ mm.add("(min-width: 600px)", () => {
         pin: ".right"
     });
 
-details.forEach((detail, index) => {
-    let headline = detail.querySelector("h3");
-    let animation = gsap.timeline()
-        .to(photos[index], { yPercent: 0, onStart: setColor, onStartParams: [photos[index]] })
-        .set(allPhotos[index], { autoAlpha: 0 })
-        .add(() => {
-            // This will be executed when the animation plays forward
+    details.forEach((detail, index) => {
+        let headline = detail.querySelector("h3");
+        let animation = gsap.timeline()
+            .to(photos[index], { yPercent: 0, onStart: setColor, onStartParams: [photos[index]] })
+            .set(allPhotos[index], { autoAlpha: 0 })
+            .add(() => {
+                // This will be executed when the animation plays forward
+            });
+
+        animation.eventCallback("onReverseComplete", () => {
+            // This will be executed when the animation reverses
+            resetColor(photos[index]);
         });
 
-    animation.eventCallback("onReverseComplete", () => {
-        // This will be executed when the animation reverses
-        resetColor(photos[index]);
+        ScrollTrigger.create({
+            trigger: headline,
+            start: "top 90%",
+            end: "top 28%",
+            animation: animation,
+            scrub: true,
+            markers: false,
+        });
     });
 
-    ScrollTrigger.create({
-        trigger: headline,
-        start: "top 90%",
-        end: "top 28%",
-        animation: animation,
-        scrub: true,
-        markers: false,
-    });
-});
 
-
-    return () => { 
+    return () => {
         console.log("mobile");
     };
 });
@@ -1257,13 +1257,13 @@ function resetColor(photo) {
     if (!gallery.hasAttribute("data-original-color")) {
         gallery.setAttribute("data-original-color", gallery.style.backgroundColor);
     }
-    
+
     // Reset the background color to the original color
     gallery.style.backgroundColor = gallery.getAttribute("data-original-color");
 }
 // Utility function to get the color class
 function getColorClass(element) {
-    const colors = ["green", " red", "pink","blue"];
+    const colors = ["green", " red", "pink", "blue"];
     for (let color of colors) {
         if (element.classList.contains(color)) {
             return color;
@@ -1349,8 +1349,76 @@ gsap.to(heroAnimate, { duration: 1, height: `${windowHeight}px` });
 // setTimeout(() => {
 //     gsap.to(heroAnimate, { duration: 1, height: '750px' });
 // }, 4000);
-setTimeout(function() {
+setTimeout(function () {
     const header = document.querySelector('header');
     header.style.display = 'block';
     gsap.from(header, { duration: 1, opacity: 0 });
 }, 8000);
+const tl = gsap.timeline();
+
+tl.to("body", {
+    overflow: "hidden"
+})
+    .to(".preloader .text-container", {
+        duration: 0.1,
+        opacity: 1,
+        ease: "Power3.easeOut"
+    })
+    .from(".preloader .text-container h1", {
+        duration: 1,
+        delay:1,
+        y: 100,
+        skewY: 10,
+        stagger: 0.4,
+        ease: "Power3.easeOut"
+    })
+    .to(".preloader .text-container h1", {
+        duration: 1.4,
+        y: 200,
+        skewY: -20,
+        stagger: 0.2,
+        ease: "Power3.easeOut"
+    })
+    .to(".preloader", {
+        duration: 1.3,
+        height: "0vh",
+        ease: "Power3.easeOut"
+    })
+    .to(
+        "body",
+        {
+            overflow: "auto"
+        },
+        "-=2"
+    )
+    .to(".preloader", {
+        display: "none"
+    });
+
+
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     const overlay = document.getElementById("overlay");
+    //     const popup = document.getElementById("popup");
+    //     const closePopupBtn = document.getElementById("closePopupBtn");
+    
+    //     function showPopup() {
+    //         overlay.style.display = "block";
+    //         popup.style.display = "block";
+    //     }
+    
+    //     function hidePopup() {
+    //         overlay.style.display = "none";
+    //         popup.style.display = "none";
+    //     }
+    
+    //     closePopupBtn.addEventListener("click", hidePopup);
+    //     overlay.addEventListener("click", hidePopup);
+    
+    //     // Show the popup after scrolling a certain distance
+    //     window.addEventListener("scroll", function () {
+    //         if (window.scrollY > 300) {
+    //             showPopup();
+    //         }
+    //     });
+    // });
+    
