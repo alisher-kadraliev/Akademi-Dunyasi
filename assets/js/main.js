@@ -1334,6 +1334,7 @@ scroll_tl.to(facts, {
         end: () => `+=4320`
     }
 });
+// FİX THE PROBLEM 
 
 
 // Get the window height
@@ -1352,73 +1353,48 @@ gsap.to(heroAnimate, { duration: 1, height: `${windowHeight}px` });
 setTimeout(function () {
     const header = document.querySelector('header');
     header.style.display = 'block';
-    gsap.from(header, { duration: 1, opacity: 0 });
+    gsap.from(header, { duration: 1, opacity: 1 });
 }, 8000);
 const tl = gsap.timeline();
 
-tl.to("body", {
-    overflow: "hidden"
-})
-    .to(".preloader .text-container", {
-        duration: 0.1,
-        opacity: 1,
-        ease: "Power3.easeOut"
-    })
-    .from(".preloader .text-container h1", {
-        duration: 1,
-        delay:1,
-        y: 100,
-        skewY: 10,
-        stagger: 0.4,
-        ease: "Power3.easeOut"
-    })
-    .to(".preloader .text-container h1", {
-        duration: 1.4,
-        y: 200,
-        skewY: -20,
-        stagger: 0.2,
-        ease: "Power3.easeOut"
-    })
-    .to(".preloader", {
-        duration: 1.3,
-        height: "0vh",
-        ease: "Power3.easeOut"
-    })
-    .to(
-        "body",
-        {
-            overflow: "auto"
-        },
-        "-=2"
-    )
-    .to(".preloader", {
-        display: "none"
-    });
 
-
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     const overlay = document.getElementById("overlay");
-    //     const popup = document.getElementById("popup");
-    //     const closePopupBtn = document.getElementById("closePopupBtn");
-    
-    //     function showPopup() {
-    //         overlay.style.display = "block";
-    //         popup.style.display = "block";
-    //     }
-    
-    //     function hidePopup() {
-    //         overlay.style.display = "none";
-    //         popup.style.display = "none";
-    //     }
-    
-    //     closePopupBtn.addEventListener("click", hidePopup);
-    //     overlay.addEventListener("click", hidePopup);
-    
-    //     // Show the popup after scrolling a certain distance
-    //     window.addEventListener("scroll", function () {
-    //         if (window.scrollY > 300) {
-    //             showPopup();
-    //         }
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     const popupOverlay = document.getElementById('popupOverlay');
+    //     const popupCTA = document.getElementById('popupCTA');
+    //     const popupClose = document.getElementById('popupClose');
+    //     const body = document.querySelector('body');
+    //     const formURL = "https://example.com/form"; // Replace with your form URL
+      
+    //     // Show the popup overlay after 2 seconds
+    //     setTimeout(function() {
+    //       popupOverlay.style.display = "flex";
+    //       body.classList.add('no-scroll'); // Prevent scrolling
+    //     }, 2000);
+      
+    //     // Close the popup overlay and enable scrolling when the close button is clicked
+    //     popupClose.addEventListener('click', function() {
+    //       popupOverlay.style.display = "none";
+    //       body.classList.remove('no-scroll'); // Allow scrolling
     //     });
-    // });
-    
+      
+    //     // Redirect to the form page when the call-to-action button is clicked
+    //     popupCTA.addEventListener('click', function() {
+    //       window.location.href = formURL;
+    //     });
+    //   });
+      
+    document.addEventListener("DOMContentLoaded", function() {
+        const header = document.querySelector('header');
+        const currentURL = window.location.pathname;
+      
+        if (currentURL === '/index.html' || currentURL === '/') {
+          setTimeout(function () {
+            header.style.display = 'block';
+            gsap.from(header, { duration: 1, opacity: 1 });
+          }, 8000);
+        } else {
+          // Show the header immediately for other pages
+          header.style.display = 'block';
+        }
+      });
+      
