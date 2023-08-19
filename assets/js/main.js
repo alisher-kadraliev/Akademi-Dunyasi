@@ -1335,12 +1335,6 @@ gsap.to(heroAnimate, { duration: 1, height: `${windowHeight}px` });
 // setTimeout(() => {
 //     gsap.to(heroAnimate, { duration: 1, height: '750px' });
 // }, 4000);
-setTimeout(function () {
-    const header = document.querySelector('header');
-    header.style.display = 'block';
-    gsap.from(header, { duration: 1, opacity: 1 });
-}, 8000);
-const tl = gsap.timeline();
 
 
     // document.addEventListener("DOMContentLoaded", function() {
@@ -1367,19 +1361,3 @@ const tl = gsap.timeline();
     //       window.location.href = formURL;
     //     });
     //   });
-      
-    document.addEventListener("DOMContentLoaded", function() {
-        const header = document.querySelector('header');
-        const currentURL = window.location.pathname;
-      
-        if (currentURL === '/index.html' || currentURL === '/') {
-          setTimeout(function () {
-            header.style.display = 'block';
-            gsap.from(header, { duration: 1, opacity: 1 });
-          }, 8000);
-        } else {
-          // Show the header immediately for other pages
-          header.style.display = 'block';
-        }
-      });
-      

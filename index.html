@@ -36,6 +36,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        header {
+            display: none;
+            transition: 0.3s ease;
+          }
+          @media (max-width: 992px) {
+            header {
+              display: block;
+            }
+          }
+    </style>
 </head>
 
 <body class="rbt-header-sticky  ">
@@ -1187,7 +1198,7 @@
                                                                 <div class="image"><img
                                                                         src="assets/images/course/category-2.png"
                                                                         alt="Course images"></div>
-                                                                <a href="course-filter-one-toggle.html">
+                                                                <a href="">
                                                                     <span>Bayilik</span>
                                                                     <i class="feather-chevron-right"></i>
                                                                 </a>
@@ -3384,6 +3395,12 @@
                 end: () => `+=4320`
             }
         });
+        setTimeout(function() {
+            const header = document.querySelector('header');
+            header.style.display = 'block';
+            gsap.from(header, { duration: 1, opacity: 0 });
+        },13000);
+        
     </script>
 </body>
 

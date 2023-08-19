@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 
-<!-- Mirrored from rainbowit.net/html/histudy/admission-guide.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Aug 2023 11:22:59 GMT -->
+<!-- Mirrored from rainbowit.net/html/histudy/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Aug 2023 11:19:39 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Admission Guide - Online Courses & Education Bootstrap5 Template</title>
+    <title>Akademi Dünyasi</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.webp">
 
     <!-- CSS
 	============================================ -->
@@ -32,6 +33,9 @@
     <link rel="stylesheet" href="assets/css/plugins/magnigy-popup.min.css">
     <link rel="stylesheet" href="assets/css/plugins/plyr.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="rbt-header-sticky">
@@ -2065,6 +2069,8 @@
 
         </div>
     </div>
+
+
     <!-- Start Side Vav -->
     <div class="rbt-cart-side-menu">
         <div class="inner-wrapper">
@@ -2173,6 +2179,20 @@
     </div>
     <!-- End Side Vav -->
     <a class="close_side_menu" href="javascript:void(0);"></a>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <div id="map" style="height: 600px;"></div>
+
+<script>
+    var map = L.map('map').setView([38.9637, 35.2433], 6); // Centered at Turkey
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+    var marker = L.marker([36.8969, 30.7133]).addTo(map); // Coordinates for Antalya
+marker.bindPopup('<b>Antalya</b><br>2 exam places').openPopup();
+
+</script>
 
     <!-- Start breadcrumb Area -->
     <div class="rbt-breadcrumb-default ptb--100 ptb_md--50 ptb_sm--30 bg-gradient-1">
@@ -2199,12 +2219,7 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6">
-                    <div class="video-popup-wrapper">
-                        <img class="w-100 rbt-radius" src="assets/images/others/video-04.jpg" alt="Video Images">
-                        <a class="rbt-btn btn-white rounded-player popup-video position-to-top" href="https://www.youtube.com/watch?v=nA1Aqp0sPQo">
-                            <span><i class="feather-play"></i></span>
-                        </a>
-                    </div>
+                a
                 </div>
                 <div class="col-lg-6">
                     <div class="addmission-guide-content pl--50 pl_sm--0 pl_md--0 pl_lg--0">
@@ -2429,6 +2444,11 @@
     <!-- JS
 ============================================ -->
     <!-- Modernizer JS -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/vendor/modernizr.min.js"></script>
     <!-- jQuery JS -->
     <script src="assets/js/vendor/jquery.js"></script>
@@ -2443,7 +2463,6 @@
     <script src="assets/js/vendor/backtotop.js"></script>
     <script src="assets/js/vendor/isotop.js"></script>
     <script src="assets/js/vendor/imageloaded.js"></script>
-
     <script src="assets/js/vendor/wow.js"></script>
     <script src="assets/js/vendor/waypoint.min.js"></script>
     <script src="assets/js/vendor/easypie.js"></script>
@@ -2455,6 +2474,7 @@
     <script src="assets/js/vendor/paralax-scroll.js"></script>
     <script src="assets/js/vendor/paralax.min.js"></script>
     <script src="assets/js/vendor/countdown.js"></script>
+
     <script src="assets/js/vendor/plyr.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
