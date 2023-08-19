@@ -30384,3 +30384,16 @@ body.no-scroll {
   background-color: #fff;
   text-align: center;
 }
+.red_text{
+  color:#ef0107;
+}
+.gap_bottom{
+  padding-bottom: 120px;
+
+}
+@media(max-width:992px){
+  .gap_bottom{
+    padding-bottom: 50px;
+  
+  }
+}

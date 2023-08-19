@@ -1169,7 +1169,6 @@
 
                                 <li class="with-megamenu has-menu-child-item">
                                     <a href="about-us-01.html">Hakkımızda </a>
-
                                 </li>
 
 
@@ -1189,13 +1188,37 @@
                                                                         src="assets/images/course/category-2.png"
                                                                         alt="Course images"></div>
                                                                 <a href="course-filter-one-toggle.html">
-                                                                    <span>Sınav Merkezlerimiz </span>
+                                                                    <span>Bayilik</span>
+                                                                    <i class="feather-chevron-right"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nav-category-item">
+                                                            <div class="thumbnail">
+                                                                <div class="image"><img
+                                                                        src="assets/images/course/category-2.png"
+                                                                        alt="Course images"></div>
+                                                                <a href="course-masonry.html">
+                                                                    <span>Kurslar</span>
                                                                     <i class="feather-chevron-right"></i>
                                                                 </a>
                                                             </div>
                                                         </div>
                                                         <!-- End Single Category  -->
 
+                                                        <!-- Start Single Category  -->
+                                                        <div class="nav-category-item">
+                                                            <div class="thumbnail">
+                                                                <div class="image"><img
+                                                                        src="assets/images/course/category-1.png"
+                                                                        alt="Course images"></div>
+                                                                <a href="course-filter-one-toggle.html">
+                                                                    <span>Sınav Merkezlerimiz </span>
+                                                                    <i class="feather-chevron-right"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Single Category  -->
                                                         <!-- Start Single Category  -->
                                                         <div class="nav-category-item">
                                                             <div class="thumbnail">
@@ -1222,7 +1245,7 @@
 
                                 </li>
                                 <li class="with-megamenu has-menu-child-item ">
-                                    <a href="#" class="iletisim">Iletişim </a>
+                                    <a href="contact.html" class="iletisim">Iletişim </a>
 
                                 </li>
                                 <!-- <li class="with-megamenu has-menu-child-item position-static">
@@ -1769,7 +1792,7 @@
 
     </header>
     <!-- End Header Area  -->
-   
+
     <!-- Mobile Menu Section -->
     <div class="popup-mobile-menu">
         <div class="inner-wrapper">
@@ -3303,7 +3326,8 @@
     </div>
     <div class="pup_up1">
         <div class="pup_up1_bg">
-<p class="pup_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo tenetur nam labore, doloribus voluptate maxime eveniet ipsam aliquid quos voluptates! </p>
+            <p class="pup_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo tenetur nam labore,
+                doloribus voluptate maxime eveniet ipsam aliquid quos voluptates! </p>
         </div>
     </div>
     <!-- JS
@@ -3343,7 +3367,24 @@
     <script src="assets/js/vendor/plyr.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
-
+    <script>
+        scroll_tl.to(facts, {
+            xPercent: -85 * (facts.length - 1),
+            scrollTrigger: {
+                trigger: ".nasil_races",
+                start: "center center",
+                pin: true,
+                // horizontal: true,
+                // pinSpacing:false,
+                // markers: true,
+                scrub: 1,
+                snap: 1 / (facts.length - 1),
+                // base vertical scrolling on how wide the container is so it feels more natural.
+                // end: () => `+=${smallFactsContainer.offsetWidth}`
+                end: () => `+=4320`
+            }
+        });
+    </script>
 </body>
 
 
