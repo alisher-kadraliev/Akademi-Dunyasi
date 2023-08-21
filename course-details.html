@@ -31,11 +31,13 @@
     <link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css">
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/plugins/magnigy-popup.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/iconic.css">
     <link rel="stylesheet" href="assets/css/plugins/plyr.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -2009,12 +2011,7 @@
                                     <li>
                                         <a href="#details">Detaylar</a>
                                     </li>
-                                    <li>
-                                        <a href="#intructor">Eğitmen</a>
-                                    </li>
-                                    <li>
-                                        <a href="#review">Gözden geçirmek</a>
-                                    </li>
+                                  
                                 </ul>
                             </nav>
                         </div>
@@ -2611,25 +2608,24 @@
                                                 class="feather-clock"></i> 3 gün kaldı</span>
                                     </div>
                                 </div>
+                                <div class="sidebar-video-hidden">
 
-                                <div class="add-to-card-button mt--15">
-                                    <a class="rbt-btn btn-gradient icon-hover w-100 d-block text-center" href="#">
-                                        <span class="btn-text">Başvur</span>
-                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                                    </a>
+                                    <div class="add-to-card-button mt--15">
+                                        <a class="rbt-btn btn-gradient icon-hover w-100 d-block text-center" href="#">
+                                            <span class="btn-text">Başvur</span>
+                                            <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                        </a>
+                                    </div>
+
+                                    <div class="buy-now-btn mt--15">
+                                        <a class="rbt-btn btn-border icon-hover w-100 d-block text-center" href="#">
+                                            <span class="btn-text">satın al</span>
+                                            <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                        </a>
+                                    </div>
+                                    <span class="subtitle"><i class="feather-rotate-ccw"></i> 30 Günlük Para İadesi
+                                        Garanti</span>
                                 </div>
-
-                                <div class="buy-now-btn mt--15">
-                                    <a class="rbt-btn btn-border icon-hover w-100 d-block text-center" href="#">
-                                        <span class="btn-text">satın al</span>
-                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                                    </a>
-                                </div>
-
-                                <span class="subtitle"><i class="feather-rotate-ccw"></i> 30 Günlük Para İadesi
-                                    Garanti</span>
-
-
                                 <div class="rbt-widget-details has-show-more">
 
 
@@ -2638,46 +2634,166 @@
                                             <div class="row full-height justify-content-center">
                                                 <div class="col-12 text-center align-self-center py-5">
                                                     <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                                                        <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span>
-                                                        </h6>
-                                                        <input class="checkbox" type="checkbox" id="reg-log"
-                                                            name="reg-log" />
+                                                        <h4 class="mb-0 pb-3"><span>Başvur </span>/<span> Soru
+                                                                Sor</span></h4>
+                                                        <input class="checkbox" class="border_none" type="checkbox"
+                                                            id="reg-log" />
                                                         <label for="reg-log"></label>
                                                         <div class="card-3d-wrap mx-auto">
                                                             <div class="card-3d-wrapper">
                                                                 <div class="card-front">
                                                                     <div class="center-wrap">
                                                                         <div class="section text-center">
-                                                                            <h4 class="mb-4 pb-3">Biz Sizi Arayalım</h4>
-                                                                            <div class="form-group">
-                                                                                <input type="email" 
-                                                                                    class="form-style"
+                                                                            <h4 class=" form_title_1">Başvur</4h>
+                                                                            <div class="form-group mt-4">
+                                                                                <input type="text"
+                                                                                    class="form-style form-style_1"
+                                                                                    placeholder="İsim Soyisim"
+                                                                                    autocomplete="off">
+                                                                                <i class="input-icon fa fa-user"></i>
+                                                                            </div>
+                                                                            <div class="form-group mt-3">
+                                                                                <input type="email"
+                                                                                    class="form-style form-style_1"
                                                                                     placeholder="E-mail"
                                                                                     autocomplete="off">
-                                                                                <i class="input-icon uil uil-at"></i>
+                                                                                <i class="input-icon fa fa-envelope"></i>
                                                                             </div>
-                                                                            <div class="form-group mt-2">
-                                                                                <input type="tel" 
-                                                                                    class="form-style"
+                                                                            <div class="form-group mt-3">
+                                                                                <input type="tel"
+                                                                                    class="form-style form-style_1"
                                                                                     placeholder="Telefon"
-                                                                                     autocomplete="off">
-                                                                                <i
-                                                                                    class="input-icon uil uil-lock-alt"></i>
+                                                                                    autocomplete="off">
+                                                                                <i class="input-icon fa fa-phone"></i>
                                                                             </div>
-                                                                            <a href="#" class="btn mt-4">Gönder</a>
-                                                                           
+                                                                            <div class="form-group mt-5">
+                                                                                <select  class="form-control">
+                                                                                    <option selected="selected" value="0">İl Seçiniz</option>
+                                                                                    <option value="81">Adana</option>
+                                                                                    <option value="80">Adıyaman</option>
+                                                                                    <option value="79">Afyonkarahisar</option>
+                                                                                    <option value="78">Ağrı</option>
+                                                                                    <option value="14">Aksaray</option>
+                                                                                    <option value="77">Amasya</option>
+                                                                                    <option value="76">Ankara</option>
+                                                                                    <option value="75">Antalya</option>
+                                                                                    <option value="7">Ardahan</option>
+                                                                                    <option value="74">Artvin</option>
+                                                                                    <option value="73">Aydın</option>
+                                                                                    <option value="72">Balıkesir</option>
+                                                                                    <option value="8">Bartın</option>
+                                                                                    <option value="10">Batman</option>
+                                                                                    <option value="13">Bayburt</option>
+                                                                                    <option value="71">Bilecik</option>
+                                                                                    <option value="70">Bingöl</option>
+                                                                                    <option value="69">Bitlis</option>
+                                                                                    <option value="68">Bolu</option>
+                                                                                    <option value="67">Burdur</option>
+                                                                                    <option value="66">Bursa</option>
+                                                                                    <option value="65">Çanakkale</option>
+                                                                                    <option value="64">Çankırı</option>
+                                                                                    <option value="63">Çorum</option>
+                                                                                    <option value="62">Denizli</option>
+                                                                                    <option value="61">Diyarbakır</option>
+                                                                                    <option value="1">Düzce</option>
+                                                                                    <option value="60">Edirne</option>
+                                                                                    <option value="59">Elazığ</option>
+                                                                                    <option value="58">Erzincan</option>
+                                                                                    <option value="57">Erzurum</option>
+                                                                                    <option value="56">Eskişehir</option>
+                                                                                    <option value="55">Gaziantep</option>
+                                                                                    <option value="54">Giresun</option>
+                                                                                    <option value="53">Gümüşhane</option>
+                                                                                    <option value="52">Hakkari</option>
+                                                                                    <option value="51">Hatay</option>
+                                                                                    <option value="6">Iğdır</option>
+                                                                                    <option value="50">Isparta</option>
+                                                                                    <option value="48">İstanbul</option>
+                                                                                    <option value="47">İzmir</option>
+                                                                                    <option value="36">Kahramanmaraş</option>
+                                                                                    <option value="4">Karabük</option>
+                                                                                    <option value="12">Karaman</option>
+                                                                                    <option value="46">Kars</option>
+                                                                                    <option value="45">Kastamonu</option>
+                                                                                    <option value="44">Kayseri</option>
+                                                                                    <option value="11">Kırıkkale</option>
+                                                                                    <option value="43">Kırklareli</option>
+                                                                                    <option value="42">Kırşehir</option>
+                                                                                    <option value="3">Kilis</option>
+                                                                                    <option value="41">Kocaeli</option>
+                                                                                    <option value="40">Konya</option>
+                                                                                    <option value="39">Kütahya</option>
+                                                                                    <option value="38">Malatya</option>
+                                                                                    <option value="37">Manisa</option>
+                                                                                    <option value="35">Mardin</option>
+                                                                                    <option value="49">Mersin</option>
+                                                                                    <option value="34">Muğla</option>
+                                                                                    <option value="33">Muş</option>
+                                                                                    <option value="32">Nevşehir</option>
+                                                                                    <option value="31">Niğde</option>
+                                                                                    <option value="30">Ordu</option>
+                                                                                    <option value="2">Osmaniye</option>
+                                                                                    <option value="29">Rize</option>
+                                                                                    <option value="28">Sakarya</option>
+                                                                                    <option value="27">Samsun</option>
+                                                                                    <option value="26">Siirt</option>
+                                                                                    <option value="25">Sinop</option>
+                                                                                    <option value="24">Sivas</option>
+                                                                                    <option value="19">Şanlıurfa</option>
+                                                                                    <option value="9">Şırnak</option>
+                                                                                    <option value="23">Tekirdağ</option>
+                                                                                    <option value="22">Tokat</option>
+                                                                                    <option value="21">Trabzon</option>
+                                                                                    <option value="20">Tunceli</option>
+                                                                                    <option value="82">Türkiye Genel</option>
+                                                                                    <option value="18">Uşak</option>
+                                                                                    <option value="17">Van</option>
+                                                                                    <option value="5">Yalova</option>
+                                                                                    <option value="16">Yozgat</option>
+                                                                                    <option value="15">Zonguldak</option>
+                                                                            
+                                                                                </select>
+                                                                                <div class="selection">
+                                                                                    <i class="input-icon  fa fa-phone"></i>
+                                                                                </div>
+                                                                            
+                                                                            </div>
+                                                                            <div class="form-group mt-5">
+                                                                                <select class="form-control">
+                                                                                    <option value="0">İlçe Seçiniz</option>
+                                                                                    <option value="782">Adaklı</option>
+                                                                                    <option value="784">Genç</option>
+                                                                                    <option value="785">Karlıova</option>
+                                                                                    <option value="786">Kiğı</option>
+                                                                                    <option value="783">Merkez</option>
+                                                                                    <option value="787">Solhan</option>
+                                                                                    <option value="788">Yayladere</option>
+                                                                                    <option value="789">Yedisu</option>
+                                                                                
+                                                                                </select>
+                                                                                <div class="selection">
+                                                                                    <i class="input-icon  fa fa-phone"></i>
+                                                                                </div>
+                                                                            
+                                                                            </div>
+                                                                            <div class="add-to-card-button mt-5">
+                                                                                <a class="rbt-btn btn-gradient icon-hover w-100 d-block text-center" href="#">
+                                                                                    <span class="btn-text">Başvur</span>
+                                                                                    <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                                                                </a>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="card-back">
                                                                     <div class="center-wrap">
                                                                         <div class="section text-center">
-                                                                            <h4 class="mb-4 pb-3">Sign Up</h4>
+                                                                            <h5 class="mb-2 form_title_1 ">Soru Sor</h5>
                                                                             <div class="form-group">
-                                                                                <input type="text" name="logname"
+                                                                                <input type="text" 
                                                                                     class="form-style"
-                                                                                    placeholder="Your Full Name"
-                                                                                    id="logname" autocomplete="off">
+                                                                                    placeholder="İsim Soyisim"
+                                                                                    autocomplete="off">
                                                                                 <i class="input-icon uil uil-user"></i>
                                                                             </div>
                                                                             <div class="form-group mt-2">
@@ -2687,7 +2803,15 @@
                                                                                     id="logemail" autocomplete="off">
                                                                                 <i class="input-icon uil uil-at"></i>
                                                                             </div>
-                                                                            <a href="#" class="btn mt-4">submit</a>
+                                                                            <div class="form-group mt-2">
+                                                                                <input type="password" name="logpass"
+                                                                                    class="form-style"
+                                                                                    placeholder="Your Password"
+                                                                                    id="logpass" autocomplete="off">
+                                                                                <i
+                                                                                    class="input-icon uil uil-lock-alt"></i>
+                                                                            </div>
+                                                                            <a href="#" class="btn mt-4"></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -2700,7 +2824,7 @@
                                     </div>
                                 </div>
 
-                                <div class="social-share-wrapper mt--30 text-center">
+                                <div class="social-share-wrapper mt--80 text-center">
                                     <div class="rbt-post-share d-flex align-items-center justify-content-center">
                                         <ul
                                             class="social-icon social-default transparent-with-border justify-content-center">

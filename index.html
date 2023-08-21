@@ -40,12 +40,13 @@
         header {
             display: none;
             transition: 0.3s ease;
-          }
-          @media (max-width: 992px) {
+        }
+
+        @media (max-width: 992px) {
             header {
-              display: block;
+                display: block;
             }
-          }
+        }
     </style>
 </head>
 
@@ -3395,12 +3396,12 @@
                 end: () => `+=4320`
             }
         });
-        setTimeout(function() {
+        setTimeout(function () {
             const header = document.querySelector('header');
             header.style.display = 'block';
             gsap.from(header, { duration: 1, opacity: 0 });
-        },13000);
-        
+        }, 13000);
+
     </script>
 </body>
 
