@@ -1337,27 +1337,89 @@ gsap.to(heroAnimate, { duration: 1, height: `${windowHeight}px` });
 // }, 4000);
 
 
-    // document.addEventListener("DOMContentLoaded", function() {
-    //     const popupOverlay = document.getElementById('popupOverlay');
-    //     const popupCTA = document.getElementById('popupCTA');
-    //     const popupClose = document.getElementById('popupClose');
-    //     const body = document.querySelector('body');
-    //     const formURL = "https://example.com/form"; // Replace with your form URL
-      
-    //     // Show the popup overlay after 2 seconds
-    //     setTimeout(function() {
-    //       popupOverlay.style.display = "flex";
-    //       body.classList.add('no-scroll'); // Prevent scrolling
-    //     }, 2000);
-      
-    //     // Close the popup overlay and enable scrolling when the close button is clicked
-    //     popupClose.addEventListener('click', function() {
-    //       popupOverlay.style.display = "none";
-    //       body.classList.remove('no-scroll'); // Allow scrolling
-    //     });
-      
-    //     // Redirect to the form page when the call-to-action button is clicked
-    //     popupCTA.addEventListener('click', function() {
-    //       window.location.href = formURL;
-    //     });
-    //   });
+// document.addEventListener("DOMContentLoaded", function() {
+//     const popupOverlay = document.getElementById('popupOverlay');
+//     const popupCTA = document.getElementById('popupCTA');
+//     const popupClose = document.getElementById('popupClose');
+//     const body = document.querySelector('body');
+//     const formURL = "https://example.com/form"; // Replace with your form URL
+
+//     // Show the popup overlay after 2 seconds
+//     setTimeout(function() {
+//       popupOverlay.style.display = "flex";
+//       body.classList.add('no-scroll'); // Prevent scrolling
+//     }, 2000);
+
+//     // Close the popup overlay and enable scrolling when the close button is clicked
+//     popupClose.addEventListener('click', function() {
+//       popupOverlay.style.display = "none";
+//       body.classList.remove('no-scroll'); // Allow scrolling
+//     });
+
+//     // Redirect to the form page when the call-to-action button is clicked
+//     popupCTA.addEventListener('click', function() {
+//       window.location.href = formURL;
+//     });
+//   });
+
+const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+tl.to(".lightCyan-slider", {
+    x: "-10%",
+    duration: 1,
+});
+
+tl.to(
+    ".persianGreen-slider",
+    {
+        x: "-20%",
+        duration: 1.5,
+    },
+    "-=1"
+);
+
+tl.to(
+    ".white-slider",
+    {
+        x: "-30%",
+        duration: 1.5,
+    },
+    "-=1"
+);
+
+tl.to(".hide1", {
+    x: "0%",
+    duration: 2,
+    opacity: 1,
+});
+
+tl.to(".preloader", {
+    x: "200%",
+    duration: 3,
+});
+
+tl.fromTo(
+    "nav",
+    {
+        opacity: 0,
+    },
+    {
+        opacity: 1,
+        duration: 1,
+    },
+    "-=2"
+);
+
+tl.fromTo(
+    ".hero-content",
+    {
+        opacity: 0,
+        y: -20,
+    },
+    {
+        opacity: 1,
+        duration: 1,
+        y: 0,
+    },
+    "-=1.5"
+);
