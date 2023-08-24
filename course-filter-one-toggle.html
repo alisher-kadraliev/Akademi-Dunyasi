@@ -106,7 +106,10 @@
                                 <div class="rbt-separator d-none d-xl-block"></div>
 
                                 <div class="header-info">
-                                    <ul class="rbt-dropdown-menu switcher-language">
+                                    <div id="google_translate_element">
+                                      
+                                    </div>
+                                    <!-- <ul class="rbt-dropdown-menu switcher-language">
                                         <li class="has-child-menu">
                                             <a href="#">
                                                 <img class="left-image" src="assets/images/icons/tr.webp" alt="Türkçe">
@@ -130,7 +133,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
 
 
@@ -2403,7 +2406,14 @@
     <script src="assets/js/vendor/paralax-scroll.js"></script>
     <script src="assets/js/vendor/paralax.min.js"></script>
     <script src="assets/js/vendor/countdown.js"></script>
-
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar,en,tr,fr,de,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="assets/js/vendor/plyr.js"></script>
     <script src="assets/js/vendor/plyr.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
