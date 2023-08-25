@@ -117,6 +117,7 @@
 /**************************************
     Default Styles
 ***************************************/
+
 /*-- Variables --*/
 :root {
   --color-primary: #ef0107;
@@ -3408,6 +3409,7 @@ textarea:-ms-input-placeholder {
 }
 
 .pb--60 {
+  padding-top: 48px;
   padding-bottom: 60px !important;
 }
 
@@ -34774,6 +34776,9 @@ a.slide_btn {
 .bay_subtest7 span{
   color: #91c36c;
 }
+.bay_subtest4 span{
+  color: #c0cb49;
+}
 .bay_subtest6 span{
   color: #359bcb;
 }
@@ -34938,4 +34943,359 @@ margin-bottom: 142px;
   border-right: 17px solid transparent;
   border-bottom: 40px solid #91c36c;
   transform: rotate(233deg);
+}
+
+/* Add this CSS code to your existing stylesheet */
+.bay_modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: hsla(0, 0%, 40%, .6);
+}
+
+
+
+.modal-content.orn {
+  background-image: linear-gradient(
+    135deg,
+    hsl(21deg 84% 52%) 0%,
+    hsl(20deg 87% 57%) 43%,
+    hsl(20deg 90% 62%) 70%,
+    hsl(20deg 94% 67%) 83%,
+    hsl(20deg 98% 71%) 90%,
+    hsl(20deg 100% 76%) 95%,
+    hsl(20deg 100% 80%) 97%,
+    hsl(20deg 100% 84%) 99%,
+    hsl(20deg 100% 88%) 100%,
+    hsl(21deg 100% 92%) 100%,
+    hsl(21deg 100% 96%) 100%,
+    hsl(0deg 0% 100%) 100%
+  );
+  margin: 9% auto;
+  color: white;
+  width: 72%;
+  padding: 5rem 5rem;
+  border: 1px solid #888;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem hsla(236, 50%, 50%, 0.3);
+  animation: zoomIn 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.modal-content.rd {
+  background-image: linear-gradient(
+    135deg,
+    hsl(339deg 81% 52%) 0%,
+    hsl(343deg 82% 59%) 43%,
+    hsl(346deg 84% 65%) 70%,
+    hsl(347deg 87% 70%) 83%,
+    hsl(349deg 91% 75%) 90%,
+    hsl(350deg 95% 79%) 95%,
+    hsl(351deg 99% 83%) 97%,
+    hsl(351deg 100% 86%) 99%,
+    hsl(352deg 100% 90%) 100%,
+    hsl(352deg 100% 93%) 100%,
+    hsl(352deg 100% 97%) 100%,
+    hsl(0deg 0% 100%) 100%
+  );
+  margin: 9% auto;
+  color: white;
+  width: 72%;
+  padding: 5rem 5rem;
+  border: 1px solid #888;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem hsla(236, 50%, 50%, 0.3);
+  animation: zoomIn 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.modal-content.vio {
+  background-image: linear-gradient(
+    135deg,
+    hsl(298deg 36% 42%) 0%,
+    hsl(298deg 29% 47%) 43%,
+    hsl(299deg 26% 53%) 70%,
+    hsl(300deg 26% 58%) 83%,
+    hsl(300deg 26% 63%) 90%,
+    hsl(301deg 26% 68%) 95%,
+    hsl(301deg 27% 73%) 97%,
+    hsl(302deg 27% 79%) 99%,
+    hsl(302deg 28% 84%) 100%,
+    hsl(302deg 28% 89%) 100%,
+    hsl(303deg 28% 95%) 100%,
+    hsl(0deg 0% 100%) 100%
+  );
+  margin: 9% auto;
+  color: white;
+  width: 72%;
+  padding: 5rem 5rem;
+  border: 1px solid #888;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem hsla(236, 50%, 50%, 0.3);
+  animation: zoomIn 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.modal-content.vio {
+  background-image: linear-gradient(
+    135deg,
+    hsl(298deg 36% 42%) 0%,
+    hsl(298deg 29% 47%) 43%,
+    hsl(299deg 26% 53%) 70%,
+    hsl(300deg 26% 58%) 83%,
+    hsl(300deg 26% 63%) 90%,
+    hsl(301deg 26% 68%) 95%,
+    hsl(301deg 27% 73%) 97%,
+    hsl(302deg 27% 79%) 99%,
+    hsl(302deg 28% 84%) 100%,
+    hsl(302deg 28% 89%) 100%,
+    hsl(303deg 28% 95%) 100%,
+    hsl(0deg 0% 100%) 100%
+  );
+  margin: 9% auto;
+  color: white;
+  width: 72%;
+  padding: 5rem 5rem;
+  border: 1px solid #888;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem hsla(236, 50%, 50%, 0.3);
+  animation: zoomIn 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.modal-content.wtgreen {
+  background-image: linear-gradient(
+    135deg,
+    hsl(65deg 56% 54%) 0%,
+    hsl(64deg 55% 59%) 43%,
+    hsl(64deg 55% 63%) 70%,
+    hsl(63deg 55% 67%) 83%,
+    hsl(62deg 54% 71%) 90%,
+    hsl(62deg 54% 75%) 95%,
+    hsl(61deg 54% 79%) 97%,
+    hsl(60deg 54% 83%) 99%,
+    hsl(60deg 55% 88%) 100%,
+    hsl(59deg 56% 92%) 100%,
+    hsl(58deg 57% 96%) 100%,
+    hsl(0deg 0% 100%) 100%
+  );
+  margin: 9% auto;
+  color: white;
+  width: 72%;
+  padding: 5rem 5rem;
+  border: 1px solid #888;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem hsla(236, 50%, 50%, 0.3);
+  animation: zoomIn 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.modal-content.bl {
+  background-image: linear-gradient(
+    135deg,
+    hsl(229deg 43% 43%) 0%,
+    hsl(231deg 33% 49%) 43%,
+    hsl(233deg 31% 54%) 70%,
+    hsl(235deg 31% 59%) 83%,
+    hsl(236deg 31% 65%) 90%,
+    hsl(238deg 31% 70%) 95%,
+    hsl(239deg 31% 75%) 97%,
+    hsl(239deg 31% 80%) 99%,
+    hsl(240deg 31% 85%) 100%,
+    hsl(241deg 31% 90%) 100%,
+    hsl(241deg 32% 95%) 100%,
+    hsl(0deg 0% 100%) 100%
+  );
+  margin: 9% auto;
+  color: white;
+  width: 72%;
+  padding: 5rem 5rem;
+  border: 1px solid #888;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem hsla(236, 50%, 50%, 0.3);
+  animation: zoomIn 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.modal-content.wtbl {
+  background-image: linear-gradient(
+    135deg,
+    hsl(199deg 59% 50%) 0%,
+    hsl(201deg 57% 57%) 43%,
+    hsl(202deg 56% 62%) 70%,
+    hsl(203deg 56% 67%) 83%,
+    hsl(204deg 55% 71%) 90%,
+    hsl(204deg 55% 76%) 95%,
+    hsl(205deg 54% 80%) 97%,
+    hsl(205deg 54% 84%) 99%,
+    hsl(205deg 54% 88%) 100%,
+    hsl(206deg 54% 92%) 100%,
+    hsl(206deg 54% 96%) 100%,
+    hsl(0deg 0% 100%) 100%
+  );
+  margin: 9% auto;
+  color: white;
+  width: 72%;
+  padding: 5rem 5rem;
+  border: 1px solid #888;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem hsla(236, 50%, 50%, 0.3);
+  animation: zoomIn 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.modal-content.gri {
+  background-image: linear-gradient(
+    135deg,
+    hsl(94deg 42% 59%) 0%,
+    hsl(94deg 42% 63%) 43%,
+    hsl(94deg 42% 67%) 70%,
+    hsl(93deg 42% 70%) 83%,
+    hsl(93deg 43% 74%) 90%,
+    hsl(93deg 43% 78%) 95%,
+    hsl(92deg 43% 81%) 97%,
+    hsl(92deg 43% 85%) 99%,
+    hsl(92deg 43% 89%) 100%,
+    hsl(91deg 43% 92%) 100%,
+    hsl(91deg 43% 96%) 100%,
+    hsl(0deg 0% 100%) 100%
+  );
+  margin: 9% auto;
+  color: white;
+  width: 72%;
+  padding: 5rem 5rem;
+  border: 1px solid #888;
+  border-radius: 0.8rem;
+  box-shadow: 0.4rem 0.4rem 2.4rem 0.2rem hsla(236, 50%, 50%, 0.3);
+  animation: zoomIn 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.modal__title{
+  padding-bottom: 15px;
+  text-align: center;
+  color:white;
+  font-size: 37px;
+}
+@media (max-width:555px) {
+  .modal__title{
+    padding-bottom: 15px;
+    text-align: center;
+    color:white;
+    font-size: 25px;
+  }
+}
+.hide-modal .modal-content {
+  animation: zoomOut 0.5s; /* Animation for zooming out */
+}
+.show-modal {
+  display: block!important;
+  animation: fadeIn 0.5s; /* Animation for fading in */
+}
+
+.bay_close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.bay_close:hover,
+.bay_close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Zoom-in animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Zoom-out animation */
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+.bay_close {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid hsla(0, 0%, 100%, .4);
+  border-radius: 100rem;
+
+  color: inherit;
+  font-size: 2.2rem;
+
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .2s;
+}
+
+.bay_close::before {
+  content: '×';
+
+  transform: translateY(-.1rem);
+}
+
+.bay_close:hover,
+.bay_close:focus {
+  border-color: hsla(0, 0%, 100%, .6);
+  transform: translateY(-.2rem);
+}
+.modal__text {
+  padding: 0 4rem;
+  margin-bottom: 4rem;
+
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.modal__text::before {
+  content: '';
+
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid hsla(0, 0%, 100%, .2);
+  border-radius: 100rem;
+
+  pointer-events: none;
+}
+.none_zi{
+  z-index: 0!important;
 }

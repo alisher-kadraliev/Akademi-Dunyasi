@@ -1316,8 +1316,8 @@ let scroll_tl = gsap.timeline({
     facts = [...document.querySelectorAll('.columns_n')]
 scroll_tl.to('.nasil_races', {
     scale: 1,
-    duration: 1,
-    ease: "slow"
+    duration: 0.2,
+    ease: "Power4.easeOut"
 })
 
 
@@ -1525,7 +1525,7 @@ $('.slider').each(function () {
     advance();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     document.getElementsByClassName('tab-link')[0].click();
 });
 
@@ -1544,3 +1544,22 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+//Spline delete
+window.onload = function () {
+    var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
+    shadowRoot.querySelector('#logo').remove();
+}
+
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.classList.add('show-modal');
+    modal.classList.remove('hide-modal');
+  }
+  
+  function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.classList.add('hide-modal');
+    modal.classList.remove('show-modal');
+    setTimeout(() => modal.style.display = 'none', 500); // Hide after animation
+  }
+  

@@ -150,7 +150,7 @@
                 </div>
             </div>
         </div>
-        <div class="rbt-header-wrapper header-space-betwween ">
+        <div class="rbt-header-wrapper header-space-betwween  ">
             <div class="container-fluid">
                 <div class="mainbar-row rbt-navigation-start align-items-center">
                     <div class="header-left rbt-header-content">
@@ -1824,95 +1824,210 @@
 
         </div>
     </div>
+
     <section class="bayilik ">
         <div class="bay-img"><img src="assets/images/logo/bay-logo.png" alt=""></div>
         <div class="bay-box">
-        <div class="center_selection">
-            <div class="center-1 tabs">
-                <div class="content_one">
-                    <div class="bay_subtest bay_subtest_size"> <span>Uzaktan </span>Eğitim</div>
-                <button class="tab-link org pos_1" onclick="openTab(event, 'Tab1')"><i class="feather-video"></i></button>
-                <div class="arrow"></div>
+            <div class="center_selection">
+                <div class="center-1 tabs">
+                    <div class="content_one">
+                        <div class="bay_subtest bay_subtest_size"> <span>Uzaktan </span>Eğitim</div>
+                        <button class="tab-link org pos_1" onclick="openModal('modal1')"><i
+                                class="feather-video"></i></button>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="content_two">
+                        <div class="bay_subtest2 bay_subtest_size"><span> Öğrenci</span> <br> Otomasyonu</div>
+                        <button class="tab-link rd pos_2" onclick="openModal('modal2')"><i
+                                class="feather-search"></i></button>
+                        <div class="arrow2"></div>
+                    </div>
+                    <div class="content_three">
+                        <div class="bay_subtest3 bay_subtest_size"><span> Grafik Tasarım</span><br>ve sosyal medya
+                        </div>
+                        <button class="tab-link vio pos_3" onclick="openModal('modal3')"><i
+                                class="feather-trending-up"></i></button>
+                        <div class="arrow3"></div>
+                    </div>
+                    <div class="content_four">
+                        <div class="bay_subtest4 bay_subtest_size"><span>Kariyer ve İstihdam </span> merkezi </div>
+                        <button class="tab-link wtgreen  pos_4" onclick="openModal('modal4')"><i
+                                class="feather-briefcase"></i></button>
+                        <div class="arrow4"></div>
+                    </div>
+                    <div class="content_five">
+                        <div class="bay_subtest5 bay_subtest_size"><span>Akademi dünyasi </span> <br> Eğitim Geliştirme
+                            ve <br> Destekleme derneği(ADE-GED) </div>
+                        <button class="tab-link bl  pos_5" onclick="openModal('modal5')"><i
+                                class="feather-briefcase"></i></button>
+                        <div class="arrow5"></div>
+                    </div>
+                    <div class="content_six">
+                        <div class="bay_subtest6 bay_subtest_size"><span>Toplam Kalite Yönetimi </span> <br> Sistemi ve
+                            Hizmetiçi Eğitim </div>
+                        <button class="tab-link wtbl  pos_6" onclick="openModal('modal6')"><i
+                                class="feather-sun"></i></button>
+                        <div class="arrow6"></div>
+                    </div>
+                    <div class="content_seven">
+                        <div class="bay_subtest7 bay_subtest_size"><span>Universite <br></span> Belgelendirme <br>
+                            <span> Yurtdışı </span><br> Danışmanlık
+                        </div>
+                        <button class="tab-link gr  pos_7" onclick="openModal('modal7')"><i
+                                class="feather-user-check"></i></button>
+                        <div class="arrow7"></div>
+                    </div>
                 </div>
-                <div class="content_two">
-                    <div class="bay_subtest2 bay_subtest_size"><span> Öğrenci</span> <br> Otomasyonu</div>
-                <button class="tab-link rd pos_2" onclick="openTab(event, 'Tab2')"><i class="feather-search"></i></button>
-                <div class="arrow2"></div>
-                </div>
-                <div class="content_three">
-                    <div class="bay_subtest3 bay_subtest_size"><span> Grafik Tasarım</span><br>ve sosyal medya </div>
-                <button class="tab-link vio pos_3" onclick="openTab(event, 'Tab3')"><i class="feather-trending-up"></i></button>
-                <div class="arrow3"></div>
-                </div>
-                <div class="content_four">
-                    <div class="bay_subtest4 bay_subtest_size"><span>Kariyer ve istihdam</span>merkezi </div>
-                <button class="tab-link wtgreen  pos_4" onclick="openTab(event, 'Tab4')"><i class="feather-briefcase"></i></button>
-                <div class="arrow4"></div>
-                </div>
-                <div class="content_five">
-                    <div class="bay_subtest5 bay_subtest_size"><span>Akademi dünyasi </span> <br> Eğitim Geliştirme ve <br> Destekleme derneği(ADE-GED) </div>
-                <button class="tab-link bl  pos_5" onclick="openTab(event, 'Tab5')"><i class="feather-briefcase"></i></button>
-                <div class="arrow5"></div>
-                </div>
-                <div class="content_six">
-                    <div class="bay_subtest6 bay_subtest_size"><span>Toplam Kalite Yönetimi </span> <br> Sistemi ve Hizmetiçi Eğitim </div>
-                <button class="tab-link wtbl  pos_6" onclick="openTab(event, 'Tab6')"><i class="feather-sun"></i></button>
-                <div class="arrow6"></div>
-                </div>
-                <div class="content_seven">
-                    <div class="bay_subtest7 bay_subtest_size"><span>Universite <br></span> Belgelendirme <br> <span> Yurtdışı </span><br> Danışmanlık </div>
-                <button class="tab-link gr  pos_7" onclick="openTab(event, 'Tab7')"><i class="feather-user-check"></i></button>
-                <div class="arrow7"></div>
-                </div>
-            </div>
-            <div class="main_center">
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.427/build/spline-viewer.js"></script>
-            <spline-viewer url="https://prod.spline.design/s1CapYo0IcFrFXg0/scene.splinecode"></spline-viewer>
-        </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="bay_text">
-            <div class="center-2">
-                <div id="Tab1" class="tab-content">
-                    <h3>UZAKTAN EĞİTİM</h3>
-                    <p>
-                        Tüm altyapısı Akademi Dünyası tarafından hazırlanan internet programı ile kolayca öğrenci kaydı alabilecek, önceden hazırlanmış paket videolar, konu ile ilgili online testler ve canlı yayın dersleri ile artık sizler de sanal bir dershaneye sahip olabileceksiniz.
-                        
-                        Merkezi öğrenci otomasyon sistemi ile öğrenci kaydı, ders programı, programlama, muhasebe ve takip kontrolünü zamandan tasarruf ederek maliyetinizi minimize etme şansına sahip olacaksınız.
-                        
-                        harcamadan kolayca eğitim alabileceklerdir.,</p>
-                </div>
-                <div id="Tab2" class="tab-content">
-                    <h3>ÖĞRENCİ OTOMASYONU</h3>
-                    <p>Merkezi öğrenci otomasyon sistemi ile öğrenci kaydı, ders programı, programlama, muhasebe ve takip kontrolünü zamandan tasarruf ederek maliyetinizi minimize etme şansına sahip olacaksınız.</p>
-                </div>
-                <div id="Tab3" class="tab-content">
-                    <h3>ÖĞRENCİ OTOMASYONU</h3>
-                    <p>Merkezi öğrenci otomasyon sistemi ile öğrenci kaydı, ders programı, programlama, muhasebe ve takip kontrolünü zamandan tasarruf ederek maliyetinizi minimize etme şansına sahip olacaksınız.</p>
-                </div>
-                <div id="Tab4" class="tab-content">
-                    <h3>ÖĞRENCİ OTOMASYONU</h3>
-                    <p>Merkezi öğrenci otomasyon sistemi ile öğrenci kaydı, ders programı, programlama, muhasebe ve takip kontrolünü zamandan tasarruf ederek maliyetinizi minimize etme şansına sahip olacaksınız.</p>
-                </div>
-                <div id="Tab5" class="tab-content">
-                    <h3>ÖĞRENCİ OTOMASYONU</h3>
-                    <p>Merkezi öğrenci otomasyon sistemi ile öğrenci kaydı, ders programı, programlama, muhasebe ve takip kontrolünü zamandan tasarruf ederek maliyetinizi minimize etme şansına sahip olacaksınız.</p>
-                </div>
-                <div id="Tab6" class="tab-content">
-                    <h3>ÖĞRENCİ OTOMASYONU</h3>
-                    <p>Merkezi öğrenci otomasyon sistemi ile öğrenci kaydı, ders programı, programlama, muhasebe ve takip kontrolünü zamandan tasarruf ederek maliyetinizi minimize etme şansına sahip olacaksınız.</p>
-                </div>
-                <div id="Tab7" class="tab-content">
-                    <h3>ÖĞRENCİ OTOMASYONU</h3>
-                    <p>Merkezi öğrenci otomasyon sistemi ile öğrenci kaydı, ders programı, programlama, muhasebe ve takip kontrolünü zamandan tasarruf ederek maliyetinizi minimize etme şansına sahip olacaksınız.</p>
+                <div class="main_center">
+                    <script type="module"
+                        src="https://unpkg.com/@splinetool/viewer@0.9.427/build/spline-viewer.js"></script>
+                    <spline-viewer url="https://prod.spline.design/s1CapYo0IcFrFXg0/scene.splinecode"></spline-viewer>
                 </div>
             </div>
         </div>
-    </div>
-       
+        <div class="container">
+            <div class="bay_text">
+                <div class="center-2">
+                    <div id="modal1" class="bay_modal">
+                        <div class="modal-content orn">
+                            <span class="bay_close " onclick="closeModal('modal1')"></span>
+                            <h2 class="modal__title">UZAKTAN EĞİTİM</h2>
+                            <hr>
+                            <p class="modal__text">Tüm altyapısı Akademi Dünyası tarafından hazırlanan internet programı
+                                ile kolayca öğrenci kaydı alabilecek, önceden hazırlanmış paket videolar, konu ile
+                                ilgili online testler ve canlı yayın dersleri ile artık sizler de sanal bir dershaneye
+                                sahip olabileceksiniz.
+
+                                “Eğitim Ayağınıza Geliyor” sloganımız ile öğrencilerimiz eğitime kendi ev, ofis, akıllı
+                                telefon, bilgisayar vb. teknolojik aletler kullanarak yol için zaman ve ekstra para
+
+                                harcamadan kolayca eğitim alabileceklerdir.</p>
+                        </div>
+
+                    </div>
+                    <div id="modal2" class="bay_modal">
+                        <div class="modal-content rd">
+                            <span class="bay_close " onclick="closeModal('modal2')"></span>
+                            <h2 class="modal__title">ÖĞRENCİ OTOMASYONU</h2>
+                            <hr>
+                            <p class="modal__text">Merkezi öğrenci otomasyon sistemi ile öğrenci kaydı, ders programı,
+                                programlama, muhasebe ve takip kontrolünü zamandan tasarruf ederek maliyetinizi minimize
+                                etme şansına sahip olacaksınız.</p>
+                        </div>
+
+                    </div>
+                    <div id="modal3" class="bay_modal">
+                        <div class="modal-content vio">
+                            <span class="bay_close " onclick="closeModal('modal3')"></span>
+                            <h2 class="modal__title">GRAFİK TASARIM VE SOSYAL MEDYA</h2>
+                            <hr>
+                            <p class="modal__text">Gelişen Dünyamızda teknolojinin de sürekli gelişim göstermesi Grafik
+                                Tasarım (Photoshop, InDesign, illustrator vb.) dersleri ve uygulama ile iç dizayn
+                                tasarımları desteği ve Sosyal Medyada adınızın sıkça reklam olarak paydaşlarınıza
+                                kolayca erişmesi için tüm varlığımız ile yanınızdayız. Merkez Kuruluş olarak ihtiyaç
+                                duyabileceğiniz her mecrada tanınmanız için (grafik tasarım, sosyal medya vb.) ne
+                                gerekiyorsa yapmaya hazırız.</p>
+                        </div>
+
+                    </div>
+                    <div id="modal4" class="bay_modal">
+                        <div class="modal-content wtgreen">
+                            <span class="bay_close " onclick="closeModal('modal4')"></span>
+                            <h2 class="modal__title">KARİYER VE İSTİHDAM MERKEZİ</h2>
+                            <hr>
+                            <p class="modal__text">İŞKOLOJİ İSTİHDAM OFİSİ Genel Merkezimiz bünyesinde faaliyette
+                                bulunan İŞKUR bağlantılı özel istihdam ofisimizdir. İŞKOLOJİ çalışmaları sayesinde
+                                kurumunuzdan eğitim almış olan öğrencileriniz ve bölgenizde sizinle iletişime geçen
+                                istihdam ihtiyacı olan bireylerin işe yerleştirilmeleri, genel merkezin yoğun
+                                çalışmaları (işveren işçi görüşmeleri-mülakat görüşmeleri) sonucunda bu kişiler iş
+                                sahibi olacak, bu durumda sizlerin ve öğrencilerinizin gelecek korkusunu ortadan
+                                kaldırmaya yardımcı olacaktır.</p>
+                        </div>
+
+                    </div>
+                    <div id="modal5" class="bay_modal">
+                        <div class="modal-content bl">
+                            <span class="bay_close " onclick="closeModal('modal5')"></span>
+                            <h2 class="modal__title">AKADEMİ DÜNYASI EĞİTİMİ GELİŞTİRME VE DESTEKLEME DERNEĞİ (ADE-GED)
+                            </h2>
+                            <hr>
+                            <p class="modal__text">ADE-GED, Sivil toplum kuruluşları kamu yararı gözeterek yapılabilecek
+                                her türlü sosyal, kültürel proje bazlı çalışmayı yapabilmek adına Akademi Dünyası
+                                Eğitimi Destekleme Ve Geliştirme Derneği (ADE-GED) olarak bünyemizde faaliyet
+                                göstermektedir. ADE-GED Franchiselarımızın ve genel merkezin oluşturmuş oldukları
+                                projelerin bulundukları bölgede yasal olarak hayata geçirebilmek için büyük bir olanak
+                                sağlamaktadır.</p>
+                        </div>
+
+                    </div>
+                    <div id="modal6" class="bay_modal">
+                        <div class="modal-content wtbl">
+                            <span class="bay_close " onclick="closeModal('modal6')"></span>
+                            <h2 class="modal__title">YURTDIŞI DANIŞMANLIK</h2>
+                            <hr>
+                            <p class="modal__text">Akademi Dünyası Yurtdışı Eğitim ve Kariyer Danışmanlık, yurtdışında
+                                eğitim almak isteyen öğrencilere veya yurtdışında çalışmak isteyenlere eğitim ve kariyer
+                                hedeflerine uygun profesyonel bir servis vererek, en doğru tercihleri yapmalarını
+                                sağlamaktadır.</p>
+                        </div>
+
+                    </div>
+                    <div id="modal7" class="bay_modal">
+                        <div class="modal-content gri">
+                            <span class="bay_close " onclick="closeModal('modal7')"></span>
+                            <h2 class="modal__title">ÜNİVERSİTE BELGELENDİRME
+
+                            </h2>
+                            <hr>
+                            <p class="modal__text">Uzaktan Eğitim veya Örgün Eğitim alan kursiyerlere anlaşmalı
+                                olduğumuz Üniversitelerden (Devlet, Özel) uygun maliyetli sertifika imkanı sunuyoruz.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
-    <div class="rbt-call-to-action-area rbt-section-gap bg-gradient-8">
+    <div class="rbt-contact-form contact-form-style-1 max-width-auto none_zi col-6">
+        <div class="section-title text-start">
+            <span class="subtitle bg-primary-opacity">EDUCATION FOR EVERYONE</span>
+        </div>
+        <h3 class="title">Get a Free Course You Can Contact With Me</h3>
+        <form id="contact-form" method="POST" action="mail.php" class="rainbow-dynamic-form max-width-auto">
+            <div class="form-group">
+                <input name="contact-name" id="contact-name" type="text">
+                <label>Name</label>
+                <span class="focus-border"></span>
+            </div>
+            <div class="form-group">
+                <input name="contact-phone" type="email">
+                <label>Email</label>
+                <span class="focus-border"></span>
+            </div>
+            <div class="form-group">
+                <input type="text" id="subject" name="subject">
+                <label>Your Subject</label>
+                <span class="focus-border"></span>
+            </div>
+            <div class="form-group">
+                <textarea name="contact-message" id="contact-message"></textarea>
+                <label>Message</label>
+                <span class="focus-border"></span>
+            </div>
+            <div class="form-submit-group">
+                <button name="submit" type="submit" id="submit" class="rbt-btn btn-md btn-gradient hover-icon-reverse w-100">
+                    <span class="icon-reverse-wrapper">
+                        <span class="btn-text">GET IT NOW</span>
+                    <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                    <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="rbt-call-to-action-area rbt-section-gap bg-gradient-8 ">
         <div class="rbt-callto-action rbt-cta-default style-6">
             <div class="container">
                 <div class="row g-5 align-items-center content-wrapper">
@@ -1925,7 +2040,9 @@
                     </div>
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
                         <div class="inner-content text-start">
-                            <p class="color-white">Apply for Admission in Post Graduate Diploma. Application Deadline: 26th September 2023 · Undergraduate &amp; Graduate Admission: Fall 2023 Semester · 20% Waiver on ...
+                            <p class="color-white">Apply for Admission in Post Graduate Diploma. Application Deadline:
+                                26th September 2023 · Undergraduate &amp; Graduate Admission: Fall 2023 Semester · 20%
+                                Waiver on ...
                             </p>
                         </div>
                     </div>
@@ -1933,9 +2050,9 @@
                         <div class="call-to-btn text-start text-xl-end">
                             <a class="rbt-btn btn-white hover-icon-reverse" href="#">
                                 <span class="icon-reverse-wrapper">
-                            <span class="btn-text">Şimdi Başvur</span>
-                                <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                                <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                    <span class="btn-text">Şimdi Başvur</span>
+                                    <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                    <span class="btn-icon"><i class="feather-arrow-right"></i></span>
                                 </span>
                             </a>
                         </div>
