@@ -896,12 +896,12 @@
             $.fn.hasShowMore = function () {
                 return this.each(function () {
                     $(this).toggleClass('active');
-                    $(this).text('Show Less');
+                    $(this).text('Daha az göster');
                     $(this).parent('.has-show-more').toggleClass('active');
                     if ($(this).parent('.has-show-more').hasClass('active')) {
-                        $(this).text('Show Less');
+                        $(this).text('Daha az göster');
                     } else {
-                        $(this).text('Show More');
+                        $(this).text('Daha fazla göster');
                     }
                 });
             };
