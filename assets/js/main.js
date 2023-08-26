@@ -297,8 +297,8 @@
                 loop: false,
                 autoHeight: true,
                 navigation: {
-                    nextEl: '.rbt-arrow-left',
-                    prevEl: '.rbt-arrow-right',
+                    nextEl: '.rbt-arrow-right ',
+                    prevEl: '.rbt-arrow-left',
                     clickable: true,
                 },
                 thumbs: {
@@ -1550,16 +1550,27 @@ window.onload = function () {
     shadowRoot.querySelector('#logo').remove();
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    // This will run when the document is fully loaded
+    var allModals = document.querySelectorAll('.show-modal');
+
+    allModals.forEach((modal) => {
+        modal.classList.add('hide-modal');
+        modal.classList.remove('show-modal');
+        modal.style.display = 'none'; // Initially set to none
+    });
+});
+
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
+    modal.style.display = 'block'; // Make sure it's visible
     modal.classList.add('show-modal');
     modal.classList.remove('hide-modal');
-  }
-  
-  function closeModal(modalId) {
+}
+
+function closeModal(modalId) {
     var modal = document.getElementById(modalId);
     modal.classList.add('hide-modal');
     modal.classList.remove('show-modal');
     setTimeout(() => modal.style.display = 'none', 500); // Hide after animation
-  }
-  
+}
