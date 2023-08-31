@@ -155,6 +155,10 @@
                     el: '.rbt-swiper-pagination',
                     clickable: true,
                 },
+                navigation: {
+                    nextEl: '.rbt-arrow-right',
+                    prevEl: '.rbt-arrow-left',
+                },
             });
 
             var swiper = new Swiper('.team-slide-activation', {
@@ -253,8 +257,8 @@
                 spaceBetween: 0,
                 loop: false,
                 navigation: {
-                    nextEl: '.rbt-arrow-left',
-                    prevEl: '.rbt-arrow-right',
+                    nextEl: '.rbt-arrow-right',
+                    prevEl: '.rbt-arrow-left ',
                     clickable: true,
                 },
                 breakpoints: {
@@ -1182,11 +1186,6 @@ document.getElementById("readMoreBtn").addEventListener("click", function () {
     this.textContent = this.textContent === "Daha az göster" ? "Daha çok göster" : "Daha az göster";
 });
 //smooth
-const lenis = new Lenis()
-
-lenis.on('scroll', (e) => {
-    console.log(e)
-})
 
 function raf(time) {
     lenis.raf(time)
@@ -1332,35 +1331,46 @@ const heroAnimate = document.querySelector('.hero_animate');
 gsap.to(heroAnimate, { duration: 1, height: `${windowHeight}px` });
 
 // Wait 4 seconds and then animate back to 700px
-// setTimeout(() => {
-//     gsap.to(heroAnimate, { duration: 1, height: '750px' });
-// }, 4000);
+setTimeout(() => {
+    gsap.to(heroAnimate, { duration: 1, height: '750px' });
+}, 4000);
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const popupOverlay = document.getElementById('popupOverlay');
-//     const popupCTA = document.getElementById('popupCTA');
-//     const popupClose = document.getElementById('popupClose');
-//     const body = document.querySelector('body');
-//     const formURL = "https://example.com/form"; // Replace with your form URL
+document.addEventListener("DOMContentLoaded", function () {
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupClose = document.getElementById('popupClose');
+    const targetContent = document.getElementById('targetContent');
+    const body = document.querySelector('body');
+    const formURL = "https://example.com/form"; // Replace with your form URL
+    let isPopupShown = false;
 
-//     // Show the popup overlay after 2 seconds
-//     setTimeout(function() {
-//       popupOverlay.style.display = "flex";
-//       body.classList.add('no-scroll'); // Prevent scrolling
-//     }, 2000);
+    // Function to show popup
+    function showPopup() {
+        popupOverlay.style.display = "flex";
+        body.classList.add('no-scroll'); // Prevent scrolling
+        isPopupShown = true;
+    }
 
-//     // Close the popup overlay and enable scrolling when the close button is clicked
-//     popupClose.addEventListener('click', function() {
-//       popupOverlay.style.display = "none";
-//       body.classList.remove('no-scroll'); // Allow scrolling
-//     });
+    // Close the popup overlay and enable scrolling when the close button is clicked
+    popupClose.addEventListener('click', function () {
+        popupOverlay.style.display = "none";
+        body.classList.remove('no-scroll'); // Allow scrolling
+    });
 
-//     // Redirect to the form page when the call-to-action button is clicked
-//     popupCTA.addEventListener('click', function() {
-//       window.location.href = formURL;
-//     });
-//   });
+
+
+    // Listen to scroll event
+    window.addEventListener('scroll', function () {
+        const targetPosition = targetContent.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        // Show popup when the top of the target content reaches the middle of the window
+        if (targetPosition < windowHeight / 2 && !isPopupShown) {
+            showPopup();
+        }
+    });
+});
+
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
@@ -1394,9 +1404,17 @@ tl.to(".hide1", {
 });
 
 tl.to(".preloader", {
-    x: "200%",
-    duration: 3,
+    opacity: 0,
+    duration: 2,
+
 });
+tl.to(".preloader", {
+    x: '200%',
+    duration: 2.5,
+
+});
+
+
 
 
 
@@ -1550,7 +1568,7 @@ window.onload = function () {
     shadowRoot.querySelector('#logo').remove();
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // This will run when the document is fully loaded
     var allModals = document.querySelectorAll('.show-modal');
 
@@ -1574,3 +1592,4 @@ function closeModal(modalId) {
     modal.classList.remove('show-modal');
     setTimeout(() => modal.style.display = 'none', 500); // Hide after animation
 }
+

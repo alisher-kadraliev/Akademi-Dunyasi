@@ -40,13 +40,20 @@
 </head>
 
 <body class="rbt-header-sticky  ">
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="prl-logo">
           <h1 class="hide1"> <img src="assets/images/logo/logo_down.png" width="300px" height="300px" alt=""> </h1>
         </div>
         <div class="lightCyan-slider"></div>
         <div class="persianGreen-slider"></div>
         <div class="white-slider"></div>
+      </div> -->
+      <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-content">
+          <button id="popupClose" class="popup-close">&times;</button>
+          <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.432/build/spline-viewer.js"></script>
+          <spline-viewer url="https://prod.spline.design/MxIl8qHNaQPLwpvN/scene.splinecode"></spline-viewer>
+        </div>
       </div>
     <header class="rbt-header rbt-header-10 ">
         <div class="rbt-sticky-placeholder"></div>
@@ -1158,7 +1165,7 @@
                                                         <div class="nav-category-item">
                                                             <div class="thumbnail">
                                                                 <div class="image"><img
-                                                                        src="assets/images/course/category-2.png"
+                                                                        src="assets/images/course/category-1.png"
                                                                         alt="Course images"></div>
                                                                 <a href="bayilik.html">
                                                                     <span>Bayilik</span>
@@ -1169,7 +1176,7 @@
                                                         <div class="nav-category-item">
                                                             <div class="thumbnail">
                                                                 <div class="image"><img
-                                                                        src="assets/images/course/category-2.png"
+                                                                        src="assets/images/course/category-1.png"
                                                                         alt="Course images"></div>
                                                                 <a href="course-masonry.html">
                                                                     <span>Kurslar</span>
@@ -2007,10 +2014,9 @@
         </div>
         <!-- End Banner Area  -->
     </div>
-
+  
     <br>
     <div class="rbt-elements-presentation-area overflow-hidden  rbt-section-gapBottom top_space" id="sec-2">
-
         <div class="wrapper ">
             <div class="row">
                 <div class="col-lg-12">
@@ -2025,8 +2031,7 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="col-lg-4">
                         <div class="content">
-                            <div
-                                class="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events">
+                            <div class="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events rbt-arrow-between ">
                                 <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms;"
                                     id="swiper-wrapper-c133c106a69478ba1" aria-live="polite">
                                     <div class="swiper-slide card_hover"
@@ -2052,7 +2057,9 @@
                                         </div>
                                         <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
                                         </div>
+                                        
                                     </div>
+                                    
                                     <div class="swiper-slide card_hover swiper-slide-prev"
                                         style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
                                         role="group" aria-label="2 / 3">
@@ -2318,8 +2325,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                <div class="rbt-swiper-arrow rbt-arrow-left" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-c133c106a69478ba1" aria-disabled="false">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-left"></i>
+                                        <i class="rbt-icon-top feather-arrow-left"></i>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-arrow rbt-arrow-right " tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-c133c106a69478ba1" aria-disabled="true">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-right"></i>
+                                        <i class="rbt-icon-top feather-arrow-right"></i>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
                                     <span class="swiper-pagination-bullet" tabindex="0" role="button"
                                         aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
                                         tabindex="0" role="button" aria-label="Go to slide 2"></span><span
@@ -2333,9 +2351,9 @@
                     <div class="col-lg-4">
                         <div class="content">
                             <div
-                                class="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events">
+                                class="banner-card rbt-arrow-between pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events">
                                 <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms;"
-                                    id="swiper-wrapper-c133c106a69478ba1" aria-live="polite">
+                                    id="swiper-wrapper-c133c106a69478ba2" aria-live="polite">
                                     <div class="swiper-slide card_hover"
                                         style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
                                         role="group" aria-label="1 / 3">
@@ -2625,8 +2643,338 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                <div class="rbt-swiper-arrow rbt-arrow-left" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-c133c106a69478ba2" aria-disabled="false">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-left"></i>
+                                        <i class="rbt-icon-top feather-arrow-left"></i>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-arrow rbt-arrow-right " tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-c133c106a69478ba2" aria-disabled="true">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-right"></i>
+                                        <i class="rbt-icon-top feather-arrow-right"></i>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                    <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                                        aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
+                                        tabindex="0" role="button" aria-label="Go to slide 2"></span><span
+                                        class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                        role="button" aria-label="Go to slide 3" aria-current="true"></span>
+                                </div>
+                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="content">
+                            <div class="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events rbt-arrow-between ">
+                                <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms;"
+                                    id="swiper-wrapper-c133c106a69478ba1" aria-live="polite">
+                                    <div class="swiper-slide card_hover"
+                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="1 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
+                                            <div class="rbt-card-img main_one ">
+                                                <a href="course-masonry.html">
+                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="swiper-slide card_hover swiper-slide-prev"
+                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="2 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
+                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="3 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover"
+                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="1 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
+                                            <div class="rbt-card-img main_one ">
+                                                <a href="course-masonry.html">
+                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-prev"
+                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="2 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
+                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="3 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover"
+                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="1 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
+                                            <div class="rbt-card-img main_one ">
+                                                <a href="course-masonry.html">
+                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-prev"
+                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="2 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
+                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="3 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover"
+                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="1 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
+                                            <div class="rbt-card-img main_one ">
+                                                <a href="course-masonry.html">
+                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-prev"
+                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="2 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
+                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="3 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-arrow rbt-arrow-left" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-c133c106a69478ba1" aria-disabled="false">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-left"></i>
+                                        <i class="rbt-icon-top feather-arrow-left"></i>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-arrow rbt-arrow-right " tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-c133c106a69478ba1" aria-disabled="true">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-right"></i>
+                                        <i class="rbt-icon-top feather-arrow-right"></i>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
                                     <span class="swiper-pagination-bullet" tabindex="0" role="button"
                                         aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
                                         tabindex="0" role="button" aria-label="Go to slide 2"></span><span
@@ -2640,9 +2988,9 @@
                     <div class="col-lg-4">
                         <div class="content">
                             <div
-                                class="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events">
+                                class="banner-card rbt-arrow-between pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events">
                                 <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms;"
-                                    id="swiper-wrapper-c133c106a69478ba1" aria-live="polite">
+                                    id="swiper-wrapper-c133c106a69478ba2" aria-live="polite">
                                     <div class="swiper-slide card_hover"
                                         style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
                                         role="group" aria-label="1 / 3">
@@ -2932,8 +3280,338 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                <div class="rbt-swiper-arrow rbt-arrow-left" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-c133c106a69478ba2" aria-disabled="false">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-left"></i>
+                                        <i class="rbt-icon-top feather-arrow-left"></i>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-arrow rbt-arrow-right " tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-c133c106a69478ba2" aria-disabled="true">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-right"></i>
+                                        <i class="rbt-icon-top feather-arrow-right"></i>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                    <span class="swiper-pagination-bullet" tabindex="0" role="button"
+                                        aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
+                                        tabindex="0" role="button" aria-label="Go to slide 2"></span><span
+                                        class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                        role="button" aria-label="Go to slide 3" aria-current="true"></span>
+                                </div>
+                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="content">
+                            <div class="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events rbt-arrow-between ">
+                                <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms;"
+                                    id="swiper-wrapper-c133c106a69478ba1" aria-live="polite">
+                                    <div class="swiper-slide card_hover"
+                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="1 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
+                                            <div class="rbt-card-img main_one ">
+                                                <a href="course-masonry.html">
+                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="swiper-slide card_hover swiper-slide-prev"
+                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="2 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
+                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="3 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover"
+                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="1 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
+                                            <div class="rbt-card-img main_one ">
+                                                <a href="course-masonry.html">
+                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-prev"
+                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="2 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
+                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="3 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover"
+                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="1 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
+                                            <div class="rbt-card-img main_one ">
+                                                <a href="course-masonry.html">
+                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-prev"
+                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="2 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
+                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="3 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover"
+                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="1 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
+                                            <div class="rbt-card-img main_one ">
+                                                <a href="course-masonry.html">
+                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-prev"
+                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="2 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
+                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
+                                        role="group" aria-label="3 / 3">
+                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
+                                            <div class="rbt-card-img">
+                                                <a href="course-details.html">
+                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
+                                                        alt="Kursun İsmi">
+                                                    <span class="rbt-btn btn-white icon-hover card_btn">
+                                                        <span class="btn-text">İncele</span>
+                                                        <span class="btn-icon"><i
+                                                                class="feather-arrow-right"></i></span>
+                                                    </span>
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-arrow rbt-arrow-left" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-c133c106a69478ba1" aria-disabled="false">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-left"></i>
+                                        <i class="rbt-icon-top feather-arrow-left"></i>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-arrow rbt-arrow-right " tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-c133c106a69478ba1" aria-disabled="true">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-right"></i>
+                                        <i class="rbt-icon-top feather-arrow-right"></i>
+                                    </div>
+                                </div>
+                                <div class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
                                     <span class="swiper-pagination-bullet" tabindex="0" role="button"
                                         aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
                                         tabindex="0" role="button" aria-label="Go to slide 2"></span><span
@@ -2947,9 +3625,9 @@
                     <div class="col-lg-4">
                         <div class="content">
                             <div
-                                class="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events">
+                                class="banner-card rbt-arrow-between pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events">
                                 <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms;"
-                                    id="swiper-wrapper-c133c106a69478ba1" aria-live="polite">
+                                    id="1" aria-live="polite">
                                     <div class="swiper-slide card_hover"
                                         style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
                                         role="group" aria-label="1 / 3">
@@ -3239,622 +3917,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div
-                                    class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                                    <span class="swiper-pagination-bullet" tabindex="0" role="button"
-                                        aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
-                                        tabindex="0" role="button" aria-label="Go to slide 2"></span><span
-                                        class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
-                                        role="button" aria-label="Go to slide 3" aria-current="true"></span>
-                                </div>
-                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="content">
-                            <div
-                                class="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events">
-                                <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms;"
-                                    id="swiper-wrapper-c133c106a69478ba1" aria-live="polite">
-                                    <div class="swiper-slide card_hover"
-                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="1 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
-                                            <div class="rbt-card-img main_one ">
-                                                <a href="course-masonry.html">
-                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-prev"
-                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="2 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
-                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="3 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover"
-                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="1 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
-                                            <div class="rbt-card-img main_one ">
-                                                <a href="course-masonry.html">
-                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-prev"
-                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="2 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
-                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="3 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover"
-                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="1 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
-                                            <div class="rbt-card-img main_one ">
-                                                <a href="course-masonry.html">
-                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-prev"
-                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="2 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
-                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="3 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover"
-                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="1 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
-                                            <div class="rbt-card-img main_one ">
-                                                <a href="course-masonry.html">
-                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-prev"
-                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="2 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
-                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="3 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
-                                        </div>
+                                <div class="rbt-swiper-arrow rbt-arrow-left" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-c133c106a69478ba6" aria-disabled="false">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-left"></i>
+                                        <i class="rbt-icon-top feather-arrow-left"></i>
                                     </div>
                                 </div>
-                                <div
-                                    class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                                    <span class="swiper-pagination-bullet" tabindex="0" role="button"
-                                        aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
-                                        tabindex="0" role="button" aria-label="Go to slide 2"></span><span
-                                        class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
-                                        role="button" aria-label="Go to slide 3" aria-current="true"></span>
-                                </div>
-                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="content">
-                            <div
-                                class="banner-card pb--60 swiper rbt-dot-bottom-center banner-swiper-active swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-pointer-events">
-                                <div class="swiper-wrapper" style="cursor: grab; transition-duration: 0ms;"
-                                    id="swiper-wrapper-c133c106a69478ba1" aria-live="polite">
-                                    <div class="swiper-slide card_hover"
-                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="1 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
-                                            <div class="rbt-card-img main_one ">
-                                                <a href="course-masonry.html">
-                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-prev"
-                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="2 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
-                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="3 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover"
-                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="1 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
-                                            <div class="rbt-card-img main_one ">
-                                                <a href="course-masonry.html">
-                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-prev"
-                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="2 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
-                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="3 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover"
-                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="1 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
-                                            <div class="rbt-card-img main_one ">
-                                                <a href="course-masonry.html">
-                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-prev"
-                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="2 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
-                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="3 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover"
-                                        style="width: 365px; z-index: 1; transform: translate3d(calc(0px + -13%), 0px, -200px) rotateZ(-4deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="1 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover  card_hover_btn">
-                                            <div class="rbt-card-img main_one ">
-                                                <a href="course-masonry.html">
-                                                    <img src="https://akademidunyasi.com.tr/panel/assets/img/egitim/332MYK.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-prev"
-                                        style="width: 365px; z-index: 2; transform: translate3d(calc(-365px + -7.25%), 0px, -100px) rotateZ(-2deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="2 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/254asci.jpg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide card_hover swiper-slide-visible swiper-slide-active"
-                                        style="width: 365px; z-index: 3; transform: translate3d(-730px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;"
-                                        role="group" aria-label="3 / 3">
-                                        <div class="rbt-card variation-01 rbt-hover card_hover_btn">
-                                            <div class="rbt-card-img">
-                                                <a href="course-details.html">
-                                                    <img src="https://myk.akademidunyasi.com.tr/panel/assets/img/egitim/29Masaj%20Uygulay%C4%B1c%C4%B1s%C4%B1%20Seviye%203.jpeg"
-                                                        alt="Kursun İsmi">
-                                                    <span class="rbt-btn btn-white icon-hover card_btn">
-                                                        <span class="btn-text">İncele</span>
-                                                        <span class="btn-icon"><i
-                                                                class="feather-arrow-right"></i></span>
-                                                    </span>
-                                                    <div class="rbt-badge-3 bg-white">
-                                                        <span>-40%</span>
-                                                        <span>Off</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;">
-                                        </div>
+                                <div class="rbt-swiper-arrow rbt-arrow-right " tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-c133c106a69478ba6" aria-disabled="true">
+                                    <div class="custom-overfolow">
+                                        <i class="rbt-icon feather-arrow-right"></i>
+                                        <i class="rbt-icon-top feather-arrow-right"></i>
                                     </div>
                                 </div>
-                                <div
-                                    class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                <div class="rbt-swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
                                     <span class="swiper-pagination-bullet" tabindex="0" role="button"
                                         aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
                                         tabindex="0" role="button" aria-label="Go to slide 2"></span><span
@@ -3966,7 +4041,7 @@
     <div class="rbt-rbt-blog-area rbt-section-gapTop bg-gradient-7 rbt-round-bottom-shape">
         <div class="wrapper pb--50 rbt-index-upper">
             <div class="container">
-                <div class="row g-5 align-items-end mb--60">
+                <div class="row g-5 align-items-end mb--80">
                     <div class="col-lg-6 col-md-12 col-12">
                         <div class="section-title text-start">
                             <h2 class="title color-white">Son Haberler</h2>
@@ -3985,10 +4060,94 @@
                     </div>
                 </div>
                 <!-- Start Card Area -->
-                <div class="row g-5">
-                    <!-- Start Single Card  -->
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30 sal-animate" data-sal-delay="150"
-                        data-sal="slide-up" data-sal-duration="800">
+                <div class="swiper service-item-3-activation rbt-arrow-between gutter-swiper-30 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+
+                    <div class="swiper-wrapper" id="swiper-wrapper-5310c95fd9c6a4da3" aria-live="polite" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                        <!-- Start Single Card  -->
+                        <div class="swiper-slide swiper-slide-prev" style="width: 445px;" role="group" aria-label="1 / 4">
+                            <div class="single-slide">
+                                <div class="rbt-card variation-02 rbt-hover card-minimal">
+                                    <div class="rbt-card-body">
+                                        <ul class="meta-list justify-content-start mb--30">
+                                            <li class="list-item">
+                                                <i class="feather-clock"></i>
+                                                <span>15 Temmuz 2023</span>
+                                            </li>
+                                        </ul>
+                                        <h4 class="rbt-card-title"><a href="blog-details.html">Eğitimin Yedi Kolay Kuralı.</a>
+                                        </h4>
+                                        <div class="rbt-card-bottom mt--40">
+                                            <a class="transparent-button" href="blog-details.html">Devamı oku<i><svg width="17"
+                                                        height="12" xmlns="http://www.w3.org/2000/svg">
+                                                        <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                                                            <path d="M10.614 0l5.629 5.629-5.63 5.629"></path>
+                                                            <path stroke-linecap="square" d="M.663 5.572h14.594"></path>
+                                                        </g>
+                                                    </svg></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Card  -->
+                        <!-- Start Single Card  -->
+                        <div class="swiper-slide swiper-slide-active" style="width: 445px;" role="group" aria-label="2 / 4">
+                            <div class="single-slide">
+                                <div class="rbt-card variation-02 rbt-hover card-minimal">
+                                    <div class="rbt-card-body">
+                                        <ul class="meta-list justify-content-start mb--30">
+                                            <li class="list-item">
+                                                <i class="feather-clock"></i>
+                                                <span>15 Temmuz 2023</span>
+                                            </li>
+                                        </ul>
+                                        <h4 class="rbt-card-title"><a href="blog-details.html">Eğitimin Yedi Kolay Kuralı.</a>
+                                        </h4>
+                                        <div class="rbt-card-bottom mt--40">
+                                            <a class="transparent-button" href="blog-details.html">Devamı oku<i><svg width="17"
+                                                        height="12" xmlns="http://www.w3.org/2000/svg">
+                                                        <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                                                            <path d="M10.614 0l5.629 5.629-5.63 5.629"></path>
+                                                            <path stroke-linecap="square" d="M.663 5.572h14.594"></path>
+                                                        </g>
+                                                    </svg></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Card  -->
+                        <!-- Start Single Card  -->
+                        <div class="swiper-slide swiper-slide-next" style="width: 445px;" role="group" aria-label="3 / 4">
+                            <div class="single-slide">
+                                <div class="rbt-card variation-02 rbt-hover card-minimal">
+                                    <div class="rbt-card-body">
+                                        <ul class="meta-list justify-content-start mb--30">
+                                            <li class="list-item">
+                                                <i class="feather-clock"></i>
+                                                <span>30 Mayıs 2023</span>
+                                            </li>
+                                        </ul>
+                                        <h4 class="rbt-card-title"><a href="blog-details.html">Eğitim Konusunda Uzman olduğunuzu
+                                                mu düşünüyorsunuz?</a></h4>
+                                        <div class="rbt-card-bottom mt--40">
+                                            <a class="transparent-button" href="blog-details.html">Devamı oku<i><svg width="17"
+                                                        height="12" xmlns="http://www.w3.org/2000/svg">
+                                                        <g stroke="#27374D" fill="none" fill-rule="evenodd">
+                                                            <path d="M10.614 0l5.629 5.629-5.63 5.629"></path>
+                                                            <path stroke-linecap="square" d="M.663 5.572h14.594"></path>
+                                                        </g>
+                                                    </svg></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Card  -->
+
+                        <!-- Start Single Card  -->
+                        <div class="swiper-slide" style="width: 445px;" role="group" aria-label="4 / 4">
+                            <div class="single-slide">
                         <div class="rbt-card variation-02 rbt-hover card-minimal">
                             <div class="rbt-card-body">
                                 <ul class="meta-list justify-content-start mb--30">
@@ -4010,22 +4169,22 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- End Single Card  -->
-
-                    <!-- Start Single Card  -->
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30 sal-animate" data-sal-delay="150"
-                        data-sal="slide-up" data-sal-duration="800">
+                            </div>
+                        </div>
+                        <!-- End Single Card  -->
+                        <!-- Start Single Card  -->
+                        <div class="swiper-slide" style="width: 445px;" role="group" aria-label="4 / 4">
+                            <div class="single-slide">
                         <div class="rbt-card variation-02 rbt-hover card-minimal">
                             <div class="rbt-card-body">
                                 <ul class="meta-list justify-content-start mb--30">
                                     <li class="list-item">
                                         <i class="feather-clock"></i>
-                                        <span>30 Mayıs 2023</span>
+                                        <span>20 Mart 2023</span>
                                     </li>
                                 </ul>
-                                <h4 class="rbt-card-title"><a href="blog-details.html">Eğitim Konusunda Uzman olduğunuzu
-                                        mu düşünüyorsunuz?</a></h4>
+                                <h4 class="rbt-card-title"><a href="blog-details.html">Bunlardan Öğrenin Eğitimi
+                                        Öğrenin.</a></h4>
                                 <div class="rbt-card-bottom mt--40">
                                     <a class="transparent-button" href="blog-details.html">Devamı oku<i><svg width="17"
                                                 height="12" xmlns="http://www.w3.org/2000/svg">
@@ -4037,22 +4196,22 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- End Single Card  -->
-
-                    <!-- Start Single Card  -->
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30 sal-animate" data-sal-delay="150"
-                        data-sal="slide-up" data-sal-duration="800">
+                            </div>
+                        </div>
+                        <!-- End Single Card  -->
+                        <!-- Start Single Card  -->
+                        <div class="swiper-slide" style="width: 445px;" role="group" aria-label="4 / 4">
+                            <div class="single-slide">
                         <div class="rbt-card variation-02 rbt-hover card-minimal">
                             <div class="rbt-card-body">
                                 <ul class="meta-list justify-content-start mb--30">
                                     <li class="list-item">
                                         <i class="feather-clock"></i>
-                                        <span>15 Temmuz 2023</span>
+                                        <span>20 Mart 2023</span>
                                     </li>
                                 </ul>
-                                <h4 class="rbt-card-title"><a href="blog-details.html">Eğitimin Yedi Kolay Kuralı.</a>
-                                </h4>
+                                <h4 class="rbt-card-title"><a href="blog-details.html">Bunlardan Öğrenin Eğitimi
+                                        Öğrenin.</a></h4>
                                 <div class="rbt-card-bottom mt--40">
                                     <a class="transparent-button" href="blog-details.html">Devamı oku<i><svg width="17"
                                                 height="12" xmlns="http://www.w3.org/2000/svg">
@@ -4064,238 +4223,101 @@
                                 </div>
                             </div>
                         </div>
+                            </div>
+                        </div>
+                        <!-- End Single Card  -->
                     </div>
-                    <!-- End Single Card  -->
-                </div>
+
+                    <div class="rbt-swiper-arrow rbt-arrow-left bg_primary_arrow swiper-button-disabled" tabindex="-1" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-5310c95fd9c6a4da3" aria-disabled="true">
+                        <div class="custom-overfolow">
+                            <i class="rbt-icon feather-arrow-left"></i>
+                            <i class="rbt-icon-top feather-arrow-left"></i>
+                        </div>
+                    </div>
+
+                    <div class="rbt-swiper-arrow rbt-arrow-right bg_primary_arrow" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-5310c95fd9c6a4da3" aria-disabled="false">
+                        <div class="custom-overfolow">
+                            <i class="rbt-icon feather-arrow-right"></i>
+                            <i class="rbt-icon-top feather-arrow-right"></i>
+                        </div>
+                    </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+             
                 <!-- End Card Area -->
             </div>
         </div>
+
     </div>
-    <br>
-
-    <br>
-    <br>
-    <!-- Start Elements Presentation Area  -->
-
-
-    <div class="gallery">
-        <div class="left">
-            <div class="desktopContent">
-                <div class="desktopContentSection about_section ">
-                    <h3>BİRLİKTE BÜYÜMEYE DAVET EDİYORUZ.</h3>
-                    <p class="desc">“Her şey insan için” anlayışıyla yola çıktığımız ilk günden beri paydaşlarımızla
-                        birlikte büyüyoruz. Sizleri de bu büyümenin bir parçası olarak aramızda görmekten büyük
-                        memnuniyet duyarız. “Birlikte Büyüyoruz” misyonumuz doğrultusunda, tek bir çatı altında
-                        toplanarak güç birliği sağlamamızda sizleri aramıza davet ediyoruz.</p>
-                    <a class="rbt-btn btn-gradient btn-gradient-2 nasil_gradient" href="#">Hemen Başvur</a>
-
+    <div class="rbt-contact-me bg_primary rbt-section-gapBottom1">
+        <div class="container">
+            <div class="row mb--60">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <h2 class="title"><span class="theme-gradient">Bize</span> soru sor</h2>
+                        <p class="description has-medium-font-size mt--20">Akademik dünya, sadece bir diploma ya da derece almak değil, aynı zamanda evrensel bir perspektif kazanmak, eleştirel düşünme yeteneği geliştirmek ve sosyal beceriler edinmektir.</p>
+                    </div>
                 </div>
-                <div class="desktopContentSection about_section">
-                    <h3>AKADEMİ DÜNYASI TÜM TÜRKİYE'DE!</h3>
-                    <p class="desc">Sizde hayalinizdeki eğitim merkezini kurabilirsiniz. Güç birliği yaparak birlikte
-                        büyüyoruz.</p>
-                    <a class="rbt-btn btn-gradient btn-gradient-2 nasil_gradient" href="#">Hemen Başvur</a>
-
-                </div>
-                <div class="desktopContentSection about_section">
-                    <h3>Neden Franchising Sistemi?</h3>
-                    <p class="desc">Akademik araştırma sonuçlarına göre kendi olanakları ile varlık göstermeye çalışan
-                        işletmelerin ilk 5 yılda başarılı olma oranı %35 seviyelerinde iken, Franchise bir işletmenin
-                        ilk 5 yılda başarılı olma oranı %95 seviyelerindedir. Akademik araştırma sonuçlarına göre
-                        iktisadi yaşamda, yalnız mücadele eden orta ve küçük ölçekli işletmelerde başarısızlık oranı %35
-                        olarak açıklanırken Franchise işletmelerde bu oran %5 olarak verilmektedir.</p>
-                    <a class="rbt-btn btn-gradient btn-gradient-2 nasil_gradient" href="#">Hemen Başvur</a>
-
-                </div>
-                <div class="desktopContentSection about_section">
-                    <h3 class="about_fun_title">Akademi Dünyası ile Franchise Olmanın Avantajları</h3>
-                    <p class="desc">Başarıyı kendisine ilke edinmiş yılların tecrübesine sahip şekilde misyonunu
-                        geçekleştirmiş vizyonunu paylaşmaya hazır bir kurumdur. Teknolojik olanakların yoğun olarak
-                        kullanıldığı sosyal medya çalışmalarının titizlikle yürütüldüğü Akademi Dünyası Eğitim ve Kültür
-                        Merkezi ülkemizin her bölgesinde ihtiyaç duyulan bütün eğitim ve belge taleplerini
-                        karşılayabilmek amacı ile Kurumumuz hizmetlerini yurdumuzun her yerine ulaştırmaya kararlıdır.
-                    </p>
-                    <a class="rbt-btn btn-gradient btn-gradient-2 nasil_gradient" href="#">Hemen Başvur</a>
-                </div>
-
             </div>
-        </div>
-
-        <div class="right">
-
-            <!-- mobile content -->
-            <div class="mobileContent">
-                <div class="mobilePhoto red "><img src="https://deveb.co/static/media/vim.2c5e9ce4.jpg" alt=""></div>
-                <div class="size50vh"></div>
-                <h1>Red</h1>
-                <p class="desc">Red is a color often associated with strong emotions such as passion, love, and anger.
-                    It's a bold and attention-grabbing color that can evoke feelings of excitement, warmth, and energy.
-                </p>
-
-                <div class="mobilePhoto green"><img src="https://deveb.co/static/media/newdopegood.6e57b4b4.jpg" alt="">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="inner pl--50 pl_lg--0 pl_md--0 pl_sm--0">
+                        <div class="section-title text-start">
+                            <h4 class="title">Akademi Dünyası ile Franchise Olmanın Avantajları</h4>
+                            <p class="description mt--30 mt_md--15 mt_sm--15 mb_md--15 mb_sm--15">Başarıyı kendisine ilke edinmiş yılların tecrübesine sahip şekilde misyonunu geçekleştirmiş vizyonunu paylaşmaya hazır bir kurumdur.</p>
+                            <p class="mb_md--15 mb_sm--15">Teknolojik olanakların yoğun olarak kullanıldığı sosyal medya çalışmalarının titizlikle yürütüldüğü Akademi Dünyası Eğitim ve Kültür Merkezi ülkemizin her bölgesinde ihtiyaç duyulan bütün eğitim ve belge taleplerini karşılayabilmek amacı ile Kurumumuz hizmetlerini yurdumuzun her yerine ulaştırmaya kararlıdır.</p>
+                                
+                            <div class="view-all-button">
+                                <a class="rbt-btn btn-gradient btn-gradient-2 nasil_gradient" href="#">Hemen Başvur</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="size50vh"></div>
-                <h1>Green</h1>
-                <p class="desc">Green is a color that is often associated with nature, growth, and harmony. It is a
-                    calming and relaxing color that can evoke feelings of balance, stability, and freshness. In color
-                    psychology, green is said to represent balance and stability, making it a popular choice for
-                    branding and marketing in the health and wellness industry. </p>
-
-                <div class="mobilePhoto pink"><img src="https://deveb.co/static/media/am-arc.0bba8786.jpg" alt=""></div>
-                <div class="size50vh"></div>
-                <h1>Pink</h1>
-                <p class="desc">Pink is a color that is often associated with femininity, romance, and sweetness. It is
-                    a softer and more delicate shade of red that can evoke feelings of warmth, love, and nurturing. In
-                    the world of branding and marketing, pink is often used to target a female audience or to promote
-                    products that are associated with beauty, love, or romance.</p>
-
-                <div class="mobilePhoto ">
-                    <form action="">
-                        <div class="login-box-mobil">
-                            <h4>Ön Başvuru Formu</h4>
-                            <form id="contact-form" class="rainbow-dynamic-form max-width-auto">
-                                <div class="row mb-5">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <input id="" type="text">
-                                            <label>İsim Soyisim</label>
-                                            <span class="focus-border"></span>
+                <div class="col-lg-6">
+                    <div class="rbt-contact-form contact-form-style-1 max-width-auto">
+                        <form action="">
+                            <div>
+                                <h4>Ön Başvuru Formu</h4>
+                                
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <input id="" type="text">
+                                                <label>İsim Soyisim</label>
+                                                <span class="focus-border"></span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <input type="tel" pattern="[0-9]{10}" required>
-                                            <label>Telefon</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group form_group_select">
-                                    <div class="filter-select-option">
-                                        <div class="filter-select rbt-modern-select">
-                                            <div class="dropdown bootstrap-select show-tick dropup"><select
-                                                    data-live-search="true" title="il seç" multiple="" data-size="7"
-                                                    data-actions-box="true" data-selected-text-format="count > 2"
-                                                    class="" tabindex="null">
-                                                    <option>Janin Afsana</option>
-                                                    <option>Joe Biden</option>
-                                                    <option>Fatima Asrafy</option>
-                                                    <option>Aysha Baby</option>
-                                                    <option>Mohamad Ali</option>
-                                                    <option>Jone Li</option>
-                                                    <option>Alberd Roce</option>
-                                                    <option>Zeliski Noor</option>
-                                                </select>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <input type="tel" pattern="[0-9]{10}" required="">
+                                                <label>Telefon</label>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group my-5">
-                                    <textarea id="contact-message"></textarea>
-                                    <label>Mesajınız</label>
-                                    <span class="focus-border"></span>
-                                </div>
-                                <div class="form-submit-group">
-                                    <a class="rbt-btn bg-secondary-opacity icon-hover  nasil_btn" href="#">
-                                        <span class="btn-text">Gönder</span>
-                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                                    </a>
-                                </div>
-                            </form>
-                        </div>
-
-                    </form>
-                </div>
-                <div class="size50vh"></div>
-                <h1>Blue</h1>
-                <p class="desc">Blue is a color that is often associated with calmness, trust, and reliability. It is a
-                    peaceful and serene color that can evoke feelings of stability, security, and professionalism. In
-                    color psychology, blue is said to represent loyalty and trust, making it a popular choice for
-                    branding and marketing in the finance and technology industries.</p>
-            </div>
-
-            <!-- desktop content -->
-
-            <div class="desktopPhotos">
-                <div class="desktopPhoto red"><img src="https://deveb.co/static/media/vim.2c5e9ce4.jpg" alt=""></div>
-                <div class="desktopPhoto green"><img src="https://deveb.co/static/media/newdopegood.6e57b4b4.jpg"
-                        alt=""></div>
-                <div class="desktopPhoto pink"><img src="https://deveb.co/static/media/am-arc.0bba8786.jpg" alt="">
-                </div>
-                <div class="desktopPhoto blue">
-                    <form action="">
-                        <div class="login-box">
-                            <h4>Ön Başvuru Formu</h4>
-                            <form id="contact-form" class="rainbow-dynamic-form max-width-auto">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <input id="" type="text">
-                                            <label>İsim Soyisim</label>
-                                            <span class="focus-border"></span>
-                                        </div>
+    
+                                    <div class="form-group my-4">
+                                        <input type="email">
+                                        <label>E Posta</label>
+                                        <span class="focus-border"></span>
                                     </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <input type="tel" pattern="[0-9]{10}" required>
-                                            <label>Telefon</label>
-                                        </div>
+                                 
+                                    <div class="form-group my-3">
+                                        <textarea id="contact-message"></textarea>
+                                        <label>Mesajınız</label>
+                                        <span class="focus-border"></span>
                                     </div>
-                                </div>
-
-                                <div class="form-group my-4">
-                                    <input type="email">
-                                    <label>E Posta</label>
-                                    <span class="focus-border"></span>
-                                </div>
-                                <div class="form-group form_group_select">
-                                    <div class="filter-select-option">
-                                        <div class="filter-select rbt-modern-select">
-                                            <div class="dropdown bootstrap-select show-tick dropup"><select
-                                                    data-live-search="true" title="il seç" multiple="" data-size="7"
-                                                    data-actions-box="true" data-selected-text-format="count > 2"
-                                                    class="" tabindex="null">
-                                                    <option>Janin Afsana</option>
-                                                    <option>Joe Biden</option>
-                                                    <option>Fatima Asrafy</option>
-                                                    <option>Aysha Baby</option>
-                                                    <option>Mohamad Ali</option>
-                                                    <option>Jone Li</option>
-                                                    <option>Alberd Roce</option>
-                                                    <option>Zeliski Noor</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                    <div class="form-submit-group my-3">
+                                        <a class="rbt-btn bg-secondary-opacity icon-hover  nasil_btn" href="#">
+                                            <span class="btn-text">Gönder</span>
+                                            <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="form-group my-3">
-                                    <textarea id="contact-message"></textarea>
-                                    <label>Mesajınız</label>
-                                    <span class="focus-border"></span>
-                                </div>
-                                <div class="form-submit-group my-3">
-                                    <a class="rbt-btn bg-secondary-opacity icon-hover  nasil_btn" href="#">
-                                        <span class="btn-text">Gönder</span>
-                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                                    </a>
-                                </div>
-                            </form>
-                        </div>
-
-                    </form>
-
+                                
+                            </div></form>
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    <div class="bg-gray">
-
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#e0f0ff" fill-opacity="1"
-                d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,202.7C840,181,960,107,1080,96C1200,85,1320,139,1380,165.3L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
-            </path>
-        </svg>
     </div>
     <div class="nasil_wrapper">
         <h1 class="nasil_title_one">Nasıl Çalışırız</h1>
@@ -4541,7 +4563,7 @@
                 </div>
             </div>
         </div>
-        <div class="scroll-animation-wrapper no-overlay mt--50">
+        <div class="scroll-animation-wrapper no-overlay mt--50" id="targetContent">
             <div class="scroll-animation scroll-right-left">
 
                 <!-- Start Single Testimonial  -->

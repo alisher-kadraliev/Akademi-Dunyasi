@@ -1990,7 +1990,7 @@
                                 class="rbt-sorting-list d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end">
                                 <div class="rbt-short-item">
                                     <form action="#" class="rbt-search-style me-0">
-                                        <input type="text" placeholder="Kursunuzu Arayın..">
+                                        <input id="mySearch" onkeyup="myFunction()" type="text" placeholder="Kursunuzu Arayın..">
                                         <button type="submit" class="rbt-search-btn rbt-round-btn">
                                             <i class="feather-search"></i>
                                         </button>
@@ -2029,7 +2029,7 @@
             <!-- Start Card Area -->
             <div class="row row--15">
                 <div class="col-lg-12">
-                    <div class="mesonry-list grid-metro2">
+                    <div class="mesonry-list grid-metro2 " id="myCourses" >
                         <div class="resizer"></div>
                         <!-- Start Single Card  -->
                         <div class="maso-item cat--1">
@@ -2799,6 +2799,20 @@
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar,en,tr,fr,de,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
         }
+        
+function myFunction() {
+    const query = document.getElementById("mySearch").value.toLowerCase();
+    const cards = document.querySelectorAll('.maso-item');
+
+    cards.forEach(card => {
+        const title = card.querySelector('.rbt-card-title').textContent.toLowerCase();
+        if (title.includes(query)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
     </script>
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
