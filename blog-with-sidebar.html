@@ -2084,11 +2084,17 @@
 
                     </div>
                     <!-- End Card Area -->
-
+                    <div id="popupOverlay" class="popup-overlay">
+                        <div class="popup-content">
+                          <button id="popupClose" class="popup-close">&times;</button>
+                          <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.432/build/spline-viewer.js"></script>
+                          <spline-viewer url="https://prod.spline.design/MxIl8qHNaQPLwpvN/scene.splinecode"></spline-viewer>
+                        </div>
+                      </div>
                     <div class="row">
                         <div class="col-lg-12 mt--60">
                             <nav>
-                                <ul class="rbt-pagination">
+                                <ul class="rbt-pagination" id="targetContent">
                                     <li><a href="#" aria-label="Previous"><i class="feather-chevron-left"></i></a></li>
                                     <li><a href="#">1</a></li>
                                     <li class="active"><a href="#">2</a></li>
