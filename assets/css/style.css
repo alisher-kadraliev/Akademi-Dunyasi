@@ -5208,13 +5208,12 @@ textarea:-ms-input-placeholder {
   }
 
   .plr--120 {
-    margin-top: 380px;
-    padding: 0 80px !important;
+    margin-top: 217px;
+    padding-top: 120px;
+    padding: 120px 120px 0 !important;
   }
 
-  .mt_lp_dec--30 {
-    margin-top: -30px !important;
-  }
+ 
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
