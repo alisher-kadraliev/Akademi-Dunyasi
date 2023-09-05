@@ -1187,10 +1187,7 @@ document.getElementById("readMoreBtn").addEventListener("click", function () {
 });
 //smooth
 
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-}
+
 
 requestAnimationFrame(raf)
 
@@ -1592,4 +1589,3 @@ function closeModal(modalId) {
     modal.classList.remove('show-modal');
     setTimeout(() => modal.style.display = 'none', 500); // Hide after animation
 }
-

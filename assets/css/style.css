@@ -16907,7 +16907,9 @@ span.transparent-button:hover i {
   display: inline-block;
   margin: 7px;
 }
-
+.province-info .rbt-meta li{
+  font-size: 18px;
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rbt-meta li {
     margin: 3px;
@@ -35701,4 +35703,121 @@ position: absolute;
   justify-content: center;
   align-content: center;
 
+}
+
+.tr_map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selected_place {
+  fill: rgba(239, 1, 9, 1);
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+}
+#country-popup {
+  position: absolute;
+  /* Additional styles */
+}
+#info-sidebar {
+  position: fixed;
+  right: -100%; 
+  top: 0;
+  width: 636px;
+  height: 100%;
+  transition: left 0.3s ease;
+  background-color: #fff;
+  z-index: 100;
+  height: 100%;  /* Full-height */
+  overflow-x: hidden;  /* Disable horizontal scroll */
+  transition: 2s ease-in-out;  /* 0.5 second transition effect to slide in or slide down the sidebar */
+}
+#info-sidebar.show-sidebar {
+  right: 0;
+}
+#close-sidebar {
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  z-index: 1000;
+  /* Additional styles */
+}
+.map_content{
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.selected_text {
+  font-weight: bolder;
+  font-size: 17px;
+  fill: red; /* Or any color you desire */
+}
+
+.tr_map path.selected_place{
+  cursor: pointer;
+
+}
+text{
+  cursor: pointer;
+}
+
+
+.info-panel-logo{
+  max-width: 100%;
+  padding-bottom: 1.25rem;
+  width: 151px;
+}
+.info-panel-image{
+  max-width: 100%;
+  margin-top: 60px;
+  padding-bottom: 1.25rem;
+}
+.map_content_wrapper{
+  padding: 30px;
+  width: 90%;
+  overflow-y: auto; /* Enable vertical scroll */
+  max-height: calc(100vh - 40px);
+  scrollbar-width: none; /* For Firefox */
+}
+@media (max-width:655px) {
+  .map_content_wrapper{
+    padding: 30px;
+    width: 100%;
+    overflow-y: auto; /* Enable vertical scroll */
+    max-height: calc(100vh - 40px);
+    scrollbar-width: none; /* For Firefox */
+  }
+  #info-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .3s ease-in-out;
+    background-color: #fff;
+    z-index: 100;
+    height: 100%;  /* Full-height */
+    overflow-x: hidden;  /* Disable horizontal scroll */
+    transition: 2s ease-in-out;  /* 0.5 second transition effect to slide in or slide down the sidebar */
+  }
+}
+
+.map_content_wrapper::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari and Opera */
+}
+.sub_text_map{
+  font-size: 20px;
+  color: black;
+}
+.sinav_map{
+display: flex;
+gap: 15px;
+}
+.box_map{
+  border: 1px solid #000;
+  border-radius: 15px;
+  padding: 20px;
+  justify-content: space-between;
 }
