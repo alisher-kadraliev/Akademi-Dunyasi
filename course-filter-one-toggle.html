@@ -106,7 +106,10 @@
                                 <div class="rbt-separator d-none d-xl-block"></div>
 
                                 <div class="header-info">
-                                    <ul class="rbt-dropdown-menu switcher-language">
+                                    <div id="google_translate_element">
+                                      
+                                    </div>
+                                    <!-- <ul class="rbt-dropdown-menu switcher-language">
                                         <li class="has-child-menu">
                                             <a href="#">
                                                 <img class="left-image" src="assets/images/icons/tr.webp" alt="Türkçe">
@@ -130,7 +133,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
 
 
@@ -234,9 +237,9 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="rbt-vertical-nav-content">
+                                    <div class="rbt-vertical-nav-content ">
                                         <!-- Start One Item  -->
-                                        <div class="rbt-vertical-inner tab-content" id="tab1" style="display: block">
+                                        <div class="rbt-vertical-inner tab-content " id="tab1" style="display: block">
                                             <div class="rbt-vertical-single">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-sm-6 col-6">
@@ -2000,7 +2003,7 @@
                                 class="rbt-sorting-list d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end">
                                 <div class="rbt-short-item">
                                     <form action="#" class="rbt-search-style me-0">
-                                        <input type="text" placeholder="Kursunuzu Arayın..">
+                                        <input id="mySearch" onkeyup="myFunction()" type="text" placeholder="Kursunuzu Arayın..">
                                         <button type="submit" class="rbt-search-btn rbt-round-btn">
                                             <i class="feather-search"></i>
                                         </button>
@@ -2108,7 +2111,7 @@
     </div>
 
 
-    <div class="rbt-section-overlayping-top rbt-section-gapBottom">
+    <div class="rbt-section-overlayping-top rbt-section-gapBottom bg_primary">
         <div class="inner">
             <div class="container">
                 <div class="rbt-course-grid-column">
@@ -2228,11 +2231,7 @@
     </div>
 
 
-    <div class="rbt-separator-mid">
-        <div class="container">
-            <hr class="rbt-separator m-0">
-        </div>
-    </div>
+
     <footer class="rbt-footer footer-style-1 bg_primary overflow-hidden">
         <div class="footer-top">
             <div class="container">
@@ -2403,9 +2402,31 @@
     <script src="assets/js/vendor/paralax-scroll.js"></script>
     <script src="assets/js/vendor/paralax.min.js"></script>
     <script src="assets/js/vendor/countdown.js"></script>
-
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar,en,tr,fr,de,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+        function myFunction() {
+    const query = document.getElementById("mySearch").value.toLowerCase();
+    const cards = document.querySelectorAll('.course-grid-3');
+  
+    cards.forEach(card => {
+      const title = card.querySelector('.rbt-card-title').textContent.toLowerCase();
+      if (title.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+  
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="assets/js/vendor/plyr.js"></script>
     <script src="assets/js/vendor/plyr.js"></script>
     <!-- Main JS -->
+    sc
     <script src="assets/js/main.js"></script>
 </body>
 

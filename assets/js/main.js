@@ -155,6 +155,10 @@
                     el: '.rbt-swiper-pagination',
                     clickable: true,
                 },
+                navigation: {
+                    nextEl: '.rbt-arrow-right',
+                    prevEl: '.rbt-arrow-left',
+                },
             });
 
             var swiper = new Swiper('.team-slide-activation', {
@@ -253,8 +257,8 @@
                 spaceBetween: 0,
                 loop: false,
                 navigation: {
-                    nextEl: '.rbt-arrow-left',
-                    prevEl: '.rbt-arrow-right',
+                    nextEl: '.rbt-arrow-right',
+                    prevEl: '.rbt-arrow-left ',
                     clickable: true,
                 },
                 breakpoints: {
@@ -297,8 +301,8 @@
                 loop: false,
                 autoHeight: true,
                 navigation: {
-                    nextEl: '.rbt-arrow-left',
-                    prevEl: '.rbt-arrow-right',
+                    nextEl: '.rbt-arrow-right ',
+                    prevEl: '.rbt-arrow-left',
                     clickable: true,
                 },
                 thumbs: {
@@ -896,12 +900,12 @@
             $.fn.hasShowMore = function () {
                 return this.each(function () {
                     $(this).toggleClass('active');
-                    $(this).text('Show Less');
+                    $(this).text('Daha az göster');
                     $(this).parent('.has-show-more').toggleClass('active');
                     if ($(this).parent('.has-show-more').hasClass('active')) {
-                        $(this).text('Show Less');
+                        $(this).text('Daha az göster');
                     } else {
-                        $(this).text('Show More');
+                        $(this).text('Daha fazla göster');
                     }
                 });
             };
@@ -1182,16 +1186,8 @@ document.getElementById("readMoreBtn").addEventListener("click", function () {
     this.textContent = this.textContent === "Daha az göster" ? "Daha çok göster" : "Daha az göster";
 });
 //smooth
-const lenis = new Lenis()
 
-lenis.on('scroll', (e) => {
-    console.log(e)
-})
 
-function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-}
 
 requestAnimationFrame(raf)
 
@@ -1213,7 +1209,8 @@ mm.add("(min-width: 600px)", () => {
         trigger: ".gallery",
         start: "top top",
         end: "bottom bottom",
-        pin: ".right"
+        pin: ".right",
+        markers: false,
     });
 
     details.forEach((detail, index) => {
@@ -1315,11 +1312,10 @@ let scroll_tl = gsap.timeline({
     facts = [...document.querySelectorAll('.columns_n')]
 scroll_tl.to('.nasil_races', {
     scale: 1,
-    duration: 1,
-    ease: "slow"
+    duration: 0.2,
+    ease: "Power4.easeOut"
 })
 
-// FİX THE PROBLEM 
 
 
 // Get the window height
@@ -1332,35 +1328,46 @@ const heroAnimate = document.querySelector('.hero_animate');
 gsap.to(heroAnimate, { duration: 1, height: `${windowHeight}px` });
 
 // Wait 4 seconds and then animate back to 700px
-// setTimeout(() => {
-//     gsap.to(heroAnimate, { duration: 1, height: '750px' });
-// }, 4000);
+setTimeout(() => {
+    gsap.to(heroAnimate, { duration: 1, height: '750px' });
+}, 4000);
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const popupOverlay = document.getElementById('popupOverlay');
-//     const popupCTA = document.getElementById('popupCTA');
-//     const popupClose = document.getElementById('popupClose');
-//     const body = document.querySelector('body');
-//     const formURL = "https://example.com/form"; // Replace with your form URL
+document.addEventListener("DOMContentLoaded", function () {
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupClose = document.getElementById('popupClose');
+    const targetContent = document.getElementById('targetContent');
+    const body = document.querySelector('body');
+    const formURL = "https://example.com/form"; // Replace with your form URL
+    let isPopupShown = false;
 
-//     // Show the popup overlay after 2 seconds
-//     setTimeout(function() {
-//       popupOverlay.style.display = "flex";
-//       body.classList.add('no-scroll'); // Prevent scrolling
-//     }, 2000);
+    // Function to show popup
+    function showPopup() {
+        popupOverlay.style.display = "flex";
+        body.classList.add('no-scroll'); // Prevent scrolling
+        isPopupShown = true;
+    }
 
-//     // Close the popup overlay and enable scrolling when the close button is clicked
-//     popupClose.addEventListener('click', function() {
-//       popupOverlay.style.display = "none";
-//       body.classList.remove('no-scroll'); // Allow scrolling
-//     });
+    // Close the popup overlay and enable scrolling when the close button is clicked
+    popupClose.addEventListener('click', function () {
+        popupOverlay.style.display = "none";
+        body.classList.remove('no-scroll'); // Allow scrolling
+    });
 
-//     // Redirect to the form page when the call-to-action button is clicked
-//     popupCTA.addEventListener('click', function() {
-//       window.location.href = formURL;
-//     });
-//   });
+
+
+    // Listen to scroll event
+    window.addEventListener('scroll', function () {
+        const targetPosition = targetContent.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        // Show popup when the top of the target content reaches the middle of the window
+        if (targetPosition < windowHeight / 2 && !isPopupShown) {
+            showPopup();
+        }
+    });
+});
+
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
@@ -1394,21 +1401,19 @@ tl.to(".hide1", {
 });
 
 tl.to(".preloader", {
-    x: "200%",
-    duration: 3,
+    opacity: 0,
+    duration: 2,
+
+});
+tl.to(".preloader", {
+    x: '200%',
+    duration: 2.5,
+
 });
 
-tl.fromTo(
-    "nav",
-    {
-        opacity: 0,
-    },
-    {
-        opacity: 1,
-        duration: 1,
-    },
-    "-=2"
-);
+
+
+
 
 tl.fromTo(
     ".hero-content",
@@ -1423,3 +1428,246 @@ tl.fromTo(
     },
     "-=1.5"
 );
+
+$(function () {
+    var tickerLength = $('.carousel-inner-data ul li').length;
+    var tickerHeight = $('.carousel-inner-data ul li').outerHeight();
+    $('.carousel-inner-data ul li:last-child').prependTo('.carousel-inner-data ul');
+    $('.carousel-inner-data ul').css('marginTop', -tickerHeight);
+
+    function moveTop() {
+        $('.carousel-inner-data ul').animate({
+            top: -tickerHeight
+        }, 600, function () {
+            $('.carousel-inner-data ul li:first-child').appendTo('.carousel-inner-data ul');
+            $('.carousel-inner-data ul').css('top', '');
+        });
+
+    }
+    setInterval(function () {
+        moveTop();
+    }, 3000);
+});
+
+
+$('.slider').each(function () {
+    var $this = $(this);
+    var $group = $this.find('.slide_group');
+    var $slides = $this.find('.slide');
+    var bulletArray = [];
+    var currentIndex = 0;
+    var timeout;
+
+    function move(newIndex) {
+        var animateLeft, slideLeft;
+
+        advance();
+
+        if ($group.is(':animated') || currentIndex === newIndex) {
+            return;
+        }
+
+        bulletArray[currentIndex].removeClass('active');
+        bulletArray[newIndex].addClass('active');
+
+        if (newIndex > currentIndex) {
+            slideLeft = '100%';
+            animateLeft = '-100%';
+        } else {
+            slideLeft = '-100%';
+            animateLeft = '100%';
+        }
+
+        $slides.eq(newIndex).css({
+            display: 'block',
+            left: slideLeft
+        });
+        $group.animate({
+            left: animateLeft
+        }, function () {
+            $slides.eq(currentIndex).css({
+                display: 'none'
+            });
+            $slides.eq(newIndex).css({
+                left: 0
+            });
+            $group.css({
+                left: 0
+            });
+            currentIndex = newIndex;
+        });
+    }
+
+    function advance() {
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+            if (currentIndex < ($slides.length - 1)) {
+                move(currentIndex + 1);
+            } else {
+                move(0);
+            }
+        }, 4000);
+    }
+
+    $('.next_btn').on('click', function () {
+        if (currentIndex < ($slides.length - 1)) {
+            move(currentIndex + 1);
+        } else {
+            move(0);
+        }
+    });
+
+    $('.previous_btn').on('click', function () {
+        if (currentIndex !== 0) {
+            move(currentIndex - 1);
+        } else {
+            move(3);
+        }
+    });
+
+    $.each($slides, function (index) {
+        var $button = $('<a class="slide_btn">&bull;</a>');
+
+        if (index === currentIndex) {
+            $button.addClass('active');
+        }
+        $button.on('click', function () {
+            move(index);
+        }).appendTo('.slide_buttons');
+        bulletArray.push($button);
+    });
+
+    advance();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementsByClassName('tab-link')[0].click();
+});
+
+function openTab(evt, tabName) {
+    var i, tabContent, tabLinks;
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
+    }
+
+    tabLinks = document.getElementsByClassName("tab-link");
+    for (i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+//Spline delete
+window.onload = function () {
+    var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
+    shadowRoot.querySelector('#logo').remove();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    // This will run when the document is fully loaded
+    var allModals = document.querySelectorAll('.show-modal');
+
+    allModals.forEach((modal) => {
+        modal.classList.add('hide-modal');
+        modal.classList.remove('show-modal');
+        modal.style.display = 'none'; // Initially set to none
+    });
+});
+
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = 'block'; // Make sure it's visible
+    modal.classList.add('show-modal');
+    modal.classList.remove('hide-modal');
+}
+
+function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.classList.add('hide-modal');
+    modal.classList.remove('show-modal');
+    setTimeout(() => modal.style.display = 'none', 500); // Hide after animation
+}
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Getting the close button and the card
+    const closeButton = document.querySelector('.close-card-info');
+    const cardInfo = document.querySelector('.card-info.bounce-slide');
+
+    // Adding click event to the close button
+    closeButton.addEventListener('click', function () {
+        cardInfo.style.display = 'none';
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieConsent = getCookie("cookieConsent");
+
+    if (!cookieConsent) {
+        // Show the popup if the cookie doesn't exist
+        document.getElementById("TW_box").style.display = "block";
+    }
+
+    // When the "Accept Cookies" button is clicked
+    document.getElementById("Cookie_btn").addEventListener("click", function () {
+        // Set a cookie to remember that the user has accepted cookies
+        setCookie("cookieConsent", "yes", 365);
+
+        // Hide the popup
+        document.getElementById("TW_box").style.display = "none";
+    });
+});
+
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+$(document).on("click", "#whatsapp-popup", function () {
+
+    $(".whatsapp-wrapper").toggleClass("hide-whatsapp show-whatsapp");
+    setTimeout(function () {
+        $('.loading-animation').hide();
+        $('.whatsapp-message-wrapper').css("display", "flex").hide().fadeIn("slow");
+    }, 8000)
+});
+
+$(document).on("click", ".close_whatsapp", function () {
+    $("#whatsapp-chat")
+    $(".whatsapp-wrapper").toggleClass("hide-whatsapp show-whatsapp");
+});
+
+
+$('.whatsapp-wrapper').delay(8000).queue(function () {
+    $(this).addClass("show-whatsapp");
+    $(this).removeClass("hide-whatsapp");
+});
+$('.whatsapp-message-wrapper').delay(6000).queue(function () {
+    $(this).addClass("di");
+    $(this).removeClass("loading-animation");
+});
+$('.loading-animation').delay(6000).queue(function () {
+    $(this).addClass("dinone");
+});
