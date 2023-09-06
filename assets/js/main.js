@@ -1589,3 +1589,85 @@ function closeModal(modalId) {
     modal.classList.remove('show-modal');
     setTimeout(() => modal.style.display = 'none', 500); // Hide after animation
 }
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Getting the close button and the card
+    const closeButton = document.querySelector('.close-card-info');
+    const cardInfo = document.querySelector('.card-info.bounce-slide');
+
+    // Adding click event to the close button
+    closeButton.addEventListener('click', function () {
+        cardInfo.style.display = 'none';
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieConsent = getCookie("cookieConsent");
+
+    if (!cookieConsent) {
+        // Show the popup if the cookie doesn't exist
+        document.getElementById("TW_box").style.display = "block";
+    }
+
+    // When the "Accept Cookies" button is clicked
+    document.getElementById("Cookie_btn").addEventListener("click", function () {
+        // Set a cookie to remember that the user has accepted cookies
+        setCookie("cookieConsent", "yes", 365);
+
+        // Hide the popup
+        document.getElementById("TW_box").style.display = "none";
+    });
+});
+
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+$(document).on("click", "#whatsapp-popup", function () {
+
+    $(".whatsapp-wrapper").toggleClass("hide-whatsapp show-whatsapp");
+    setTimeout(function () {
+        $('.loading-animation').hide();
+        $('.whatsapp-message-wrapper').css("display", "flex").hide().fadeIn("slow");
+    }, 8000)
+});
+
+$(document).on("click", ".close_whatsapp", function () {
+    $("#whatsapp-chat")
+    $(".whatsapp-wrapper").toggleClass("hide-whatsapp show-whatsapp");
+});
+
+
+$('.whatsapp-wrapper').delay(8000).queue(function () {
+    $(this).addClass("show-whatsapp");
+    $(this).removeClass("hide-whatsapp");
+});
+$('.whatsapp-message-wrapper').delay(6000).queue(function () {
+    $(this).addClass("di");
+    $(this).removeClass("loading-animation");
+});
+$('.loading-animation').delay(6000).queue(function () {
+    $(this).addClass("dinone");
+});
