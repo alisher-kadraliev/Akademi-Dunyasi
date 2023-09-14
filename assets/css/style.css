@@ -9612,13 +9612,29 @@ input[type="radio"] {
 input[type="checkbox"]~label,
 input[type="radio"]~label {
   position: relative;
-  font-size: 15px;
+  padding-top: 14px!important;
+  font-size: 25px;
   line-height: 25px;
-  color: var(--body-color);
+  color: #000;
+  font-weight: 400;
+  padding-left: 20px;
+  cursor: pointer;
+  transition: .5s ease;
+  margin-bottom: 0;
+}
+input[type="checkbox"]~label:hover,
+input[type="radio"]~label:hover {
+  position: relative;
+  padding-top: 14px!important;
+  font-size: 25px;
+  line-height: 25px;
+  color: #fff;
+  background: #000;
   font-weight: 400;
   padding-left: 20px;
   cursor: pointer;
   margin-bottom: 0;
+  transition: .5s ease;
 }
 
 input[type="checkbox"]~label::before,
@@ -14753,6 +14769,7 @@ fieldset:disabled {
 
 .rbt-btn.rbt-switch-btn {
   overflow: hidden;
+  margin-bottom: 92px;
 }
 
 .rbt-btn.rbt-switch-btn span {
@@ -29864,7 +29881,6 @@ Course Sidebar
 }
 
 .course-sidebar .social-share-wrapper {
-  background: #f5f5fa;
   margin: 0 -27px -27px;
   padding: 30px;
   border-radius: 0 0 6px 6px;
@@ -33800,32 +33816,18 @@ body.no-scroll {
   position: relative;
   display: block;
   text-align: center;
-  width: 110px;
-  height: 16px;
+  width: 183px;
+  height: 59px;
   border-radius: 8px;
+  border: 1px solid #000;
   padding: 0;
   margin: 10px auto;
   cursor: pointer;
-  background-color: black;
+  background-color: white;
 }
 
-.checkbox:checked+label:before,
-.checkbox:not(:checked)+label:before {
-  position: absolute;
-  display: block;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  color: #ffeba7;
-  font-family: 'unicons';
-  content: '\26AA';
-  top: -10px;
-  left: -10px;
-  line-height: 36px;
-  text-align: center;
-  font-size: 24px;
-  transition: all 0.5s ease;
-}
+
+
 
 .checkbox:checked+label:before {
   transform: translateX(102px) rotate(0deg);
@@ -34358,13 +34360,6 @@ td {
     padding-bottom: 40px;
   }
 
-  .hero-content h2 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 0.8rem;
-  }
 }
 
 .bg_primary_arrow {
@@ -35807,6 +35802,12 @@ body.no-scroll {
   font-size: 17px;
   fill: white;
 }
+.selected_text_small{
+  font-family: unset;
+  font-weight: 100;
+  font-size: 12px;
+  fill: white;
+}
 
 .tr_map path.selected_place {
   cursor: pointer;
@@ -35826,7 +35827,6 @@ text {
 
 .info-panel-image {
   max-width: 100%;
-  margin-top: 60px;
   padding-bottom: 1.25rem;
 }
 
@@ -36447,7 +36447,7 @@ animation-name: dotThree;
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  margin: 20px;
+  margin: 12px;
   overflow: hidden;
   appearance: none;
 }
@@ -36728,3 +36728,217 @@ margin-right: 15px;
   content: "\f139"; /* adjust as needed, taken from bootstrap.css */
 }
 
+/* whatsapp */
+
+#myTable table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+#myTable table, th, td {
+  border: 1px solid #fff;
+}
+.add_wishlist{
+  position: relative;
+}
+.add_wish{
+  position: absolute;
+  bottom: 5px;
+  z-index: 10;
+  font-size: 33px;
+  left: 62%;
+  background: none!important;
+}
+.tel_call{
+  padding: 8px 12px;
+  border-radius: 0px;
+  border: none;
+  background: rgb(39 37 167);
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 12px;
+  overflow: hidden;
+  appearance: none;
+}
+.basvur{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#myTable  td {
+  padding: 10px;
+  text-align: left;
+  background: #fff;
+}
+
+#myTable th{
+  color:#fff;
+  background: #000;
+}
+.what_tel{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.bookmark {
+  --background-default: #fff;
+  --background-hover: #fafbff;
+  --text-color: #404660;
+  --icon-color-default: #8a91b4;
+  --icon-color-active: #f04949;
+  --default-position: 32px;
+  --default-y: 0px;
+  --icon-background-height: 19px;
+  --shadow: rgba(0, 19, 132, 0.08);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  border: none;
+  padding: 2px 18px 2px 5px;
+  margin: 0;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: .8s ease-in-out;
+}
+.bookmark.dark {
+  --background-default: #1e2235;
+  --background-hover: #171827;
+  --text-color: #f9faff;
+  --icon-color-default: #8a91b4;
+  --icon-color-active: #f04949;
+  --shadow: rgba(0, 19, 132, 0.16);
+}
+.bookmark:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  box-shadow: 0 var(--shadow-y, 2px) var(--shadow-blur, 3px) var(--shadow);
+  background: var(--background, var(--background-default));
+  transform: scale(var(--scale-x, 1), var(--scale-y, 1)) translateZ(0);
+  transition: box-shadow 0.2s, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.2s;
+}
+.bookmark:active {
+  --shadow-y: 1px;
+  --shadow-blur: 2px;
+  --scale-x: 0.975;
+  --scale-y: 0.94;
+}
+
+.bookmark.marked {
+  --icon-color: var(--icon-color-active);
+}
+.bookmark .icon {
+  position: relative;
+  z-index: 1;
+  transform: scale(0.62);
+}
+.bookmark.active_icon .icon{
+  position: relative;
+  z-index: 1;
+  --background-default: #B5BBD7;
+  transition: .3s ease;
+  transform: scale(0.82);
+}
+
+.bookmark .icon:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  width: 18px;
+  height: 19px;
+  border-radius: 1px;
+  -webkit-clip-path: inset(0 -1px var(--icon-background-height) -1px round 1px);
+          clip-path: inset(0 -1px var(--icon-background-height) -1px round 1px);
+  background: var(--icon-color, var(--icon-color-default));
+  transition: background var(--duration, 0.5s) ease 0.01s;
+}
+.bookmark .icon svg {
+  display: block;
+  width: 36px;
+  height: 36px;
+  stroke: var(--icon-color, var(--icon-color-default));
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  position: relative;
+  z-index: 1;
+  transform: translateZ(0);
+  -webkit-clip-path: inset(5px 0 0 0);
+          clip-path: inset(5px 0 0 0);
+}
+.bookmark .icon svg path {
+  fill: var(--fill, var(--background, var(--background-default)));
+  transition: fill var(--duration, 0.5s) ease 0.01s, stroke var(--duration, 0.5s) ease 0.01s;
+}
+.bookmark .icon svg path.default {
+  --fill: var(
+      --default-fill,
+      var(--background, var(--background-default))
+  );
+  -webkit-clip-path: circle(var(--default-position) at 50% 100%);
+          clip-path: circle(var(--default-position) at 50% 100%);
+}
+.bookmark .icon svg path.filled {
+  --fill: var(--icon-color, var(--icon-color-default));
+}
+.bookmark .icon svg path.default, .bookmark .icon svg path.filled {
+  transform: translateY(var(--default-y));
+}
+.bookmark span {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-left: -2px;
+}
+.top_title{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.bookmark.dark {
+  --background-default: #1e2235;
+  --background-hover: #171827;
+  --text-color: #f9faff;
+  --icon-color-default: #8a91b4;
+  --icon-color-active: #f04949;
+  --shadow: rgba(0, 19, 132, 0.16);
+}
+
+.popup_map {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  padding: 10px;
+  width: 150px;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+/* mugla 
+ */
