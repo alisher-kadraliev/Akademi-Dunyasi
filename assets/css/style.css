@@ -2705,8 +2705,8 @@ textarea:-ms-input-placeholder {
   }
 }
 
-.rbt-section-gapBottom {
-  /* padding-bottom: 120px; */
+.rbt-section-gapBottom-1 {
+  padding-bottom: 120px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -14140,7 +14140,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   right: 0;
   top: 0;
   background: var(--color-white);
-  z-index: 9999;
+  z-index: 999;
   height: 100%;
   transform: translate3d(100%, 0, 0);
   overflow: hidden;
@@ -14321,7 +14321,7 @@ ul.rbt-dropdown-menu.currency-menu li .sub-menu {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1091;
+  z-index: 998;
   opacity: 0;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.6);
@@ -30781,7 +30781,6 @@ Course Sidebar
 -------------------------*/
 .footer-style-1 .footer-top {
   padding-top: 80px;
-  padding-bottom: 90px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -32293,7 +32292,7 @@ Course Sidebar
     Call To Action Footer  
 --------------------------*/
 .overlpping-call-to-action {
-  padding-bottom: 340px;
+  padding-bottom: 60px;
 }
 
 .rbt-splash-callto-action {
@@ -36104,7 +36103,7 @@ text {
   display: inline-block;
   position: fixed;
   bottom: 0px;
-  z-index: 9999999;
+  z-index: 10;
   left: 0px;
   right: auto;
 }
@@ -36940,5 +36939,26 @@ margin-right: 15px;
   border-radius: 5px;
   transition: all 0.5s ease;
 }
-/* mugla 
- */
+.progress-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0px;
+  z-index: 992;
+  display: none;
+  transition: all .5s ease-in-out;
+  opacity: 0;
+}
+.progress-bar-add{
+  display: block;
+  transition: all .5s ease-in-out;
+  opacity: 1;
+}
+.progress-bar {
+  width: 0;
+  height: 6px;
+  background-color: var(--color-primary);
+}
+.add-relative{
+  position: relative;
+}

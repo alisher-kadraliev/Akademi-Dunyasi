@@ -763,15 +763,19 @@
             $(window).on('scroll', function () {
                 if ($('body').hasClass('rbt-header-sticky')) {
                     var stickyPlaceHolder = $('.rbt-sticky-placeholder'),
+                        progressContainer = $('.progress-container'),
                         headerConainer = $('.rbt-header-wrapper'),
                         headerConainerH = headerConainer.outerHeight(),
                         topHeaderH = $('.rbt-header-top').outerHeight() || 0,
                         targrtScroll = topHeaderH + 200;
                     if ($(window).scrollTop() > targrtScroll) {
                         headerConainer.addClass('rbt-sticky');
+                        progressContainer.addClass('progress-bar-add');
                         stickyPlaceHolder.height(headerConainerH);
                     } else {
                         headerConainer.removeClass('rbt-sticky');
+                        progressContainer.removeClass('progress-bar-add');
+
                         stickyPlaceHolder.height(0);
                     }
                 }
@@ -1119,12 +1123,6 @@
             })
         }
 
-
-
-
-
-
-
     }
     eduJs.i();
 
@@ -1146,9 +1144,26 @@ scroll_tl.to('.nasil_races', {
     scale: 1,
     duration: 0.2,
     ease: "Power4.easeOut"
-})
+}
 
+)
 
+scroll_tl.to(facts, {
+    xPercent: -85 * (facts.length - 1),
+    scrollTrigger: {
+        trigger: ".nasil_races",
+        start: "center center",
+        pin: true,
+        // horizontal: true,
+        // pinSpacing:false,
+        // markers: true,
+        scrub: 1,
+        snap: 1 / (facts.length - 1),
+        // base vertical scrolling on how wide the container is so it feels more natural.
+        // end: () => `+=${smallFactsContainer.offsetWidth}`
+        end: () => `+=4320`
+    }
+});
 
 // 9.08 off canvas
 
@@ -1502,7 +1517,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar,en,tr,fr,de,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+}
 
 
 function setCookie(name, value, days) {
@@ -1556,25 +1573,33 @@ $('.loading-animation').delay(6000).queue(function () {
 function myFunction() {
     var element = document.getElementById("bookmark");
     element.classList.toggle("active_icon");
-} 
+}
 
 //pup up for map
-$(".selected_text").hover(function() {
+$(".selected_text").hover(function () {
     var popupText = $(this).data("popup-text");
 
     var position = $(this).offset();
     var width = $(this).outerWidth();
     var height = $(this).outerHeight();
-  
+
     $("#popup_map p").text(popupText);
-    
+
     $("#popup_map").css({
         display: "block",
         top: position.top + height + 10, // Adjust the vertical position as needed
         left: position.left,
-      });
-  }, function() {
+    });
+}, function () {
     // Hide the popup when the mouse leaves the element
     $("#popup_map").css("display", "none");
-  });
-  
+});
+
+window.onscroll = function() { updateProgressBar() };
+
+function updateProgressBar() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+}
