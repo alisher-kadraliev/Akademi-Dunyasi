@@ -1129,6 +1129,8 @@
 
 })(window, document, jQuery);
 
+
+
 let scroll_tl = gsap.timeline({
     scrollTrigger: {
         trigger: '.nasil_wrapper',
@@ -1166,6 +1168,7 @@ scroll_tl.to(facts, {
 });
 
 // 9.08 off canvas
+
 
 document.addEventListener("DOMContentLoaded", function () {
     // Get the close button
@@ -1223,15 +1226,6 @@ requestAnimationFrame(raf)
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
-
-
-
-
-
-
-// Get the window height
 const windowHeight = window.innerHeight;
 
 // Get the element to animate
@@ -1323,11 +1317,6 @@ tl.to(".preloader", {
     duration: 0,
 
 });
-
-
-
-
-
 tl.fromTo(
     ".hero-content",
     {
@@ -1517,9 +1506,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar,en,tr,fr,de,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
-}
 
 
 function setCookie(name, value, days) {
@@ -1602,4 +1588,9 @@ function updateProgressBar() {
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar,en,tr,fr,de,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
 }

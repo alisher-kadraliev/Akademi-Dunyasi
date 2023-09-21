@@ -1990,7 +1990,7 @@
                                 class="rbt-sorting-list d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end">
                                 <div class="rbt-short-item">
                                     <form action="#" class="rbt-search-style me-0">
-                                        <input id="mySearch" onkeyup="myFunction()" type="text" placeholder="Kursunuzu Arayın..">
+                                        <input id="mySearch" onkeyup="searchMasonry()" type="text" placeholder="Kursunuzu Arayın..">
                                         <button type="submit" class="rbt-search-btn rbt-round-btn">
                                             <i class="feather-search"></i>
                                         </button>
@@ -2796,7 +2796,7 @@
             new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar,en,tr,fr,de,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
         }
         
-function myFunction() {
+function searchMasonry() {
     const query = document.getElementById("mySearch").value.toLowerCase();
     const cards = document.querySelectorAll('.maso-item');
 
