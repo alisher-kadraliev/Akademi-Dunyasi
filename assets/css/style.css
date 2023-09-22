@@ -36986,3 +36986,9 @@ margin-right: 15px;
   bottom: -38px;
   left: 35%;
 }
+#captcha-form-1{
+  width: 25%!important;
+}
+#captcha-form-3{
+  width: 25%;
+}
