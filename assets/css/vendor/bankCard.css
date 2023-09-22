@@ -441,3 +441,25 @@ input {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
+
+.header-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    z-index: 99;
+    justify-content: space-between;
+    align-items: center;
+padding: 0 108px;
+}
+.header-logo img{
+    width: 181px;
+    height: 65px;
+}
+.header-back {
+    width: 50px;
+    height: 30px;
+
+}
