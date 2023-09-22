@@ -1990,7 +1990,7 @@
                                 class="rbt-sorting-list d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end">
                                 <div class="rbt-short-item">
                                     <form action="#" class="rbt-search-style me-0">
-                                        <input id="mySearch" onkeyup="myFunction()" type="text" placeholder="Kursunuzu Arayın..">
+                                        <input id="mySearch" onkeyup="searchMasonry()" type="text" placeholder="Kursunuzu Arayın..">
                                         <button type="submit" class="rbt-search-btn rbt-round-btn">
                                             <i class="feather-search"></i>
                                         </button>
@@ -2626,15 +2626,9 @@
             <hr class="rbt-separator m-0">
         </div>
     </div>
-    <div id="popupOverlay" class="popup-overlay">
-        <div class="popup-content">
-          <button id="popupClose" class="popup-close">&times;</button>
-          <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.432/build/spline-viewer.js"></script>
-          <spline-viewer url="https://prod.spline.design/MxIl8qHNaQPLwpvN/scene.splinecode"></spline-viewer>
-        </div>
-      </div>
+  
     <!-- Start Footer aera -->
-    <footer class="rbt-footer footer-style-1 bg_primary overflow-hidden">
+    <footer class="rbt-footer footer-style-1  overflow-hidden">
         <div class="footer-top" id="targetContent">
             <div class="container">
                 <div class="row g-5">
@@ -2764,12 +2758,7 @@
         </div>
         <!-- End Copyright Area  -->
     </footer>
-    <!-- End Footer aera -->
-    <div class="rbt-progress-parent">
-        <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
+
 
     <!-- Modernizer JS -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
@@ -2807,7 +2796,7 @@
             new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar,en,tr,fr,de,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
         }
         
-function myFunction() {
+function searchMasonry() {
     const query = document.getElementById("mySearch").value.toLowerCase();
     const cards = document.querySelectorAll('.maso-item');
 

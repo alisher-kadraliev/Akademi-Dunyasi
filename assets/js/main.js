@@ -763,15 +763,19 @@
             $(window).on('scroll', function () {
                 if ($('body').hasClass('rbt-header-sticky')) {
                     var stickyPlaceHolder = $('.rbt-sticky-placeholder'),
+                        progressContainer = $('.progress-container'),
                         headerConainer = $('.rbt-header-wrapper'),
                         headerConainerH = headerConainer.outerHeight(),
                         topHeaderH = $('.rbt-header-top').outerHeight() || 0,
                         targrtScroll = topHeaderH + 200;
                     if ($(window).scrollTop() > targrtScroll) {
                         headerConainer.addClass('rbt-sticky');
+                        progressContainer.addClass('progress-bar-add');
                         stickyPlaceHolder.height(headerConainerH);
                     } else {
                         headerConainer.removeClass('rbt-sticky');
+                        progressContainer.removeClass('progress-bar-add');
+
                         stickyPlaceHolder.height(0);
                     }
                 }
@@ -1119,12 +1123,6 @@
             })
         }
 
-
-
-
-
-
-
     }
     eduJs.i();
 
@@ -1133,9 +1131,44 @@
 
 
 
+let scroll_tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.nasil_wrapper',
+        start: "top top",
+        // pin: true,
+        scrub: true,
+        end: "+=300",
+        // markers: true,
+    }
+}),
+    facts = [...document.querySelectorAll('.columns_n')]
+scroll_tl.to('.nasil_races', {
+    scale: 1,
+    duration: 0.2,
+    ease: "Power4.easeOut"
+}
 
+)
+
+scroll_tl.to(facts, {
+    xPercent: -85 * (facts.length - 1),
+    scrollTrigger: {
+        trigger: ".nasil_races",
+        start: "center center",
+        pin: true,
+        // horizontal: true,
+        // pinSpacing:false,
+        // markers: true,
+        scrub: 1,
+        snap: 1 / (facts.length - 1),
+        // base vertical scrolling on how wide the container is so it feels more natural.
+        // end: () => `+=${smallFactsContainer.offsetWidth}`
+        end: () => `+=4320`
+    }
+});
 
 // 9.08 off canvas
+
 
 document.addEventListener("DOMContentLoaded", function () {
     // Get the close button
@@ -1193,132 +1226,6 @@ requestAnimationFrame(raf)
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)");
-const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
-gsap.set(photos, { yPercent: 101 });
-const allPhotos = gsap.utils.toArray(".desktopPhoto");
-const gallery = document.querySelector(".gallery");
-
-let mm = gsap.matchMedia();
-
-mm.add("(min-width: 600px)", () => {
-    console.log("desktop");
-
-    ScrollTrigger.create({
-        trigger: ".gallery",
-        start: "top top",
-        end: "bottom bottom",
-        pin: ".right",
-        markers: false,
-    });
-
-    details.forEach((detail, index) => {
-        let headline = detail.querySelector("h3");
-        let animation = gsap.timeline()
-            .to(photos[index], { yPercent: 0, onStart: setColor, onStartParams: [photos[index]] })
-            .set(allPhotos[index], { autoAlpha: 0 })
-            .add(() => {
-                // This will be executed when the animation plays forward
-            });
-
-        animation.eventCallback("onReverseComplete", () => {
-            // This will be executed when the animation reverses
-            resetColor(photos[index]);
-        });
-
-        ScrollTrigger.create({
-            trigger: headline,
-            start: "top 90%",
-            end: "top 28%",
-            animation: animation,
-            scrub: true,
-            markers: false,
-        });
-    });
-
-
-    return () => {
-        console.log("mobile");
-    };
-});
-
-function setColor(photo) {
-    let colorClass = Array.from(photo.classList).find(cls => ["green", "red", "pink", "blue"].includes(cls));
-    if (colorClass) {
-        gallery.style.backgroundColor = getComputedStyle(photo).backgroundColor;
-    }
-}
-function resetColor(photo) {
-    // Store the original background color in a data attribute (do this before changing the color)
-    if (!gallery.hasAttribute("data-original-color")) {
-        gallery.setAttribute("data-original-color", gallery.style.backgroundColor);
-    }
-
-    // Reset the background color to the original color
-    gallery.style.backgroundColor = gallery.getAttribute("data-original-color");
-}
-// Utility function to get the color class
-function getColorClass(element) {
-    const colors = ["green", " red", "pink", "blue"];
-    for (let color of colors) {
-        if (element.classList.contains(color)) {
-            return color;
-        }
-    }
-    return null; // or a default color if desired
-}
-
-
-
-
-//nasil
-
-// const races = document.querySelector(".nasil_races");
-// console.log(races.offsetWidth)
-
-// function getScrollAmount() {
-// 	let racesWidth = races.scrollWidth;
-// 	return -(racesWidth - window.innerWidth);
-// }
-
-// const tween = gsap.to(races, {
-// 	x: getScrollAmount,
-// 	duration: 3,
-// 	ease: "none",
-// });
-
-
-// ScrollTrigger.create({
-// 	trigger:".nasil_wrapper",
-// 	start:"top 30%",
-// 	end: () => `+=${getScrollAmount() * -1}`,
-// 	pin:true,
-// 	animation:tween,
-// 	scrub:1,
-// 	invalidateOnRefresh:true,
-// })
-
-let scroll_tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: '.nasil_wrapper',
-        start: "top top",
-        // pin: true,
-        scrub: true,
-        end: "+=300",
-        // markers: true,
-    }
-}),
-    facts = [...document.querySelectorAll('.columns_n')]
-scroll_tl.to('.nasil_races', {
-    scale: 1,
-    duration: 0.2,
-    ease: "Power4.easeOut"
-})
-
-
-
-// Get the window height
 const windowHeight = window.innerHeight;
 
 // Get the element to animate
@@ -1389,32 +1296,27 @@ tl.to(
     ".white-slider",
     {
         x: "-30%",
-        duration: 1.5,
+        duration: 1,
     },
     "-=1"
 );
 
 tl.to(".hide1", {
     x: "0%",
-    duration: 2,
+    duration: 1,
     opacity: 1,
 });
 
 tl.to(".preloader", {
     opacity: 0,
-    duration: 2,
+    duration: 0.4,
 
 });
 tl.to(".preloader", {
     x: '200%',
-    duration: 2.5,
+    duration: 0,
 
 });
-
-
-
-
-
 tl.fromTo(
     ".hero-content",
     {
@@ -1589,8 +1491,7 @@ function closeModal(modalId) {
     modal.classList.remove('show-modal');
     setTimeout(() => modal.style.display = 'none', 500); // Hide after animation
 }
-function raf(time) {
-    lenis.raf(time)
+function raf() {
     requestAnimationFrame(raf)
 }
 
@@ -1606,23 +1507,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const cookieConsent = getCookie("cookieConsent");
-
-    if (!cookieConsent) {
-        // Show the popup if the cookie doesn't exist
-        document.getElementById("TW_box").style.display = "block";
-    }
-
-    // When the "Accept Cookies" button is clicked
-    document.getElementById("Cookie_btn").addEventListener("click", function () {
-        // Set a cookie to remember that the user has accepted cookies
-        setCookie("cookieConsent", "yes", 365);
-
-        // Hide the popup
-        document.getElementById("TW_box").style.display = "none";
-    });
-});
 
 function setCookie(name, value, days) {
     let expires = "";
@@ -1671,3 +1555,43 @@ $('.whatsapp-message-wrapper').delay(6000).queue(function () {
 $('.loading-animation').delay(6000).queue(function () {
     $(this).addClass("dinone");
 });
+
+function myFunction() {
+    var element = document.getElementById("bookmark");
+    element.classList.toggle("active_icon");
+}
+
+//pup up for map
+$(".selected_text").hover(function () {
+    var popupText = $(this).data("popup-text");
+
+    var position = $(this).offset();
+    var width = $(this).outerWidth();
+    var height = $(this).outerHeight();
+
+    $("#popup_map p").text(popupText);
+
+    $("#popup_map").css({
+        display: "block",
+        top: position.top + height + 10, // Adjust the vertical position as needed
+        left: position.left,
+    });
+}, function () {
+    // Hide the popup when the mouse leaves the element
+    $("#popup_map").css("display", "none");
+});
+
+window.onscroll = function() { updateProgressBar() };
+
+function updateProgressBar() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar,en,tr,fr,de,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+}
+// Get references to the elements

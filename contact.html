@@ -2,7 +2,6 @@
 <html lang="tr">
 
 
-<!-- Mirrored from rainbowit.net/html/histudy/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Aug 2023 11:22:59 GMT -->
 
 <head>
     <meta charset="utf-8">
@@ -1996,7 +1995,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <form class="form_bayli">
+                    <form class="form_bayli" id="form-4">
                         <h4 class="text-center">FRANCHISE BAŞVURU FORMU</h4>
                         <div class="flex">
                             <label>
@@ -2020,12 +2019,15 @@
                             <textarea required="" rows="3" class="input01"></textarea>
                             <span>mesajınız</span>
                         </label>
-                        <div class="form-submit-group my-3">
-                            <a class="rbt-btn bg-secondary-opacity icon-hover  nasil_btn" href="#">
-                                <span class="btn-text">Gönder</span>
-                                <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                            </a>
-                        </div>
+                        <label for="captcha-form-4">2 + 2 nedir?</label> 
+                    <input type="text" name="captcha-form-4" id="captcha-form-4" required>
+                    <div class="form-submit-group my-3">
+                        <button class="rbt-btn bg-secondary-opacity icon-hover  nasil_btn" type="submit"
+                            >
+                            <span class="btn-text">Gönder</span>
+                            <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                        </button>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -2211,13 +2213,16 @@
     <script src="assets/js/vendor/paralax-scroll.js"></script>
     <script src="assets/js/vendor/paralax.min.js"></script>
     <script src="assets/js/vendor/countdown.js"></script>
-
+    <script src="assets/js/vendor/cap.js"></script>
+    <script>
+        handleFormSubmission("form-4", "4"); // For Form 1, answer is "4"
+    </script>
     <script src="assets/js/vendor/plyr.js"></script>
     <!-- Main JS -->
+
     <script src="assets/js/main.js"></script>
 </body>
 
 
-<!-- Mirrored from rainbowit.net/html/histudy/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Aug 2023 11:23:00 GMT -->
 
 </html>
