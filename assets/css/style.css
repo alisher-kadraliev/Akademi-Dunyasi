@@ -1758,6 +1758,50 @@ ul.rbt-dropdown-menu li a {
   animation-name: bounceSlide;
 }
 
+@keyframes arrowS {
+
+  0%{
+    transform: translateX(0);
+  }
+
+
+
+  50% {
+    transform: translateX(14px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.arrowS {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-name: arrowS;
+}
+@keyframes arrowSD {
+
+  0%{
+    transform: translateY(-3px);
+  }
+
+
+
+  50% {
+    transform: translateY(-11px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+.arrowSD {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-name: arrowSD;
+}
 /*==============================
  *  Utilities
 =================================*/
@@ -29731,7 +29775,7 @@ blockquote.has-text-align-right cite,
   border: 0 none;
   box-shadow: none;
 }
-
+VALI
 .rbt-sorting-list .course-switch-layout li button i {
   font-size: 14px;
   transition: 0.4s;
@@ -35687,10 +35731,17 @@ body.no-scroll {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.tr_map_text{
+  font-size: 15px;
+  position: absolute;
+  left: 1%;
+  bottom: -12%;
 }
 
 .selected_place {
-  fill: rgba(239, 1, 9, 1);
+  fill: #c93b40;
   z-index: 2;
 }
 
@@ -35728,7 +35779,6 @@ body.no-scroll {
   top: 10px;
   right: 19px;
   z-index: 1000;
-  /* Additional styles */
 }
 
 .map_content {
@@ -35737,16 +35787,15 @@ body.no-scroll {
 }
 
 .selected_text {
-  font-family: unset;
   font-weight: 100;
-  font-size: 17px;
-  fill: white;
+  font-size: 19px;
+  font-family: var(--bs-font-sans-serif);
+  letter-spacing: 2px;
 }
 .selected_text_small{
-  font-family: unset;
   font-weight: 100;
-  font-size: 12px;
-  fill: white;
+  font-size: 13px;
+  font-family: var(--bs-font-sans-serif);
 }
 
 .tr_map path.selected_place {
@@ -36902,4 +36951,38 @@ margin-right: 15px;
 }
 .add-relative{
   position: relative;
+}
+.captcha{
+  width:25%
+}
+#captcha-form-2{
+  width: 25%;
+}
+.istanbul{
+  border-radius: 99px;
+  background: linear-gradient(315deg, #b5353a, #d73f44);
+  color: white;
+  padding: 15px;
+  position: absolute;
+  top: -3%;
+  left: 19%;
+}
+.Mugla{
+  border-radius: 99px;
+  background: linear-gradient(315deg, #b5353a, #d73f44);
+  color: white;
+  padding: 15px;
+  position: absolute;
+  bottom: 12%;
+  left: 4%;
+}
+.Mugla img{
+  position: absolute;
+  bottom: 17px;
+  left: 109%;
+}
+.istanbul img{
+  position: absolute;
+  bottom: -38px;
+  left: 35%;
 }

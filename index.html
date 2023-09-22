@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="tr">
-
-
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -1350,7 +1347,8 @@
                                             </a>
                                         </div>
                                         <div class="checkout-btn mt--20">
-                                            <a class="rbt-btn btn-gradient icon-hover w-100 text-center" href="cart.html">
+                                            <a class="rbt-btn btn-gradient icon-hover w-100 text-center"
+                                                href="bankKart.html">
                                                 <span class="btn-text">Checkout</span>
                                                 <span class="btn-icon"><i class="feather-arrow-right"></i></span>
                                             </a>
@@ -1754,7 +1752,7 @@
 
         </div>
     </div>
-<!-- end here -->
+    <!-- end here -->
 
     <div class="rbt-slider-main-wrapper position-relative">
         <div
@@ -4170,7 +4168,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="rbt-contact-form contact-form-style-1 max-width-auto">
-                        <form action="">
+                        <form action="" id="form-1">
                             <div>
                                 <h4>Ön Başvuru Formu</h4>
 
@@ -4184,7 +4182,7 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <input type="tel" pattern="[0-9]{10}" required="">
+                                            <input type="tel" required="">
                                             <label>Telefon</label>
                                         </div>
                                     </div>
@@ -4201,15 +4199,18 @@
                                     <label>Mesajınız</label>
                                     <span class="focus-border"></span>
                                 </div>
+                                <label for="captcha-form-1">2 + 2 nedir?</label> <br>
+                                <input type="text" name="captcha-form-1" id="captcha-form-1" required>
                                 <div class="form-submit-group my-3">
-                                    <a class="rbt-btn bg-secondary-opacity icon-hover  nasil_btn" href="#">
+                                    <button class="rbt-btn bg-secondary-opacity icon-hover  nasil_btn" type="submit"
+                                        >
                                         <span class="btn-text">Gönder</span>
                                         <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                                    </a>
+                                    </button>
                                 </div>
-
                             </div>
                         </form>
+                     
                     </div>
                 </div>
             </div>
@@ -5221,7 +5222,7 @@
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
         </svg>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
         integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
@@ -5248,21 +5249,25 @@
     <script src="assets/js/vendor/paralax-scroll.js"></script>
     <script src="assets/js/vendor/paralax.min.js"></script>
     <script src="assets/js/vendor/countdown.js"></script>
+    <script src="assets/js/vendor/cap.js"></script>
+    <script>
+        handleFormSubmission("form-1", "4"); // For Form 1, answer is "4"
+    </script>
     <script src="assets/js/vendor/plyr.js"></script>
 
     <script src="assets/js/main.js"></script>
     <script>
         scroll_tl.to(facts, {
-    xPercent: -85 * (facts.length - 1),
-    scrollTrigger: {
-        trigger: ".nasil_races",
-        start: "center center",
-        pin: true,
-        scrub: 1,
-        snap: 1 / (facts.length - 1),
-        end: () => `+=4320`
-    }
-});
+            xPercent: -85 * (facts.length - 1),
+            scrollTrigger: {
+                trigger: ".nasil_races",
+                start: "center center",
+                pin: true,
+                scrub: 1,
+                snap: 1 / (facts.length - 1),
+                end: () => `+=4320`
+            }
+        });
     </script>
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

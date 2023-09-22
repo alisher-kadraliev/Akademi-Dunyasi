@@ -1594,3 +1594,4 @@ function updateProgressBar() {
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({ pageLanguage: 'tr', includedLanguages: 'ar,en,tr,fr,de,ru', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
 }
+// Get references to the elements
